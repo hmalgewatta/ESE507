@@ -1,0 +1,21 @@
+module mac
+#(parameter DATA_WIDTH = 16)
+(
+	input clk,
+	input reset,
+	input valid_in,
+	input [DATA_WIDTH-1:0] data_in,
+	output logic valid_out,
+	output logic [2*DATA_WIDTH:0]data_out
+);
+
+logic [2*DATA_WIDTH -1: 0] product;
+
+always_ff @(posedge clk)
+begin
+	if (reset)
+		begin
+		end	
+end
+
+endmodule

@@ -1,0 +1,6087 @@
+Reading pref.tcl
+
+# 2019.3
+
+# vsim tb_part2_mac -c -do "run -all" 
+# Start time: 18:54:37 on Oct 02,2021
+# //  ModelSim DE 2019.3 Jul 24 2019 Linux 3.10.0-1160.36.2.el7.x86_64
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim DE and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_part2_mac
+# Loading work.part2_mac
+# run -all
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 2001 of file "expectedOutput". (Current address [2000], address range [0:1999])    : part2_tb_simple.sv(30)
+#    Time: 0 ns  Iteration: 0  Instance: /tb_part2_mac
+# a =  -485, b =  -259, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[          1]        0
+# 
+# 
+# a =   380, b =   178, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[          3]        0
+# 
+# 
+# a =   300, b =   194, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   125615. Expected value is testOut[          5]   125615
+# 
+# 
+# a =    50, b =  -109, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   193255. Expected value is testOut[          7]   193255
+# 
+# 
+# a =  -165, b =   286, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   251455. Expected value is testOut[          9]   251455
+# 
+# 
+# a =    68, b =    14, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   246005. Expected value is testOut[         11]   246005
+# 
+# 
+# a =  -199, b =   140, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   198815. Expected value is testOut[         13]   198815
+# 
+# 
+# a =  -183, b =  -215, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   199767. Expected value is testOut[         15]   199767
+# 
+# 
+# a =   474, b =   434, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   171907. Expected value is testOut[         17]   171907
+# 
+# 
+# a =   100, b =   -41, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   211252. Expected value is testOut[         19]   211252
+# 
+# 
+# a =  -235, b =  -359, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   416968. Expected value is testOut[         21]   416968
+# 
+# 
+# a =   468, b =  -221, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   412868. Expected value is testOut[         23]   412868
+# 
+# 
+# a =   508, b =  -467, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   497233. Expected value is testOut[         25]   497233
+# 
+# 
+# a =  -481, b =  -109, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   393805. Expected value is testOut[         27]   393805
+# 
+# 
+# a =  -249, b =  -501, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   156569. Expected value is testOut[         29]   156569
+# 
+# 
+# a =   204, b =  -261, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   208998. Expected value is testOut[         31]   208998
+# 
+# 
+# a =  -183, b =   -85, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   333747. Expected value is testOut[         33]   333747
+# 
+# 
+# a =  -127, b =  -371, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   280503. Expected value is testOut[         35]   280503
+# 
+# 
+# a =   218, b =  -435, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   296058. Expected value is testOut[         37]   296058
+# 
+# 
+# a =   144, b =   208, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   343175. Expected value is testOut[         39]   343175
+# 
+# 
+# a =  -163, b =   258, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   248345. Expected value is testOut[         41]   248345
+# 
+# 
+# a =  -367, b =  -323, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   278297. Expected value is testOut[         43]   278297
+# 
+# 
+# a =   312, b =   -49, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   236243. Expected value is testOut[         45]   236243
+# 
+# 
+# a =   310, b =   102, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   354784. Expected value is testOut[         47]   354784
+# 
+# 
+# a =  -187, b =  -167, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   339496. Expected value is testOut[         49]   339496
+# 
+# 
+# a =   -27, b =  -435, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   371116. Expected value is testOut[         51]   371116
+# 
+# 
+# a =   358, b =  -301, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   402345. Expected value is testOut[         53]   402345
+# 
+# 
+# a =   510, b =  -205, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   414090. Expected value is testOut[         55]   414090
+# 
+# 
+# a =  -463, b =   336, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   306332. Expected value is testOut[         57]   306332
+# 
+# 
+# a =  -147, b =    84, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   201782. Expected value is testOut[         59]   201782
+# 
+# 
+# a =  -133, b =  -449, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    46214. Expected value is testOut[         61]    46214
+# 
+# 
+# a =   -39, b =   122, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    33866. Expected value is testOut[         63]    33866
+# 
+# 
+# a =  -289, b =   178, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    93583. Expected value is testOut[         65]    93583
+# 
+# 
+# a =  -101, b =   194, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    88825. Expected value is testOut[         67]    88825
+# 
+# 
+# a =   496, b =   470, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    37383. Expected value is testOut[         69]    37383
+# 
+# 
+# a =  -163, b =    70, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    17789. Expected value is testOut[         71]    17789
+# 
+# 
+# a =  -407, b =   438, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   250909. Expected value is testOut[         73]   250909
+# 
+# 
+# a =    10, b =   346, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   239499. Expected value is testOut[         75]   239499
+# 
+# 
+# a =  -283, b =  -453, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    61233. Expected value is testOut[         77]    61233
+# 
+# 
+# a =   -63, b =  -501, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    64693. Expected value is testOut[         79]    64693
+# 
+# 
+# a =  -167, b =   -67, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   192892. Expected value is testOut[         81]   192892
+# 
+# 
+# a =   262, b =  -207, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   224455. Expected value is testOut[         83]   224455
+# 
+# 
+# a =   166, b =  -155, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   235644. Expected value is testOut[         85]   235644
+# 
+# 
+# a =   226, b =  -371, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   181410. Expected value is testOut[         87]   181410
+# 
+# 
+# a =  -297, b =   366, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   155680. Expected value is testOut[         89]   155680
+# 
+# 
+# a =   200, b =  -153, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    71834. Expected value is testOut[         91]    71834
+# 
+# 
+# a =   -95, b =    14, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -36868. Expected value is testOut[         93]   -36868
+# 
+# 
+# a =    -3, b =  -333, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -67468. Expected value is testOut[         95]   -67468
+# 
+# 
+# a =   400, b =  -157, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -68798. Expected value is testOut[         97]   -68798
+# 
+# 
+# a =   364, b =  -143, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -67799. Expected value is testOut[         99]   -67799
+# 
+# 
+# a =  -299, b =   112, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -130599. Expected value is testOut[        101]  -130599
+# 
+# 
+# a =   484, b =   280, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -182651. Expected value is testOut[        103]  -182651
+# 
+# 
+# a =  -135, b =  -297, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -216139. Expected value is testOut[        105]  -216139
+# 
+# 
+# a =  -451, b =     4, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -80619. Expected value is testOut[        107]   -80619
+# 
+# 
+# a =    18, b =    90, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -40524. Expected value is testOut[        109]   -40524
+# 
+# 
+# a =  -423, b =   192, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -42328. Expected value is testOut[        111]   -42328
+# 
+# 
+# a =  -349, b =  -119, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -40708. Expected value is testOut[        113]   -40708
+# 
+# 
+# a =  -263, b =  -347, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -121924. Expected value is testOut[        115]  -121924
+# 
+# 
+# a =  -459, b =    56, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -80393. Expected value is testOut[        117]   -80393
+# 
+# 
+# a =   336, b =  -197, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    10868. Expected value is testOut[        119]    10868
+# 
+# 
+# a =   494, b =   254, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -14836. Expected value is testOut[        121]   -14836
+# 
+# 
+# a =   258, b =    90, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -81028. Expected value is testOut[        123]   -81028
+# 
+# 
+# a =  -181, b =   148, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    44448. Expected value is testOut[        125]    44448
+# 
+# 
+# a =   340, b =  -491, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    67668. Expected value is testOut[        127]    67668
+# 
+# 
+# a =    98, b =  -355, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    40880. Expected value is testOut[        129]    40880
+# 
+# 
+# a =   190, b =    86, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -126060. Expected value is testOut[        131]  -126060
+# 
+# 
+# a =   142, b =   474, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -160850. Expected value is testOut[        133]  -160850
+# 
+# 
+# a =  -159, b =   246, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -144510. Expected value is testOut[        135]  -144510
+# 
+# 
+# a =   500, b =  -221, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -77202. Expected value is testOut[        137]   -77202
+# 
+# 
+# a =   312, b =   -19, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -116316. Expected value is testOut[        139]  -116316
+# 
+# 
+# a =  -167, b =  -309, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -226816. Expected value is testOut[        141]  -226816
+# 
+# 
+# a =   288, b =   478, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -232744. Expected value is testOut[        143]  -232744
+# 
+# 
+# a =  -321, b =    38, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -181141. Expected value is testOut[        145]  -181141
+# 
+# 
+# a =  -125, b =  -135, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -43477. Expected value is testOut[        147]   -43477
+# 
+# 
+# a =    98, b =  -193, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -55675. Expected value is testOut[        149]   -55675
+# 
+# 
+# a =  -439, b =  -161, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -38800. Expected value is testOut[        151]   -38800
+# 
+# 
+# a =   382, b =  -463, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -57714. Expected value is testOut[        153]   -57714
+# 
+# 
+# a =   482, b =   172, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    12965. Expected value is testOut[        155]    12965
+# 
+# 
+# a =  -481, b =  -237, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -163901. Expected value is testOut[        157]  -163901
+# 
+# 
+# a =  -203, b =   304, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -80997. Expected value is testOut[        159]   -80997
+# 
+# 
+# a =   342, b =  -367, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    33000. Expected value is testOut[        161]    33000
+# 
+# 
+# a =  -503, b =  -147, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -28712. Expected value is testOut[        163]   -28712
+# 
+# 
+# a =  -341, b =  -457, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -154226. Expected value is testOut[        165]  -154226
+# 
+# 
+# a =   106, b =   234, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -80285. Expected value is testOut[        167]   -80285
+# 
+# 
+# a =  -185, b =  -345, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    75552. Expected value is testOut[        169]    75552
+# 
+# 
+# a =    -5, b =  -323, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   100356. Expected value is testOut[        171]   100356
+# 
+# 
+# a =    48, b =   424, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   164181. Expected value is testOut[        173]   164181
+# 
+# 
+# a =   216, b =  -363, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   165796. Expected value is testOut[        175]   165796
+# 
+# 
+# a =   218, b =   274, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   186148. Expected value is testOut[        177]   186148
+# 
+# 
+# a =  -421, b =  -225, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   107740. Expected value is testOut[        179]   107740
+# 
+# 
+# a =   170, b =  -133, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   167472. Expected value is testOut[        181]   167472
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =   262197. Expected value is testOut[        183]   262197
+# 
+# 
+# a =    40, b =    24, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[        185]   239587
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 926 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =    30, b =   224, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[        187]        0
+# 
+# 
+# a =   272, b =  -399, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =      960. Expected value is testOut[        189]      960
+# 
+# 
+# a =  -103, b =   -87, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =     7680. Expected value is testOut[        191]     7680
+# 
+# 
+# a =  -305, b =    36, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -100848. Expected value is testOut[        193]  -100848
+# 
+# 
+# a =   458, b =   376, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -91887. Expected value is testOut[        195]   -91887
+# 
+# 
+# a =   -35, b =   434, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -102867. Expected value is testOut[        197]  -102867
+# 
+# 
+# a =  -289, b =   394, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    69341. Expected value is testOut[        199]    69341
+# 
+# 
+# a =  -419, b =  -467, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    54151. Expected value is testOut[        201]    54151
+# 
+# 
+# a =   180, b =  -499, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -59715. Expected value is testOut[        203]   -59715
+# 
+# 
+# a =   386, b =  -177, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   135958. Expected value is testOut[        205]   135958
+# 
+# 
+# a =   264, b =   226, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    46138. Expected value is testOut[        207]    46138
+# 
+# 
+# a =  -263, b =   278, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -22184. Expected value is testOut[        209]   -22184
+# 
+# 
+# a =  -143, b =   362, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    37480. Expected value is testOut[        211]    37480
+# 
+# 
+# a =  -285, b =   -97, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -35634. Expected value is testOut[        213]   -35634
+# 
+# 
+# a =  -491, b =    32, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -87400. Expected value is testOut[        215]   -87400
+# 
+# 
+# a =  -499, b =   404, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -59755. Expected value is testOut[        217]   -59755
+# 
+# 
+# a =   392, b =  -277, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -75467. Expected value is testOut[        219]   -75467
+# 
+# 
+# a =   454, b =    60, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -277063. Expected value is testOut[        221]  -277063
+# 
+# 
+# a =   286, b =  -371, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -385647. Expected value is testOut[        223]  -385647
+# 
+# 
+# a =  -137, b =   326, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -358407. Expected value is testOut[        225]  -358407
+# 
+# 
+# a =   176, b =   140, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -464513. Expected value is testOut[        227]  -464513
+# 
+# 
+# a =  -237, b =   436, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -509175. Expected value is testOut[        229]  -509175
+# 
+# 
+# a =   468, b =   404, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -484535. Expected value is testOut[        231]  -484535
+# 
+# 
+# a =   296, b =   438, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -524288. Expected value is testOut[        233]  -524288
+# 
+# 
+# a =  -203, b =  -219, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -335216. Expected value is testOut[        235]  -335216
+# 
+# 
+# a =  -279, b =  -175, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -205568. Expected value is testOut[        237]  -205568
+# 
+# 
+# a =    34, b =   106, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -161111. Expected value is testOut[        239]  -161111
+# 
+# 
+# a =   432, b =   338, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -112286. Expected value is testOut[        241]  -112286
+# 
+# 
+# a =   478, b =   398, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -108682. Expected value is testOut[        243]  -108682
+# 
+# 
+# a =  -323, b =    58, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    37334. Expected value is testOut[        245]    37334
+# 
+# 
+# a =   462, b =    10, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   227578. Expected value is testOut[        247]   227578
+# 
+# 
+# a =  -449, b =  -335, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   208844. Expected value is testOut[        249]   208844
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =   213464. Expected value is testOut[        251]   213464
+# 
+# 
+# a =   322, b =   -17, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[        253]   363879
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 1266 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =   -51, b =  -233, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[        255]        0
+# 
+# 
+# a =  -153, b =  -293, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    -5474. Expected value is testOut[        257]    -5474
+# 
+# 
+# a =  -259, b =   -49, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =     6409. Expected value is testOut[        259]     6409
+# 
+# 
+# a =   372, b =   354, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    51238. Expected value is testOut[        261]    51238
+# 
+# 
+# a =   304, b =   380, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    63929. Expected value is testOut[        263]    63929
+# 
+# 
+# a =  -317, b =   186, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   195617. Expected value is testOut[        265]   195617
+# 
+# 
+# a =   228, b =  -303, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   311137. Expected value is testOut[        267]   311137
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =   252175. Expected value is testOut[        269]   252175
+# 
+# 
+# a =  -371, b =   -81, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[        271]   183091
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 1356 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =  -235, b =  -151, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[        273]        0
+# 
+# 
+# a =  -411, b =  -293, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    30051. Expected value is testOut[        275]    30051
+# 
+# 
+# a =  -153, b =  -111, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    65536. Expected value is testOut[        277]    65536
+# 
+# 
+# a =  -415, b =    88, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   185959. Expected value is testOut[        279]   185959
+# 
+# 
+# a =  -405, b =   330, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   202942. Expected value is testOut[        281]   202942
+# 
+# 
+# a =    46, b =   194, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   166422. Expected value is testOut[        283]   166422
+# 
+# 
+# a =    -3, b =   432, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    32772. Expected value is testOut[        285]    32772
+# 
+# 
+# a =    -1, b =  -357, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    41696. Expected value is testOut[        287]    41696
+# 
+# 
+# a =  -509, b =  -189, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    40400. Expected value is testOut[        289]    40400
+# 
+# 
+# a =   482, b =   478, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    40757. Expected value is testOut[        291]    40757
+# 
+# 
+# a =   -77, b =  -477, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   136958. Expected value is testOut[        293]   136958
+# 
+# 
+# a =   -53, b =   -49, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   367354. Expected value is testOut[        295]   367354
+# 
+# 
+# a =  -379, b =  -325, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   404083. Expected value is testOut[        297]   404083
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =   406680. Expected value is testOut[        299]   406680
+# 
+# 
+# a =    10, b =   290, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[        301]   524287
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 1506 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =  -291, b =  -343, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[        303]        0
+# 
+# 
+# a =   340, b =     6, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =     2900. Expected value is testOut[        305]     2900
+# 
+# 
+# a =  -489, b =   192, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   102713. Expected value is testOut[        307]   102713
+# 
+# 
+# a =  -269, b =  -459, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   104753. Expected value is testOut[        309]   104753
+# 
+# 
+# a =     0, b =   -55, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    10865. Expected value is testOut[        311]    10865
+# 
+# 
+# a =   434, b =  -497, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   134336. Expected value is testOut[        313]   134336
+# 
+# 
+# a =   504, b =   102, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   134336. Expected value is testOut[        315]   134336
+# 
+# 
+# a =   392, b =   332, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -81362. Expected value is testOut[        317]   -81362
+# 
+# 
+# a =  -163, b =  -205, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -29954. Expected value is testOut[        319]   -29954
+# 
+# 
+# a =   212, b =  -413, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   100190. Expected value is testOut[        321]   100190
+# 
+# 
+# a =   -93, b =   210, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   133605. Expected value is testOut[        323]   133605
+# 
+# 
+# a =  -157, b =   296, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    46049. Expected value is testOut[        325]    46049
+# 
+# 
+# a =  -351, b =  -273, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    26519. Expected value is testOut[        327]    26519
+# 
+# 
+# a =   258, b =   348, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -19953. Expected value is testOut[        329]   -19953
+# 
+# 
+# a =  -451, b =   454, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    75870. Expected value is testOut[        331]    75870
+# 
+# 
+# a =   274, b =  -129, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   165654. Expected value is testOut[        333]   165654
+# 
+# 
+# a =  -335, b =  -179, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -39100. Expected value is testOut[        335]   -39100
+# 
+# 
+# a =   -81, b =   146, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -74446. Expected value is testOut[        337]   -74446
+# 
+# 
+# a =  -357, b =     2, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -14481. Expected value is testOut[        339]   -14481
+# 
+# 
+# a =   298, b =   126, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -26307. Expected value is testOut[        341]   -26307
+# 
+# 
+# a =  -399, b =   264, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -27021. Expected value is testOut[        343]   -27021
+# 
+# 
+# a =   100, b =     6, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    10527. Expected value is testOut[        345]    10527
+# 
+# 
+# a =  -461, b =  -137, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -94809. Expected value is testOut[        347]   -94809
+# 
+# 
+# a =  -267, b =   362, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -94209. Expected value is testOut[        349]   -94209
+# 
+# 
+# a =    30, b =   -67, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -31052. Expected value is testOut[        351]   -31052
+# 
+# 
+# a =   214, b =  -349, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -127706. Expected value is testOut[        353]  -127706
+# 
+# 
+# a =  -351, b =  -311, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -129716. Expected value is testOut[        355]  -129716
+# 
+# 
+# a =  -437, b =  -221, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -204402. Expected value is testOut[        357]  -204402
+# 
+# 
+# a =  -485, b =   172, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -95241. Expected value is testOut[        359]   -95241
+# 
+# 
+# a =   178, b =   354, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =     1336. Expected value is testOut[        361]     1336
+# 
+# 
+# a =   492, b =   484, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -82084. Expected value is testOut[        363]   -82084
+# 
+# 
+# a =  -335, b =   500, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -19072. Expected value is testOut[        365]   -19072
+# 
+# 
+# a =    56, b =   462, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   219056. Expected value is testOut[        367]   219056
+# 
+# 
+# a =  -299, b =  -249, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    51556. Expected value is testOut[        369]    51556
+# 
+# 
+# a =    48, b =   390, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    77428. Expected value is testOut[        371]    77428
+# 
+# 
+# a =   100, b =   -37, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   151879. Expected value is testOut[        373]   151879
+# 
+# 
+# a =  -209, b =  -257, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   170599. Expected value is testOut[        375]   170599
+# 
+# 
+# a =   100, b =  -261, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   166899. Expected value is testOut[        377]   166899
+# 
+# 
+# a =  -233, b =   354, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   220612. Expected value is testOut[        379]   220612
+# 
+# 
+# a =   342, b =   152, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   194512. Expected value is testOut[        381]   194512
+# 
+# 
+# a =   102, b =  -385, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   112030. Expected value is testOut[        383]   112030
+# 
+# 
+# a =  -123, b =  -485, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   164014. Expected value is testOut[        385]   164014
+# 
+# 
+# a =   364, b =   302, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   124744. Expected value is testOut[        387]   124744
+# 
+# 
+# a =  -339, b =   444, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   184399. Expected value is testOut[        389]   184399
+# 
+# 
+# a =   190, b =  -173, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   294327. Expected value is testOut[        391]   294327
+# 
+# 
+# a =   434, b =   426, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   143811. Expected value is testOut[        393]   143811
+# 
+# 
+# a =   268, b =  -185, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   110941. Expected value is testOut[        395]   110941
+# 
+# 
+# a =  -337, b =  -121, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   295825. Expected value is testOut[        397]   295825
+# 
+# 
+# a =  -507, b =   142, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   246245. Expected value is testOut[        399]   246245
+# 
+# 
+# a =  -115, b =  -355, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   287022. Expected value is testOut[        401]   287022
+# 
+# 
+# a =  -145, b =  -435, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   215028. Expected value is testOut[        403]   215028
+# 
+# 
+# a =  -367, b =  -457, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   255853. Expected value is testOut[        405]   255853
+# 
+# 
+# a =   118, b =  -431, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   318928. Expected value is testOut[        407]   318928
+# 
+# 
+# a =   346, b =  -193, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   486647. Expected value is testOut[        409]   486647
+# 
+# 
+# a =   378, b =  -407, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   435789. Expected value is testOut[        411]   435789
+# 
+# 
+# a =   -17, b =  -187, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   369011. Expected value is testOut[        413]   369011
+# 
+# 
+# a =  -329, b =   458, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   215165. Expected value is testOut[        415]   215165
+# 
+# 
+# a =  -301, b =  -419, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   218344. Expected value is testOut[        417]   218344
+# 
+# 
+# a =   342, b =  -331, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    67662. Expected value is testOut[        419]    67662
+# 
+# 
+# a =   276, b =   426, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   193781. Expected value is testOut[        421]   193781
+# 
+# 
+# a =   346, b =   -67, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    80579. Expected value is testOut[        423]    80579
+# 
+# 
+# a =   260, b =   118, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   198155. Expected value is testOut[        425]   198155
+# 
+# 
+# a =   -13, b =   484, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   174973. Expected value is testOut[        427]   174973
+# 
+# 
+# a =  -159, b =  -461, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   205653. Expected value is testOut[        429]   205653
+# 
+# 
+# a =  -407, b =   172, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   199361. Expected value is testOut[        431]   199361
+# 
+# 
+# a =    80, b =   320, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   272660. Expected value is testOut[        433]   272660
+# 
+# 
+# a =   140, b =    38, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   202656. Expected value is testOut[        435]   202656
+# 
+# 
+# a =   464, b =   352, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   228256. Expected value is testOut[        437]   228256
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =   233576. Expected value is testOut[        439]   233576
+# 
+# 
+# a =  -167, b =  -339, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[        441]   396904
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 2206 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =  -353, b =  -221, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[        443]        0
+# 
+# 
+# a =   380, b =    62, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    56613. Expected value is testOut[        445]    56613
+# 
+# 
+# a =  -469, b =    86, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   134626. Expected value is testOut[        447]   134626
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =   158186. Expected value is testOut[        449]   158186
+# 
+# 
+# a =   -77, b =  -213, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[        451]   117852
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 2256 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =  -117, b =   276, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[        453]        0
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =    16401. Expected value is testOut[        455]    16401
+# 
+# 
+# a =   -29, b =   100, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[        457]   -15891
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 2286 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =   394, b =   306, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[        459]        0
+# 
+# 
+# a =   178, b =  -367, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    -2900. Expected value is testOut[        461]    -2900
+# 
+# 
+# a =  -211, b =   -15, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   117664. Expected value is testOut[        463]   117664
+# 
+# 
+# a =  -169, b =  -345, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    52338. Expected value is testOut[        465]    52338
+# 
+# 
+# a =   422, b =   250, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    55503. Expected value is testOut[        467]    55503
+# 
+# 
+# a =  -367, b =    32, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   113808. Expected value is testOut[        469]   113808
+# 
+# 
+# a =   -95, b =   -53, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   219308. Expected value is testOut[        471]   219308
+# 
+# 
+# a =  -153, b =  -351, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   207564. Expected value is testOut[        473]   207564
+# 
+# 
+# a =   146, b =   390, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   212599. Expected value is testOut[        475]   212599
+# 
+# 
+# a =   246, b =   -89, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   266302. Expected value is testOut[        477]   266302
+# 
+# 
+# a =   104, b =    82, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   323242. Expected value is testOut[        479]   323242
+# 
+# 
+# a =  -427, b =   458, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   301348. Expected value is testOut[        481]   301348
+# 
+# 
+# a =   196, b =   484, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   309876. Expected value is testOut[        483]   309876
+# 
+# 
+# a =     4, b =    42, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   114310. Expected value is testOut[        485]   114310
+# 
+# 
+# a =   -95, b =   210, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   209174. Expected value is testOut[        487]   209174
+# 
+# 
+# a =   -49, b =  -115, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   209342. Expected value is testOut[        489]   209342
+# 
+# 
+# a =  -505, b =   316, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   189392. Expected value is testOut[        491]   189392
+# 
+# 
+# a =  -405, b =  -423, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   195027. Expected value is testOut[        493]   195027
+# 
+# 
+# a =   506, b =    94, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    35447. Expected value is testOut[        495]    35447
+# 
+# 
+# a =   -41, b =   488, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   206762. Expected value is testOut[        497]   206762
+# 
+# 
+# a =   460, b =   168, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   254326. Expected value is testOut[        499]   254326
+# 
+# 
+# a =   210, b =  -101, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   234318. Expected value is testOut[        501]   234318
+# 
+# 
+# a =  -311, b =   276, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   311598. Expected value is testOut[        503]   311598
+# 
+# 
+# a =  -391, b =  -327, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   290388. Expected value is testOut[        505]   290388
+# 
+# 
+# a =   132, b =    52, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   204552. Expected value is testOut[        507]   204552
+# 
+# 
+# a =  -475, b =  -297, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   332409. Expected value is testOut[        509]   332409
+# 
+# 
+# a =   392, b =   294, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   339273. Expected value is testOut[        511]   339273
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =   480348. Expected value is testOut[        513]   480348
+# 
+# 
+# a =   218, b =   282, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[        515]   524287
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 2576 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =   492, b =   -37, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[        517]        0
+# 
+# 
+# a =  -349, b =   500, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    61476. Expected value is testOut[        519]    61476
+# 
+# 
+# a =   380, b =  -143, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    43272. Expected value is testOut[        521]    43272
+# 
+# 
+# a =  -275, b =   294, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -131228. Expected value is testOut[        523]  -131228
+# 
+# 
+# a =   258, b =  -151, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -185568. Expected value is testOut[        525]  -185568
+# 
+# 
+# a =   -31, b =   106, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -266418. Expected value is testOut[        527]  -266418
+# 
+# 
+# a =   376, b =   196, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -305376. Expected value is testOut[        529]  -305376
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =  -308662. Expected value is testOut[        531]  -308662
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[        533]  -234966
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 2666 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =   232, b =  -433, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[        535]        0
+# 
+# 
+# a =  -119, b =   334, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[        537]        0
+# 
+# 
+# a =   -75, b =  -467, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -100456. Expected value is testOut[        539]  -100456
+# 
+# 
+# a =   256, b =   402, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -140202. Expected value is testOut[        541]  -140202
+# 
+# 
+# a =  -105, b =  -111, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -105177. Expected value is testOut[        543]  -105177
+# 
+# 
+# a =   -63, b =    38, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    -2265. Expected value is testOut[        545]    -2265
+# 
+# 
+# a =   120, b =  -351, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =     9390. Expected value is testOut[        547]     9390
+# 
+# 
+# a =  -297, b =   304, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =     6996. Expected value is testOut[        549]     6996
+# 
+# 
+# a =  -225, b =  -295, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -35124. Expected value is testOut[        551]   -35124
+# 
+# 
+# a =  -117, b =  -257, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -125412. Expected value is testOut[        553]  -125412
+# 
+# 
+# a =   212, b =  -337, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -59037. Expected value is testOut[        555]   -59037
+# 
+# 
+# a =  -227, b =   202, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -28968. Expected value is testOut[        557]   -28968
+# 
+# 
+# a =  -313, b =   198, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -100412. Expected value is testOut[        559]  -100412
+# 
+# 
+# a =   236, b =  -393, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -146266. Expected value is testOut[        561]  -146266
+# 
+# 
+# a =   232, b =  -257, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -208240. Expected value is testOut[        563]  -208240
+# 
+# 
+# a =   -49, b =   -47, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -300988. Expected value is testOut[        565]  -300988
+# 
+# 
+# a =   342, b =  -101, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -360612. Expected value is testOut[        567]  -360612
+# 
+# 
+# a =   358, b =   300, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -358309. Expected value is testOut[        569]  -358309
+# 
+# 
+# a =  -125, b =  -263, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -392851. Expected value is testOut[        571]  -392851
+# 
+# 
+# a =  -465, b =    38, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -285451. Expected value is testOut[        573]  -285451
+# 
+# 
+# a =   236, b =  -183, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -252576. Expected value is testOut[        575]  -252576
+# 
+# 
+# a =    64, b =  -167, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -270246. Expected value is testOut[        577]  -270246
+# 
+# 
+# a =  -425, b =   -23, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -313434. Expected value is testOut[        579]  -313434
+# 
+# 
+# a =   -71, b =   350, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -324122. Expected value is testOut[        581]  -324122
+# 
+# 
+# a =  -451, b =  -343, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -314347. Expected value is testOut[        583]  -314347
+# 
+# 
+# a =  -131, b =   502, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -339197. Expected value is testOut[        585]  -339197
+# 
+# 
+# a =  -253, b =  -369, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -184504. Expected value is testOut[        587]  -184504
+# 
+# 
+# a =  -407, b =   272, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -250266. Expected value is testOut[        589]  -250266
+# 
+# 
+# a =  -455, b =    90, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -156909. Expected value is testOut[        591]  -156909
+# 
+# 
+# a =   258, b =   408, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -267613. Expected value is testOut[        593]  -267613
+# 
+# 
+# a =  -431, b =  -107, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -308563. Expected value is testOut[        595]  -308563
+# 
+# 
+# a =   458, b =   370, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -203299. Expected value is testOut[        597]  -203299
+# 
+# 
+# a =   202, b =  -253, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -157182. Expected value is testOut[        599]  -157182
+# 
+# 
+# a =   244, b =    26, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    12278. Expected value is testOut[        601]    12278
+# 
+# 
+# a =   396, b =   176, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -38828. Expected value is testOut[        603]   -38828
+# 
+# 
+# a =   448, b =   152, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -32484. Expected value is testOut[        605]   -32484
+# 
+# 
+# a =  -243, b =     2, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    37212. Expected value is testOut[        607]    37212
+# 
+# 
+# a =   410, b =  -191, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   105308. Expected value is testOut[        609]   105308
+# 
+# 
+# a =  -299, b =  -293, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   104822. Expected value is testOut[        611]   104822
+# 
+# 
+# a =   152, b =   212, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    26512. Expected value is testOut[        613]    26512
+# 
+# 
+# a =   466, b =  -313, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   114119. Expected value is testOut[        615]   114119
+# 
+# 
+# a =   340, b =   254, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   146343. Expected value is testOut[        617]   146343
+# 
+# 
+# a =   430, b =  -375, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =      485. Expected value is testOut[        619]      485
+# 
+# 
+# a =    16, b =   426, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    86845. Expected value is testOut[        621]    86845
+# 
+# 
+# a =  -429, b =  -133, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -74405. Expected value is testOut[        623]   -74405
+# 
+# 
+# a =  -325, b =   408, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -67589. Expected value is testOut[        625]   -67589
+# 
+# 
+# a =  -189, b =   466, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -10532. Expected value is testOut[        627]   -10532
+# 
+# 
+# a =   166, b =  -487, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -143132. Expected value is testOut[        629]  -143132
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =  -231206. Expected value is testOut[        631]  -231206
+# 
+# 
+# a =  -117, b =  -101, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[        633]  -312048
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 3166 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =   -19, b =  -365, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[        635]        0
+# 
+# 
+# a =  -381, b =  -259, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    11817. Expected value is testOut[        637]    11817
+# 
+# 
+# a =   176, b =   254, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    18752. Expected value is testOut[        639]    18752
+# 
+# 
+# a =   -67, b =   272, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   117431. Expected value is testOut[        641]   117431
+# 
+# 
+# a =   462, b =   -91, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   162135. Expected value is testOut[        643]   162135
+# 
+# 
+# a =  -257, b =     0, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   143911. Expected value is testOut[        645]   143911
+# 
+# 
+# a =  -289, b =   322, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   101869. Expected value is testOut[        647]   101869
+# 
+# 
+# a =  -423, b =   174, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   101869. Expected value is testOut[        649]   101869
+# 
+# 
+# a =    28, b =   -67, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =     8811. Expected value is testOut[        651]     8811
+# 
+# 
+# a =   326, b =   438, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -64791. Expected value is testOut[        653]   -64791
+# 
+# 
+# a =   180, b =   402, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -66667. Expected value is testOut[        655]   -66667
+# 
+# 
+# a =  -163, b =  -119, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    76121. Expected value is testOut[        657]    76121
+# 
+# 
+# a =   210, b =   452, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   148481. Expected value is testOut[        659]   148481
+# 
+# 
+# a =   452, b =  -367, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   167878. Expected value is testOut[        661]   167878
+# 
+# 
+# a =  -177, b =     6, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   262798. Expected value is testOut[        663]   262798
+# 
+# 
+# a =   180, b =   358, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    96914. Expected value is testOut[        665]    96914
+# 
+# 
+# a =  -425, b =   336, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    95852. Expected value is testOut[        667]    95852
+# 
+# 
+# a =   262, b =   132, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   160292. Expected value is testOut[        669]   160292
+# 
+# 
+# a =    22, b =   212, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    17492. Expected value is testOut[        671]    17492
+# 
+# 
+# a =  -331, b =    94, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    52076. Expected value is testOut[        673]    52076
+# 
+# 
+# a =    34, b =  -191, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    56740. Expected value is testOut[        675]    56740
+# 
+# 
+# a =    46, b =   318, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    25626. Expected value is testOut[        677]    25626
+# 
+# 
+# a =   324, b =   326, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    19132. Expected value is testOut[        679]    19132
+# 
+# 
+# a =   172, b =  -331, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    33760. Expected value is testOut[        681]    33760
+# 
+# 
+# a =  -155, b =  -307, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   139384. Expected value is testOut[        683]   139384
+# 
+# 
+# a =  -439, b =    44, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    82452. Expected value is testOut[        685]    82452
+# 
+# 
+# a =   256, b =    14, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   130037. Expected value is testOut[        687]   130037
+# 
+# 
+# a =   108, b =   434, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   110721. Expected value is testOut[        689]   110721
+# 
+# 
+# a =  -113, b =    90, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   114305. Expected value is testOut[        691]   114305
+# 
+# 
+# a =  -409, b =  -319, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   161177. Expected value is testOut[        693]   161177
+# 
+# 
+# a =  -133, b =   184, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   151007. Expected value is testOut[        695]   151007
+# 
+# 
+# a =    -3, b =   416, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   281478. Expected value is testOut[        697]   281478
+# 
+# 
+# a =  -211, b =   204, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   257006. Expected value is testOut[        699]   257006
+# 
+# 
+# a =   248, b =   412, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   255758. Expected value is testOut[        701]   255758
+# 
+# 
+# a =  -427, b =   224, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   212714. Expected value is testOut[        703]   212714
+# 
+# 
+# a =   146, b =   174, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   314890. Expected value is testOut[        705]   314890
+# 
+# 
+# a =  -265, b =   282, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   219242. Expected value is testOut[        707]   219242
+# 
+# 
+# a =    90, b =   290, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   244646. Expected value is testOut[        709]   244646
+# 
+# 
+# a =   474, b =    86, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   169916. Expected value is testOut[        711]   169916
+# 
+# 
+# a =   502, b =   408, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   196016. Expected value is testOut[        713]   196016
+# 
+# 
+# a =   100, b =  -189, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   236780. Expected value is testOut[        715]   236780
+# 
+# 
+# a =    90, b =  -429, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   441596. Expected value is testOut[        717]   441596
+# 
+# 
+# a =   142, b =  -411, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   422696. Expected value is testOut[        719]   422696
+# 
+# 
+# a =   -73, b =   194, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   384086. Expected value is testOut[        721]   384086
+# 
+# 
+# a =  -477, b =  -455, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   325724. Expected value is testOut[        723]   325724
+# 
+# 
+# a =  -233, b =   372, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   311562. Expected value is testOut[        725]   311562
+# 
+# 
+# a =   458, b =  -295, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[        727]   524287
+# 
+# 
+# a =  -191, b =  -287, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   437611. Expected value is testOut[        729]   437611
+# 
+# 
+# a =   476, b =   478, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   302501. Expected value is testOut[        731]   302501
+# 
+# 
+# a =  -395, b =  -471, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   357318. Expected value is testOut[        733]   357318
+# 
+# 
+# a =   370, b =    88, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[        735]   524287
+# 
+# 
+# a =   282, b =   350, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[        737]   524287
+# 
+# 
+# a =  -293, b =   258, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[        739]   524287
+# 
+# 
+# a =   118, b =   -69, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[        741]   524287
+# 
+# 
+# a =   364, b =   372, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   448693. Expected value is testOut[        743]   448693
+# 
+# 
+# a =  -147, b =   138, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   440551. Expected value is testOut[        745]   440551
+# 
+# 
+# a =   104, b =  -465, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[        747]   524287
+# 
+# 
+# a =   424, b =   226, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   504001. Expected value is testOut[        749]   504001
+# 
+# 
+# a =   314, b =  -327, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   455641. Expected value is testOut[        751]   455641
+# 
+# 
+# a =  -165, b =  -483, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[        753]   524287
+# 
+# 
+# a =   230, b =   122, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   421609. Expected value is testOut[        755]   421609
+# 
+# 
+# a =  -191, b =  -171, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   501304. Expected value is testOut[        757]   501304
+# 
+# 
+# a =   -31, b =  -413, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[        759]   524287
+# 
+# 
+# a =   -39, b =   424, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[        761]   524287
+# 
+# 
+# a =  -377, b =  -457, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[        763]   524287
+# 
+# 
+# a =  -171, b =   144, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   507751. Expected value is testOut[        765]   507751
+# 
+# 
+# a =  -471, b =   272, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[        767]   524287
+# 
+# 
+# a =   244, b =   390, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   499663. Expected value is testOut[        769]   499663
+# 
+# 
+# a =     0, b =    30, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   371551. Expected value is testOut[        771]   371551
+# 
+# 
+# a =  -201, b =  -211, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   466711. Expected value is testOut[        773]   466711
+# 
+# 
+# a =  -113, b =   324, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   466711. Expected value is testOut[        775]   466711
+# 
+# 
+# a =   236, b =  -191, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   509122. Expected value is testOut[        777]   509122
+# 
+# 
+# a =   136, b =  -427, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   472510. Expected value is testOut[        779]   472510
+# 
+# 
+# a =   -59, b =  -449, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   427434. Expected value is testOut[        781]   427434
+# 
+# 
+# a =  -209, b =  -339, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   369362. Expected value is testOut[        783]   369362
+# 
+# 
+# a =  -217, b =   212, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   395853. Expected value is testOut[        785]   395853
+# 
+# 
+# a =   242, b =   214, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   466704. Expected value is testOut[        787]   466704
+# 
+# 
+# a =  -425, b =   134, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   420700. Expected value is testOut[        789]   420700
+# 
+# 
+# a =   458, b =   -65, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   472488. Expected value is testOut[        791]   472488
+# 
+# 
+# a =   256, b =  -475, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   415538. Expected value is testOut[        793]   415538
+# 
+# 
+# a =   390, b =  -161, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   385768. Expected value is testOut[        795]   385768
+# 
+# 
+# a =    98, b =   470, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   264168. Expected value is testOut[        797]   264168
+# 
+# 
+# a =  -297, b =   -97, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   201378. Expected value is testOut[        799]   201378
+# 
+# 
+# a =  -309, b =   152, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   247438. Expected value is testOut[        801]   247438
+# 
+# 
+# a =   366, b =  -119, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   276247. Expected value is testOut[        803]   276247
+# 
+# 
+# a =  -253, b =   136, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   229279. Expected value is testOut[        805]   229279
+# 
+# 
+# a =  -201, b =  -485, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   185725. Expected value is testOut[        807]   185725
+# 
+# 
+# a =   448, b =   152, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   151317. Expected value is testOut[        809]   151317
+# 
+# 
+# a =  -313, b =    14, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   248802. Expected value is testOut[        811]   248802
+# 
+# 
+# a =   484, b =   218, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   316898. Expected value is testOut[        813]   316898
+# 
+# 
+# a =  -315, b =  -455, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   312516. Expected value is testOut[        815]   312516
+# 
+# 
+# a =    96, b =   494, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   418028. Expected value is testOut[        817]   418028
+# 
+# 
+# a =  -101, b =  -123, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[        819]   524287
+# 
+# 
+# a =   260, b =   -25, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[        821]   524287
+# 
+# 
+# a =   510, b =   422, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[        823]   524287
+# 
+# 
+# a =    62, b =  -233, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   517787. Expected value is testOut[        825]   517787
+# 
+# 
+# a =  -247, b =   -13, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[        827]   524287
+# 
+# 
+# a =  -231, b =   480, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   509841. Expected value is testOut[        829]   509841
+# 
+# 
+# a =   424, b =  -251, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   513052. Expected value is testOut[        831]   513052
+# 
+# 
+# a =  -233, b =  -299, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   402172. Expected value is testOut[        833]   402172
+# 
+# 
+# a =  -423, b =  -189, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   295748. Expected value is testOut[        835]   295748
+# 
+# 
+# a =   214, b =  -217, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   365415. Expected value is testOut[        837]   365415
+# 
+# 
+# a =  -127, b =   -15, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   445362. Expected value is testOut[        839]   445362
+# 
+# 
+# a =   248, b =  -409, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   398924. Expected value is testOut[        841]   398924
+# 
+# 
+# a =   422, b =   326, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   400829. Expected value is testOut[        843]   400829
+# 
+# 
+# a =   294, b =   182, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   299397. Expected value is testOut[        845]   299397
+# 
+# 
+# a =  -433, b =   324, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   436969. Expected value is testOut[        847]   436969
+# 
+# 
+# a =  -111, b =  -173, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   490477. Expected value is testOut[        849]   490477
+# 
+# 
+# a =   362, b =   152, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   350185. Expected value is testOut[        851]   350185
+# 
+# 
+# a =  -369, b =   314, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   369388. Expected value is testOut[        853]   369388
+# 
+# 
+# a =  -329, b =   424, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   424412. Expected value is testOut[        855]   424412
+# 
+# 
+# a =  -321, b =  -225, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   308546. Expected value is testOut[        857]   308546
+# 
+# 
+# a =   -39, b =   254, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   169050. Expected value is testOut[        859]   169050
+# 
+# 
+# a =   436, b =   -37, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   241275. Expected value is testOut[        861]   241275
+# 
+# 
+# a =  -361, b =   242, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   231369. Expected value is testOut[        863]   231369
+# 
+# 
+# a =  -415, b =  -487, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   215237. Expected value is testOut[        865]   215237
+# 
+# 
+# a =  -127, b =   176, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   127875. Expected value is testOut[        867]   127875
+# 
+# 
+# a =   490, b =    94, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   329980. Expected value is testOut[        869]   329980
+# 
+# 
+# a =     6, b =  -141, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   307628. Expected value is testOut[        871]   307628
+# 
+# 
+# a =   366, b =   424, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   353688. Expected value is testOut[        873]   353688
+# 
+# 
+# a =   166, b =   418, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   352842. Expected value is testOut[        875]   352842
+# 
+# 
+# a =  -455, b =   254, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   508026. Expected value is testOut[        877]   508026
+# 
+# 
+# a =  -497, b =   446, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[        879]   524287
+# 
+# 
+# a =  -421, b =   248, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   408717. Expected value is testOut[        881]   408717
+# 
+# 
+# a =   424, b =  -483, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   187055. Expected value is testOut[        883]   187055
+# 
+# 
+# a =   -65, b =   500, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    82647. Expected value is testOut[        885]    82647
+# 
+# 
+# a =  -129, b =   -61, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -122145. Expected value is testOut[        887]  -122145
+# 
+# 
+# a =  -485, b =   444, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -154645. Expected value is testOut[        889]  -154645
+# 
+# 
+# a =  -351, b =   102, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -146776. Expected value is testOut[        891]  -146776
+# 
+# 
+# a =  -357, b =   164, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -362116. Expected value is testOut[        893]  -362116
+# 
+# 
+# a =    98, b =   352, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -397918. Expected value is testOut[        895]  -397918
+# 
+# 
+# a =    88, b =   384, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -456466. Expected value is testOut[        897]  -456466
+# 
+# 
+# a =   356, b =   -63, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -421970. Expected value is testOut[        899]  -421970
+# 
+# 
+# a =   -51, b =    90, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -388178. Expected value is testOut[        901]  -388178
+# 
+# 
+# a =  -151, b =  -379, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -410606. Expected value is testOut[        903]  -410606
+# 
+# 
+# a =   312, b =   -39, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -415196. Expected value is testOut[        905]  -415196
+# 
+# 
+# a =  -141, b =   492, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -357967. Expected value is testOut[        907]  -357967
+# 
+# 
+# a =   144, b =    20, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -370135. Expected value is testOut[        909]  -370135
+# 
+# 
+# a =   372, b =   -47, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -439507. Expected value is testOut[        911]  -439507
+# 
+# 
+# a =  -431, b =   292, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -436627. Expected value is testOut[        913]  -436627
+# 
+# 
+# a =  -355, b =   352, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -454111. Expected value is testOut[        915]  -454111
+# 
+# 
+# a =  -443, b =   166, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -524288. Expected value is testOut[        917]  -524288
+# 
+# 
+# a =   -33, b =  -237, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -524288. Expected value is testOut[        919]  -524288
+# 
+# 
+# a =   276, b =   470, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -524288. Expected value is testOut[        921]  -524288
+# 
+# 
+# a =  -451, b =   430, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -516467. Expected value is testOut[        923]  -516467
+# 
+# 
+# a =   450, b =  -221, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -386747. Expected value is testOut[        925]  -386747
+# 
+# 
+# a =   268, b =   -63, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -524288. Expected value is testOut[        927]  -524288
+# 
+# 
+# a =   356, b =   208, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -524288. Expected value is testOut[        929]  -524288
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =  -524288. Expected value is testOut[        931]  -524288
+# 
+# 
+# a =   492, b =   302, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[        933]  -450240
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 4666 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =  -335, b =   406, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[        935]        0
+# 
+# 
+# a =   170, b =   228, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   148584. Expected value is testOut[        937]   148584
+# 
+# 
+# a =  -167, b =   -71, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    12574. Expected value is testOut[        939]    12574
+# 
+# 
+# a =    10, b =   190, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    51334. Expected value is testOut[        941]    51334
+# 
+# 
+# a =   458, b =   128, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    63191. Expected value is testOut[        943]    63191
+# 
+# 
+# a =   484, b =  -277, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    65091. Expected value is testOut[        945]    65091
+# 
+# 
+# a =   326, b =   220, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   123715. Expected value is testOut[        947]   123715
+# 
+# 
+# a =    10, b =   434, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -10353. Expected value is testOut[        949]   -10353
+# 
+# 
+# a =   328, b =   126, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    61367. Expected value is testOut[        951]    61367
+# 
+# 
+# a =   354, b =   156, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    65707. Expected value is testOut[        953]    65707
+# 
+# 
+# a =   228, b =    32, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   107035. Expected value is testOut[        955]   107035
+# 
+# 
+# a =   222, b =   324, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   162259. Expected value is testOut[        957]   162259
+# 
+# 
+# a =   452, b =  -115, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   169555. Expected value is testOut[        959]   169555
+# 
+# 
+# a =   392, b =   386, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   241483. Expected value is testOut[        961]   241483
+# 
+# 
+# a =    94, b =  -349, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   189503. Expected value is testOut[        963]   189503
+# 
+# 
+# a =  -271, b =  -369, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   340815. Expected value is testOut[        965]   340815
+# 
+# 
+# a =  -495, b =   454, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   308009. Expected value is testOut[        967]   308009
+# 
+# 
+# a =    98, b =   136, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   408008. Expected value is testOut[        969]   408008
+# 
+# 
+# a =   168, b =   -93, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   183278. Expected value is testOut[        971]   183278
+# 
+# 
+# a =  -417, b =   -99, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   196606. Expected value is testOut[        973]   196606
+# 
+# 
+# a =  -215, b =   348, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   180982. Expected value is testOut[        975]   180982
+# 
+# 
+# a =   222, b =  -353, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   222265. Expected value is testOut[        977]   222265
+# 
+# 
+# a =   190, b =   302, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   147445. Expected value is testOut[        979]   147445
+# 
+# 
+# a =  -159, b =   360, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    69079. Expected value is testOut[        981]    69079
+# 
+# 
+# a =   302, b =  -109, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   126459. Expected value is testOut[        983]   126459
+# 
+# 
+# a =   246, b =  -313, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    69219. Expected value is testOut[        985]    69219
+# 
+# 
+# a =  -407, b =   268, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    36301. Expected value is testOut[        987]    36301
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =   -40697. Expected value is testOut[        989]   -40697
+# 
+# 
+# a =    70, b =  -175, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[        991]  -149773
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 4956 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =  -397, b =   268, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[        993]        0
+# 
+# 
+# a =   458, b =   258, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -12250. Expected value is testOut[        995]   -12250
+# 
+# 
+# a =   418, b =   472, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -118646. Expected value is testOut[        997]  -118646
+# 
+# 
+# a =   262, b =   -41, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =     -482. Expected value is testOut[        999]     -482
+# 
+# 
+# a =  -287, b =  -329, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   196814. Expected value is testOut[       1001]   196814
+# 
+# 
+# a =   224, b =  -123, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   186072. Expected value is testOut[       1003]   186072
+# 
+# 
+# a =   490, b =   310, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   280495. Expected value is testOut[       1005]   280495
+# 
+# 
+# a =  -485, b =    98, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   252943. Expected value is testOut[       1007]   252943
+# 
+# 
+# a =  -367, b =  -171, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   404843. Expected value is testOut[       1009]   404843
+# 
+# 
+# a =  -429, b =   172, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   357313. Expected value is testOut[       1011]   357313
+# 
+# 
+# a =   132, b =   140, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   420070. Expected value is testOut[       1013]   420070
+# 
+# 
+# a =  -181, b =   400, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   346282. Expected value is testOut[       1015]   346282
+# 
+# 
+# a =  -217, b =  -401, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   364762. Expected value is testOut[       1017]   364762
+# 
+# 
+# a =    12, b =   116, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   292362. Expected value is testOut[       1019]   292362
+# 
+# 
+# a =   426, b =   138, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   379379. Expected value is testOut[       1021]   379379
+# 
+# 
+# a =   236, b =  -255, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   380771. Expected value is testOut[       1023]   380771
+# 
+# 
+# a =   426, b =   320, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   439559. Expected value is testOut[       1025]   439559
+# 
+# 
+# a =   492, b =   102, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   379379. Expected value is testOut[       1027]   379379
+# 
+# 
+# a =   242, b =   -39, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   515699. Expected value is testOut[       1029]   515699
+# 
+# 
+# a =  -439, b =    30, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[       1031]   524287
+# 
+# 
+# a =   432, b =    14, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   514849. Expected value is testOut[       1033]   514849
+# 
+# 
+# a =  -131, b =   -29, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   501679. Expected value is testOut[       1035]   501679
+# 
+# 
+# a =  -167, b =  -475, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   507727. Expected value is testOut[       1037]   507727
+# 
+# 
+# a =   218, b =   192, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   511526. Expected value is testOut[       1039]   511526
+# 
+# 
+# a =     0, b =   388, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[       1041]   524287
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[       1043]   524287
+# 
+# 
+# a =  -221, b =   170, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[       1045]   524287
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 5226 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =   -97, b =   120, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[       1047]        0
+# 
+# 
+# a =    40, b =    16, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -37570. Expected value is testOut[       1049]   -37570
+# 
+# 
+# a =  -147, b =  -345, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -49210. Expected value is testOut[       1051]   -49210
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =   -48570. Expected value is testOut[       1053]   -48570
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[       1055]     2145
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 5276 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =   388, b =  -211, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[       1057]        0
+# 
+# 
+# a =  -175, b =   300, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[       1059]        0
+# 
+# 
+# a =   394, b =   464, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -81868. Expected value is testOut[       1061]   -81868
+# 
+# 
+# a =   -85, b =   -61, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -134368. Expected value is testOut[       1063]  -134368
+# 
+# 
+# a =   302, b =  -133, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    48448. Expected value is testOut[       1065]    48448
+# 
+# 
+# a =   106, b =   250, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    53633. Expected value is testOut[       1067]    53633
+# 
+# 
+# a =   442, b =  -453, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    13467. Expected value is testOut[       1069]    13467
+# 
+# 
+# a =   346, b =  -453, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    39967. Expected value is testOut[       1071]    39967
+# 
+# 
+# a =   152, b =   182, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -160259. Expected value is testOut[       1073]  -160259
+# 
+# 
+# a =   482, b =  -219, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -316997. Expected value is testOut[       1075]  -316997
+# 
+# 
+# a =  -171, b =   -85, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -289333. Expected value is testOut[       1077]  -289333
+# 
+# 
+# a =   146, b =   428, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -394891. Expected value is testOut[       1079]  -394891
+# 
+# 
+# a =   -49, b =  -447, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -380356. Expected value is testOut[       1081]  -380356
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =  -317868. Expected value is testOut[       1083]  -317868
+# 
+# 
+# a =  -115, b =   436, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[       1085]  -295965
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 5426 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =   270, b =  -473, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[       1087]        0
+# 
+# 
+# a =  -113, b =  -217, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -50140. Expected value is testOut[       1089]   -50140
+# 
+# 
+# a =  -187, b =  -175, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -177850. Expected value is testOut[       1091]  -177850
+# 
+# 
+# a =   346, b =   134, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -153329. Expected value is testOut[       1093]  -153329
+# 
+# 
+# a =   280, b =  -291, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -120604. Expected value is testOut[       1095]  -120604
+# 
+# 
+# a =  -341, b =   370, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -74240. Expected value is testOut[       1097]   -74240
+# 
+# 
+# a =   -43, b =  -243, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -155720. Expected value is testOut[       1099]  -155720
+# 
+# 
+# a =  -167, b =  -163, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -281890. Expected value is testOut[       1101]  -281890
+# 
+# 
+# a =   124, b =   366, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -271441. Expected value is testOut[       1103]  -271441
+# 
+# 
+# a =   -71, b =  -373, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -244220. Expected value is testOut[       1105]  -244220
+# 
+# 
+# a =    36, b =   216, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -198836. Expected value is testOut[       1107]  -198836
+# 
+# 
+# a =   350, b =   160, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -172353. Expected value is testOut[       1109]  -172353
+# 
+# 
+# a =  -451, b =   398, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -164577. Expected value is testOut[       1111]  -164577
+# 
+# 
+# a =   256, b =    84, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -108577. Expected value is testOut[       1113]  -108577
+# 
+# 
+# a =  -327, b =  -407, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -288075. Expected value is testOut[       1115]  -288075
+# 
+# 
+# a =    58, b =   278, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -266571. Expected value is testOut[       1117]  -266571
+# 
+# 
+# a =   132, b =   324, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -133482. Expected value is testOut[       1119]  -133482
+# 
+# 
+# a =   186, b =   -75, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -117358. Expected value is testOut[       1121]  -117358
+# 
+# 
+# a =  -291, b =   246, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -74590. Expected value is testOut[       1123]   -74590
+# 
+# 
+# a =   406, b =    56, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -88540. Expected value is testOut[       1125]   -88540
+# 
+# 
+# a =   454, b =   -73, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -160126. Expected value is testOut[       1127]  -160126
+# 
+# 
+# a =  -157, b =  -379, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -137390. Expected value is testOut[       1129]  -137390
+# 
+# 
+# a =   274, b =  -445, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -170532. Expected value is testOut[       1131]  -170532
+# 
+# 
+# a =  -211, b =  -373, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -111029. Expected value is testOut[       1133]  -111029
+# 
+# 
+# a =  -185, b =  -425, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -232959. Expected value is testOut[       1135]  -232959
+# 
+# 
+# a =   500, b =  -495, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -154256. Expected value is testOut[       1137]  -154256
+# 
+# 
+# a =  -229, b =  -175, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -75631. Expected value is testOut[       1139]   -75631
+# 
+# 
+# a =  -231, b =  -147, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -323131. Expected value is testOut[       1141]  -323131
+# 
+# 
+# a =   220, b =   -71, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -283056. Expected value is testOut[       1143]  -283056
+# 
+# 
+# a =   450, b =   358, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -249099. Expected value is testOut[       1145]  -249099
+# 
+# 
+# a =   292, b =  -303, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -264719. Expected value is testOut[       1147]  -264719
+# 
+# 
+# a =   164, b =   -37, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -103619. Expected value is testOut[       1149]  -103619
+# 
+# 
+# a =   462, b =  -369, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -192095. Expected value is testOut[       1151]  -192095
+# 
+# 
+# a =  -353, b =  -291, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -198163. Expected value is testOut[       1153]  -198163
+# 
+# 
+# a =   466, b =  -117, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -368641. Expected value is testOut[       1155]  -368641
+# 
+# 
+# a =   264, b =  -151, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -265918. Expected value is testOut[       1157]  -265918
+# 
+# 
+# a =   222, b =  -219, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -320440. Expected value is testOut[       1159]  -320440
+# 
+# 
+# a =    66, b =   186, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -360304. Expected value is testOut[       1161]  -360304
+# 
+# 
+# a =  -489, b =   406, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -408922. Expected value is testOut[       1163]  -408922
+# 
+# 
+# a =  -443, b =   172, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -396646. Expected value is testOut[       1165]  -396646
+# 
+# 
+# a =    30, b =  -187, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -524288. Expected value is testOut[       1167]  -524288
+# 
+# 
+# a =   478, b =    40, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -524288. Expected value is testOut[       1169]  -524288
+# 
+# 
+# a =  -157, b =  -135, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -524288. Expected value is testOut[       1171]  -524288
+# 
+# 
+# a =   286, b =   466, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -505168. Expected value is testOut[       1173]  -505168
+# 
+# 
+# a =   174, b =   230, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -483973. Expected value is testOut[       1175]  -483973
+# 
+# 
+# a =   416, b =   -17, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -350697. Expected value is testOut[       1177]  -350697
+# 
+# 
+# a =  -423, b =  -435, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -310677. Expected value is testOut[       1179]  -310677
+# 
+# 
+# a =    96, b =     0, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -317749. Expected value is testOut[       1181]  -317749
+# 
+# 
+# a =   188, b =   -57, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -133744. Expected value is testOut[       1183]  -133744
+# 
+# 
+# a =   -97, b =   450, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -133744. Expected value is testOut[       1185]  -133744
+# 
+# 
+# a =    74, b =   182, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -144460. Expected value is testOut[       1187]  -144460
+# 
+# 
+# a =  -137, b =    44, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -188110. Expected value is testOut[       1189]  -188110
+# 
+# 
+# a =   274, b =    -1, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -174642. Expected value is testOut[       1191]  -174642
+# 
+# 
+# a =    18, b =  -125, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -180670. Expected value is testOut[       1193]  -180670
+# 
+# 
+# a =    48, b =   -81, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -180944. Expected value is testOut[       1195]  -180944
+# 
+# 
+# a =    82, b =     8, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -183194. Expected value is testOut[       1197]  -183194
+# 
+# 
+# a =    66, b =  -267, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -187082. Expected value is testOut[       1199]  -187082
+# 
+# 
+# a =   206, b =   500, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -186426. Expected value is testOut[       1201]  -186426
+# 
+# 
+# a =   170, b =   -69, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -204048. Expected value is testOut[       1203]  -204048
+# 
+# 
+# a =   114, b =  -485, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -101048. Expected value is testOut[       1205]  -101048
+# 
+# 
+# a =  -487, b =  -145, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -112778. Expected value is testOut[       1207]  -112778
+# 
+# 
+# a =   270, b =   114, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -168068. Expected value is testOut[       1209]  -168068
+# 
+# 
+# a =   196, b =  -207, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -97453. Expected value is testOut[       1211]   -97453
+# 
+# 
+# a =  -215, b =   222, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -66673. Expected value is testOut[       1213]   -66673
+# 
+# 
+# a =  -489, b =   460, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -107245. Expected value is testOut[       1215]  -107245
+# 
+# 
+# a =   448, b =  -351, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -154975. Expected value is testOut[       1217]  -154975
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =  -379915. Expected value is testOut[       1219]  -379915
+# 
+# 
+# a =    22, b =   -53, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[       1221]  -524288
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 6106 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =    28, b =   154, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[       1223]        0
+# 
+# 
+# a =  -425, b =    68, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    -1166. Expected value is testOut[       1225]    -1166
+# 
+# 
+# a =   264, b =   152, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =     3146. Expected value is testOut[       1227]     3146
+# 
+# 
+# a =  -367, b =  -405, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -25754. Expected value is testOut[       1229]   -25754
+# 
+# 
+# a =  -383, b =   -15, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    14374. Expected value is testOut[       1231]    14374
+# 
+# 
+# a =  -463, b =  -421, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   163009. Expected value is testOut[       1233]   163009
+# 
+# 
+# a =  -329, b =    86, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   168754. Expected value is testOut[       1235]   168754
+# 
+# 
+# a =  -139, b =   482, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   363677. Expected value is testOut[       1237]   363677
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =   335383. Expected value is testOut[       1239]   335383
+# 
+# 
+# a =   -37, b =  -273, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[       1241]   268385
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 6206 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =    26, b =  -287, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[       1243]        0
+# 
+# 
+# a =   142, b =   346, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    10101. Expected value is testOut[       1245]    10101
+# 
+# 
+# a =  -217, b =   138, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =     2639. Expected value is testOut[       1247]     2639
+# 
+# 
+# a =   -89, b =   258, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    51771. Expected value is testOut[       1249]    51771
+# 
+# 
+# a =    76, b =   364, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    21825. Expected value is testOut[       1251]    21825
+# 
+# 
+# a =  -503, b =   -79, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    -1137. Expected value is testOut[       1253]    -1137
+# 
+# 
+# a =  -203, b =   372, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    26527. Expected value is testOut[       1255]    26527
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =    66264. Expected value is testOut[       1257]    66264
+# 
+# 
+# a =  -159, b =  -259, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[       1259]    -9252
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 6296 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =   402, b =   286, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[       1261]        0
+# 
+# 
+# a =  -503, b =  -477, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    41181. Expected value is testOut[       1263]    41181
+# 
+# 
+# a =    54, b =  -265, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   156153. Expected value is testOut[       1265]   156153
+# 
+# 
+# a =  -341, b =  -393, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   396084. Expected value is testOut[       1267]   396084
+# 
+# 
+# a =  -385, b =   390, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   381774. Expected value is testOut[       1269]   381774
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =   515787. Expected value is testOut[       1271]   515787
+# 
+# 
+# a =  -323, b =   418, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[       1273]   365637
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 6366 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =   -65, b =   102, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[       1275]        0
+# 
+# 
+# a =   504, b =   -35, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -135014. Expected value is testOut[       1277]  -135014
+# 
+# 
+# a =    26, b =   -73, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -141644. Expected value is testOut[       1279]  -141644
+# 
+# 
+# a =   128, b =   434, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -159284. Expected value is testOut[       1281]  -159284
+# 
+# 
+# a =  -263, b =  -201, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -161182. Expected value is testOut[       1283]  -161182
+# 
+# 
+# a =    74, b =     8, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -105630. Expected value is testOut[       1285]  -105630
+# 
+# 
+# a =    90, b =   206, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -52767. Expected value is testOut[       1287]   -52767
+# 
+# 
+# a =   112, b =  -331, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -52175. Expected value is testOut[       1289]   -52175
+# 
+# 
+# a =  -433, b =   484, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -33635. Expected value is testOut[       1291]   -33635
+# 
+# 
+# a =    -7, b =   -55, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -70707. Expected value is testOut[       1293]   -70707
+# 
+# 
+# a =  -129, b =  -243, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -280279. Expected value is testOut[       1295]  -280279
+# 
+# 
+# a =  -165, b =  -131, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -279894. Expected value is testOut[       1297]  -279894
+# 
+# 
+# a =   332, b =  -205, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -248547. Expected value is testOut[       1299]  -248547
+# 
+# 
+# a =   214, b =  -359, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -226932. Expected value is testOut[       1301]  -226932
+# 
+# 
+# a =   -53, b =  -489, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -294992. Expected value is testOut[       1303]  -294992
+# 
+# 
+# a =   308, b =  -429, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -371818. Expected value is testOut[       1305]  -371818
+# 
+# 
+# a =  -401, b =  -289, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -345901. Expected value is testOut[       1307]  -345901
+# 
+# 
+# a =  -345, b =   216, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -478033. Expected value is testOut[       1309]  -478033
+# 
+# 
+# a =  -459, b =  -253, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -362144. Expected value is testOut[       1311]  -362144
+# 
+# 
+# a =   384, b =   294, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -436664. Expected value is testOut[       1313]  -436664
+# 
+# 
+# a =   500, b =   466, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -320537. Expected value is testOut[       1315]  -320537
+# 
+# 
+# a =  -313, b =    98, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -207641. Expected value is testOut[       1317]  -207641
+# 
+# 
+# a =   -75, b =   200, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    25359. Expected value is testOut[       1319]    25359
+# 
+# 
+# a =  -117, b =   362, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    -5315. Expected value is testOut[       1321]    -5315
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =   -20315. Expected value is testOut[       1323]   -20315
+# 
+# 
+# a =   484, b =  -459, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[       1325]   -62669
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 6626 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =   406, b =   -85, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[       1327]        0
+# 
+# 
+# a =  -469, b =   448, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -222156. Expected value is testOut[       1329]  -222156
+# 
+# 
+# a =   436, b =   502, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -256666. Expected value is testOut[       1331]  -256666
+# 
+# 
+# a =   304, b =  -357, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -466778. Expected value is testOut[       1333]  -466778
+# 
+# 
+# a =  -433, b =  -321, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -247906. Expected value is testOut[       1335]  -247906
+# 
+# 
+# a =   438, b =    28, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -356434. Expected value is testOut[       1337]  -356434
+# 
+# 
+# a =  -167, b =  -135, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -217441. Expected value is testOut[       1339]  -217441
+# 
+# 
+# a =    82, b =  -179, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -205177. Expected value is testOut[       1341]  -205177
+# 
+# 
+# a =   264, b =   228, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -182632. Expected value is testOut[       1343]  -182632
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =  -197310. Expected value is testOut[       1345]  -197310
+# 
+# 
+# a =    88, b =    10, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[       1347]  -137118
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 6736 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =   314, b =  -487, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[       1349]        0
+# 
+# 
+# a =   408, b =  -143, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =      880. Expected value is testOut[       1351]      880
+# 
+# 
+# a =    70, b =  -167, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -152038. Expected value is testOut[       1353]  -152038
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =  -210382. Expected value is testOut[       1355]  -210382
+# 
+# 
+# a =   474, b =  -311, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[       1357]  -222072
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 6786 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =   288, b =   282, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[       1359]        0
+# 
+# 
+# a =   504, b =  -429, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -147414. Expected value is testOut[       1361]  -147414
+# 
+# 
+# a =    -5, b =  -303, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -66198. Expected value is testOut[       1363]   -66198
+# 
+# 
+# a =  -105, b =  -479, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -282414. Expected value is testOut[       1365]  -282414
+# 
+# 
+# a =  -375, b =  -185, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -280899. Expected value is testOut[       1367]  -280899
+# 
+# 
+# a =  -255, b =   372, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -230604. Expected value is testOut[       1369]  -230604
+# 
+# 
+# a =  -195, b =   386, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -161229. Expected value is testOut[       1371]  -161229
+# 
+# 
+# a =  -185, b =   114, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -256089. Expected value is testOut[       1373]  -256089
+# 
+# 
+# a =  -397, b =  -459, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -331359. Expected value is testOut[       1375]  -331359
+# 
+# 
+# a =   376, b =   -15, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -352449. Expected value is testOut[       1377]  -352449
+# 
+# 
+# a =   318, b =  -243, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -170226. Expected value is testOut[       1379]  -170226
+# 
+# 
+# a =   210, b =   130, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -175866. Expected value is testOut[       1381]  -175866
+# 
+# 
+# a =  -315, b =  -183, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -253140. Expected value is testOut[       1383]  -253140
+# 
+# 
+# a =    44, b =   294, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -225840. Expected value is testOut[       1385]  -225840
+# 
+# 
+# a =   168, b =   412, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -168195. Expected value is testOut[       1387]  -168195
+# 
+# 
+# a =   -15, b =   -79, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -155259. Expected value is testOut[       1389]  -155259
+# 
+# 
+# a =    26, b =    38, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -86043. Expected value is testOut[       1391]   -86043
+# 
+# 
+# a =   -53, b =    28, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -84858. Expected value is testOut[       1393]   -84858
+# 
+# 
+# a =   272, b =  -361, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -83870. Expected value is testOut[       1395]   -83870
+# 
+# 
+# a =  -491, b =   260, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -85354. Expected value is testOut[       1397]   -85354
+# 
+# 
+# a =   444, b =  -181, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -183546. Expected value is testOut[       1399]  -183546
+# 
+# 
+# a =  -475, b =   156, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -311206. Expected value is testOut[       1401]  -311206
+# 
+# 
+# a =    56, b =   -99, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -391570. Expected value is testOut[       1403]  -391570
+# 
+# 
+# a =   178, b =   288, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -465670. Expected value is testOut[       1405]  -465670
+# 
+# 
+# a =   326, b =   260, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -471214. Expected value is testOut[       1407]  -471214
+# 
+# 
+# a =  -289, b =   368, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -419950. Expected value is testOut[       1409]  -419950
+# 
+# 
+# a =  -217, b =     8, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -335190. Expected value is testOut[       1411]  -335190
+# 
+# 
+# a =  -269, b =   -63, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -441542. Expected value is testOut[       1413]  -441542
+# 
+# 
+# a =   244, b =   330, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -443278. Expected value is testOut[       1415]  -443278
+# 
+# 
+# a =   486, b =   392, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -426331. Expected value is testOut[       1417]  -426331
+# 
+# 
+# a =  -491, b =  -311, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -345811. Expected value is testOut[       1419]  -345811
+# 
+# 
+# a =   -87, b =    74, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -155299. Expected value is testOut[       1421]  -155299
+# 
+# 
+# a =   334, b =  -459, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    -2598. Expected value is testOut[       1423]    -2598
+# 
+# 
+# a =  -315, b =     6, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    -9036. Expected value is testOut[       1425]    -9036
+# 
+# 
+# a =    14, b =   180, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -162342. Expected value is testOut[       1427]  -162342
+# 
+# 
+# a =  -243, b =   196, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -164232. Expected value is testOut[       1429]  -164232
+# 
+# 
+# a =    14, b =  -149, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -161712. Expected value is testOut[       1431]  -161712
+# 
+# 
+# a =   -29, b =    10, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -209340. Expected value is testOut[       1433]  -209340
+# 
+# 
+# a =  -321, b =   122, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -211426. Expected value is testOut[       1435]  -211426
+# 
+# 
+# a =   196, b =    18, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -211716. Expected value is testOut[       1437]  -211716
+# 
+# 
+# a =  -477, b =   -77, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -250878. Expected value is testOut[       1439]  -250878
+# 
+# 
+# a =   -83, b =  -291, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -247350. Expected value is testOut[       1441]  -247350
+# 
+# 
+# a =  -471, b =    -7, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -210621. Expected value is testOut[       1443]  -210621
+# 
+# 
+# a =  -203, b =  -353, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -186468. Expected value is testOut[       1445]  -186468
+# 
+# 
+# a =  -503, b =   362, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -183171. Expected value is testOut[       1447]  -183171
+# 
+# 
+# a =   372, b =   226, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -111512. Expected value is testOut[       1449]  -111512
+# 
+# 
+# a =  -349, b =   196, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -293598. Expected value is testOut[       1451]  -293598
+# 
+# 
+# a =   214, b =   386, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -209526. Expected value is testOut[       1453]  -209526
+# 
+# 
+# a =  -463, b =  -183, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -277930. Expected value is testOut[       1455]  -277930
+# 
+# 
+# a =   474, b =  -249, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -195326. Expected value is testOut[       1457]  -195326
+# 
+# 
+# a =   256, b =     0, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -110597. Expected value is testOut[       1459]  -110597
+# 
+# 
+# a =   354, b =   302, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -228623. Expected value is testOut[       1461]  -228623
+# 
+# 
+# a =   152, b =  -371, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -228623. Expected value is testOut[       1463]  -228623
+# 
+# 
+# a =    86, b =  -395, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -121715. Expected value is testOut[       1465]  -121715
+# 
+# 
+# a =   -79, b =   270, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -178107. Expected value is testOut[       1467]  -178107
+# 
+# 
+# a =   144, b =    -9, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -212077. Expected value is testOut[       1469]  -212077
+# 
+# 
+# a =   192, b =  -421, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -233407. Expected value is testOut[       1471]  -233407
+# 
+# 
+# a =  -159, b =   260, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -234703. Expected value is testOut[       1473]  -234703
+# 
+# 
+# a =  -261, b =   198, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -315535. Expected value is testOut[       1475]  -315535
+# 
+# 
+# a =   500, b =    16, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -356875. Expected value is testOut[       1477]  -356875
+# 
+# 
+# a =  -387, b =  -301, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -408553. Expected value is testOut[       1479]  -408553
+# 
+# 
+# a =   184, b =  -345, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -400553. Expected value is testOut[       1481]  -400553
+# 
+# 
+# a =  -103, b =  -353, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -284066. Expected value is testOut[       1483]  -284066
+# 
+# 
+# a =   362, b =    -7, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -347546. Expected value is testOut[       1485]  -347546
+# 
+# 
+# a =  -429, b =  -471, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -311187. Expected value is testOut[       1487]  -311187
+# 
+# 
+# a =   220, b =  -271, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -313721. Expected value is testOut[       1489]  -313721
+# 
+# 
+# a =  -469, b =   342, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -111662. Expected value is testOut[       1491]  -111662
+# 
+# 
+# a =   358, b =     8, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -171282. Expected value is testOut[       1493]  -171282
+# 
+# 
+# a =  -309, b =  -239, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -331680. Expected value is testOut[       1495]  -331680
+# 
+# 
+# a =    72, b =    80, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -328816. Expected value is testOut[       1497]  -328816
+# 
+# 
+# a =  -433, b =   292, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -254965. Expected value is testOut[       1499]  -254965
+# 
+# 
+# a =  -299, b =   254, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -249205. Expected value is testOut[       1501]  -249205
+# 
+# 
+# a =  -213, b =    -9, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -375641. Expected value is testOut[       1503]  -375641
+# 
+# 
+# a =   280, b =   272, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -451587. Expected value is testOut[       1505]  -451587
+# 
+# 
+# a =   102, b =   474, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -449670. Expected value is testOut[       1507]  -449670
+# 
+# 
+# a =   482, b =   270, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -373510. Expected value is testOut[       1509]  -373510
+# 
+# 
+# a =  -509, b =   378, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -325162. Expected value is testOut[       1511]  -325162
+# 
+# 
+# a =   458, b =   508, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -195022. Expected value is testOut[       1513]  -195022
+# 
+# 
+# a =   288, b =  -157, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -387424. Expected value is testOut[       1515]  -387424
+# 
+# 
+# a =  -411, b =  -475, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -154760. Expected value is testOut[       1517]  -154760
+# 
+# 
+# a =   484, b =    72, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -199976. Expected value is testOut[       1519]  -199976
+# 
+# 
+# a =   344, b =   436, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    -4751. Expected value is testOut[       1521]    -4751
+# 
+# 
+# a =  -399, b =  -161, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    30097. Expected value is testOut[       1523]    30097
+# 
+# 
+# a =  -431, b =   -67, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   180081. Expected value is testOut[       1525]   180081
+# 
+# 
+# a =  -445, b =  -399, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   244320. Expected value is testOut[       1527]   244320
+# 
+# 
+# a =  -395, b =  -231, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   273197. Expected value is testOut[       1529]   273197
+# 
+# 
+# a =   388, b =   410, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   450752. Expected value is testOut[       1531]   450752
+# 
+# 
+# a =  -373, b =   -27, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[       1533]   524287
+# 
+# 
+# a =   -99, b =   434, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[       1535]   524287
+# 
+# 
+# a =   358, b =    64, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[       1537]   524287
+# 
+# 
+# a =   226, b =  -263, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   481321. Expected value is testOut[       1539]   481321
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =   504233. Expected value is testOut[       1541]   504233
+# 
+# 
+# a =  -263, b =   128, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[       1543]   444795
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 7716 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =   -11, b =  -279, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[       1545]        0
+# 
+# 
+# a =   156, b =  -301, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -33664. Expected value is testOut[       1547]   -33664
+# 
+# 
+# a =   162, b =  -457, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -30595. Expected value is testOut[       1549]   -30595
+# 
+# 
+# a =    44, b =  -253, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -77551. Expected value is testOut[       1551]   -77551
+# 
+# 
+# a =   100, b =  -147, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -151585. Expected value is testOut[       1553]  -151585
+# 
+# 
+# a =  -373, b =   106, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -162717. Expected value is testOut[       1555]  -162717
+# 
+# 
+# a =   436, b =  -177, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -177417. Expected value is testOut[       1557]  -177417
+# 
+# 
+# a =  -305, b =  -117, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -216955. Expected value is testOut[       1559]  -216955
+# 
+# 
+# a =   396, b =   222, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -294127. Expected value is testOut[       1561]  -294127
+# 
+# 
+# a =   -11, b =  -417, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -258442. Expected value is testOut[       1563]  -258442
+# 
+# 
+# a =   362, b =  -303, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -170530. Expected value is testOut[       1565]  -170530
+# 
+# 
+# a =   -45, b =  -253, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -165943. Expected value is testOut[       1567]  -165943
+# 
+# 
+# a =  -401, b =  -227, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -275629. Expected value is testOut[       1569]  -275629
+# 
+# 
+# a =  -333, b =  -427, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -264244. Expected value is testOut[       1571]  -264244
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =  -173217. Expected value is testOut[       1573]  -173217
+# 
+# 
+# a =  -397, b =  -455, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[       1575]   -31026
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 7876 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =   340, b =   488, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[       1577]        0
+# 
+# 
+# a =  -499, b =    94, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   180635. Expected value is testOut[       1579]   180635
+# 
+# 
+# a =  -457, b =   144, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   346555. Expected value is testOut[       1581]   346555
+# 
+# 
+# a =  -189, b =   -73, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   299649. Expected value is testOut[       1583]   299649
+# 
+# 
+# a =   474, b =   450, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   233841. Expected value is testOut[       1585]   233841
+# 
+# 
+# a =   272, b =  -227, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   247638. Expected value is testOut[       1587]   247638
+# 
+# 
+# a =  -319, b =  -321, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   460938. Expected value is testOut[       1589]   460938
+# 
+# 
+# a =   264, b =  -217, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   399194. Expected value is testOut[       1591]   399194
+# 
+# 
+# a =  -193, b =   -83, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   501593. Expected value is testOut[       1593]   501593
+# 
+# 
+# a =  -177, b =  -313, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   444305. Expected value is testOut[       1595]   444305
+# 
+# 
+# a =  -457, b =   162, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   460324. Expected value is testOut[       1597]   460324
+# 
+# 
+# a =   236, b =   186, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   515725. Expected value is testOut[       1599]   515725
+# 
+# 
+# a =   124, b =  -269, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   441691. Expected value is testOut[       1601]   441691
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =   485587. Expected value is testOut[       1603]   485587
+# 
+# 
+# a =   304, b =  -215, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[       1605]   452231
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 8026 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =  -479, b =    72, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[       1607]        0
+# 
+# 
+# a =  -265, b =  -485, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -65360. Expected value is testOut[       1609]   -65360
+# 
+# 
+# a =  -151, b =   334, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -99848. Expected value is testOut[       1611]   -99848
+# 
+# 
+# a =   280, b =  -439, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    28677. Expected value is testOut[       1613]    28677
+# 
+# 
+# a =  -163, b =   422, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -21757. Expected value is testOut[       1615]   -21757
+# 
+# 
+# a =    34, b =   128, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -144677. Expected value is testOut[       1617]  -144677
+# 
+# 
+# a =   112, b =  -167, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -213463. Expected value is testOut[       1619]  -213463
+# 
+# 
+# a =   382, b =   188, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -209111. Expected value is testOut[       1621]  -209111
+# 
+# 
+# a =   260, b =  -303, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -227815. Expected value is testOut[       1623]  -227815
+# 
+# 
+# a =  -277, b =  -431, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -155999. Expected value is testOut[       1625]  -155999
+# 
+# 
+# a =  -253, b =  -225, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -234779. Expected value is testOut[       1627]  -234779
+# 
+# 
+# a =   152, b =  -425, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -115392. Expected value is testOut[       1629]  -115392
+# 
+# 
+# a =  -335, b =  -295, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -58467. Expected value is testOut[       1631]   -58467
+# 
+# 
+# a =  -423, b =  -439, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -123067. Expected value is testOut[       1633]  -123067
+# 
+# 
+# a =   -95, b =   110, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -24242. Expected value is testOut[       1635]   -24242
+# 
+# 
+# a =   298, b =  -341, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   161455. Expected value is testOut[       1637]   161455
+# 
+# 
+# a =   132, b =  -213, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   151005. Expected value is testOut[       1639]   151005
+# 
+# 
+# a =   132, b =     8, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    49387. Expected value is testOut[       1641]    49387
+# 
+# 
+# a =  -233, b =    -3, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    21271. Expected value is testOut[       1643]    21271
+# 
+# 
+# a =   428, b =  -331, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    22327. Expected value is testOut[       1645]    22327
+# 
+# 
+# a =   114, b =  -355, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    23026. Expected value is testOut[       1647]    23026
+# 
+# 
+# a =  -283, b =  -399, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -118642. Expected value is testOut[       1649]  -118642
+# 
+# 
+# a =  -509, b =  -489, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -159112. Expected value is testOut[       1651]  -159112
+# 
+# 
+# a =   318, b =  -147, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -46195. Expected value is testOut[       1653]   -46195
+# 
+# 
+# a =   360, b =   402, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   202706. Expected value is testOut[       1655]   202706
+# 
+# 
+# a =   410, b =  -161, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   155960. Expected value is testOut[       1657]   155960
+# 
+# 
+# a =   164, b =   262, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   300680. Expected value is testOut[       1659]   300680
+# 
+# 
+# a =    82, b =   194, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   234670. Expected value is testOut[       1661]   234670
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =   277638. Expected value is testOut[       1663]   277638
+# 
+# 
+# a =  -321, b =   330, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[       1665]   293546
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 8326 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =  -327, b =   248, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[       1667]        0
+# 
+# 
+# a =    54, b =  -165, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -105930. Expected value is testOut[       1669]  -105930
+# 
+# 
+# a =    14, b =   344, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -187026. Expected value is testOut[       1671]  -187026
+# 
+# 
+# a =  -243, b =   502, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -195936. Expected value is testOut[       1673]  -195936
+# 
+# 
+# a =   154, b =   112, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -191120. Expected value is testOut[       1675]  -191120
+# 
+# 
+# a =   194, b =    62, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -313106. Expected value is testOut[       1677]  -313106
+# 
+# 
+# a =   100, b =  -499, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -295858. Expected value is testOut[       1679]  -295858
+# 
+# 
+# a =  -317, b =   372, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -283830. Expected value is testOut[       1681]  -283830
+# 
+# 
+# a =   108, b =   114, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -333730. Expected value is testOut[       1683]  -333730
+# 
+# 
+# a =   280, b =   186, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -451654. Expected value is testOut[       1685]  -451654
+# 
+# 
+# a =   -19, b =  -495, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -439342. Expected value is testOut[       1687]  -439342
+# 
+# 
+# a =  -485, b =  -139, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -387262. Expected value is testOut[       1689]  -387262
+# 
+# 
+# a =  -251, b =   504, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -377857. Expected value is testOut[       1691]  -377857
+# 
+# 
+# a =    54, b =  -419, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -310442. Expected value is testOut[       1693]  -310442
+# 
+# 
+# a =  -407, b =   426, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -436946. Expected value is testOut[       1695]  -436946
+# 
+# 
+# a =   286, b =  -159, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -459572. Expected value is testOut[       1697]  -459572
+# 
+# 
+# a =  -273, b =    78, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -524288. Expected value is testOut[       1699]  -524288
+# 
+# 
+# a =   264, b =   198, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -524288. Expected value is testOut[       1701]  -524288
+# 
+# 
+# a =  -181, b =   112, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -524288. Expected value is testOut[       1703]  -524288
+# 
+# 
+# a =  -251, b =   158, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -472016. Expected value is testOut[       1705]  -472016
+# 
+# 
+# a =   150, b =  -133, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -492288. Expected value is testOut[       1707]  -492288
+# 
+# 
+# a =    40, b =   250, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -524288. Expected value is testOut[       1709]  -524288
+# 
+# 
+# a =   164, b =  -421, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -524288. Expected value is testOut[       1711]  -524288
+# 
+# 
+# a =    68, b =  -493, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -514288. Expected value is testOut[       1713]  -514288
+# 
+# 
+# a =   -59, b =   376, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -524288. Expected value is testOut[       1715]  -524288
+# 
+# 
+# a =    62, b =   206, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -524288. Expected value is testOut[       1717]  -524288
+# 
+# 
+# a =  -319, b =  -129, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -524288. Expected value is testOut[       1719]  -524288
+# 
+# 
+# a =  -287, b =   168, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -511516. Expected value is testOut[       1721]  -511516
+# 
+# 
+# a =  -301, b =   486, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -470365. Expected value is testOut[       1723]  -470365
+# 
+# 
+# a =   224, b =  -487, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -518581. Expected value is testOut[       1725]  -518581
+# 
+# 
+# a =   396, b =  -425, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -524288. Expected value is testOut[       1727]  -524288
+# 
+# 
+# a =  -407, b =   146, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -524288. Expected value is testOut[       1729]  -524288
+# 
+# 
+# a =    10, b =   164, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -524288. Expected value is testOut[       1731]  -524288
+# 
+# 
+# a =  -371, b =   374, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -524288. Expected value is testOut[       1733]  -524288
+# 
+# 
+# a =  -503, b =  -203, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -522648. Expected value is testOut[       1735]  -522648
+# 
+# 
+# a =   372, b =   286, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -524288. Expected value is testOut[       1737]  -524288
+# 
+# 
+# a =   260, b =   332, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -422179. Expected value is testOut[       1739]  -422179
+# 
+# 
+# a =  -307, b =  -269, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -315787. Expected value is testOut[       1741]  -315787
+# 
+# 
+# a =   182, b =   176, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -229467. Expected value is testOut[       1743]  -229467
+# 
+# 
+# a =   322, b =   436, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -146884. Expected value is testOut[       1745]  -146884
+# 
+# 
+# a =   -89, b =   310, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -114852. Expected value is testOut[       1747]  -114852
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =    25540. Expected value is testOut[       1749]    25540
+# 
+# 
+# a =  -163, b =   414, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[       1751]    -2050
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 8756 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =   274, b =   136, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[       1753]        0
+# 
+# 
+# a =  -397, b =   464, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -67482. Expected value is testOut[       1755]   -67482
+# 
+# 
+# a =  -259, b =   184, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -30218. Expected value is testOut[       1757]   -30218
+# 
+# 
+# a =  -367, b =  -395, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -214426. Expected value is testOut[       1759]  -214426
+# 
+# 
+# a =   206, b =     6, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -262082. Expected value is testOut[       1761]  -262082
+# 
+# 
+# a =   -95, b =  -275, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -117117. Expected value is testOut[       1763]  -117117
+# 
+# 
+# a =  -447, b =   132, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -115881. Expected value is testOut[       1765]  -115881
+# 
+# 
+# a =    34, b =   -19, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -89756. Expected value is testOut[       1767]   -89756
+# 
+# 
+# a =   156, b =  -161, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -148760. Expected value is testOut[       1769]  -148760
+# 
+# 
+# a =  -113, b =   148, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -149406. Expected value is testOut[       1771]  -149406
+# 
+# 
+# a =  -333, b =   118, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -174522. Expected value is testOut[       1773]  -174522
+# 
+# 
+# a =     2, b =  -393, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -191246. Expected value is testOut[       1775]  -191246
+# 
+# 
+# a =  -399, b =   -85, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -230540. Expected value is testOut[       1777]  -230540
+# 
+# 
+# a =   360, b =   156, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -231326. Expected value is testOut[       1779]  -231326
+# 
+# 
+# a =   288, b =   194, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -197411. Expected value is testOut[       1781]  -197411
+# 
+# 
+# a =  -213, b =  -423, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -141251. Expected value is testOut[       1783]  -141251
+# 
+# 
+# a =    72, b =   352, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -85379. Expected value is testOut[       1785]   -85379
+# 
+# 
+# a =  -501, b =  -309, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =     4720. Expected value is testOut[       1787]     4720
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =    30064. Expected value is testOut[       1789]    30064
+# 
+# 
+# a =   430, b =  -239, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[       1791]   184873
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 8956 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =   126, b =  -203, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[       1793]        0
+# 
+# 
+# a =   -51, b =    -5, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -102770. Expected value is testOut[       1795]  -102770
+# 
+# 
+# a =  -293, b =  -327, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -128348. Expected value is testOut[       1797]  -128348
+# 
+# 
+# a =    28, b =   140, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -128093. Expected value is testOut[       1799]  -128093
+# 
+# 
+# a =   212, b =   -63, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -32282. Expected value is testOut[       1801]   -32282
+# 
+# 
+# a =    52, b =    94, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -28362. Expected value is testOut[       1803]   -28362
+# 
+# 
+# a =    10, b =   290, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -41718. Expected value is testOut[       1805]   -41718
+# 
+# 
+# a =   -17, b =  -491, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -36830. Expected value is testOut[       1807]   -36830
+# 
+# 
+# a =   182, b =  -415, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -33930. Expected value is testOut[       1809]   -33930
+# 
+# 
+# a =   420, b =   384, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -25583. Expected value is testOut[       1811]   -25583
+# 
+# 
+# a =  -199, b =   298, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -101113. Expected value is testOut[       1813]  -101113
+# 
+# 
+# a =  -439, b =   -15, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    60167. Expected value is testOut[       1815]    60167
+# 
+# 
+# a =   -79, b =   410, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =      865. Expected value is testOut[       1817]      865
+# 
+# 
+# a =   504, b =   470, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =     7450. Expected value is testOut[       1819]     7450
+# 
+# 
+# a =   248, b =   366, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -24940. Expected value is testOut[       1821]   -24940
+# 
+# 
+# a =  -345, b =   496, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   211940. Expected value is testOut[       1823]   211940
+# 
+# 
+# a =  -399, b =  -149, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   302708. Expected value is testOut[       1825]   302708
+# 
+# 
+# a =   -21, b =  -319, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   131588. Expected value is testOut[       1827]   131588
+# 
+# 
+# a =  -105, b =  -301, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   191039. Expected value is testOut[       1829]   191039
+# 
+# 
+# a =   316, b =   -51, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   197738. Expected value is testOut[       1831]   197738
+# 
+# 
+# a =  -461, b =  -197, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   229343. Expected value is testOut[       1833]   229343
+# 
+# 
+# a =  -155, b =    -9, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   213227. Expected value is testOut[       1835]   213227
+# 
+# 
+# a =     0, b =     0, valid_in = 0, reset = 1
+# valid_out = 1. Expected value is 1
+# 
+# f =   304044. Expected value is testOut[       1837]   304044
+# 
+# 
+# a =  -209, b =  -371, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 1
+# 
+# f =        0. Expected value is testOut[       1839]   305439
+# 
+# 
+# ** Error: Valid out mismatch
+#    Time: 9196 ns  Scope: tb_part2_mac File: part2_tb_simple.sv Line: 51
+# a =  -259, b =   204, valid_in = 1, reset = 0
+# valid_out = 0. Expected value is 0
+# 
+# f =        0. Expected value is testOut[       1841]        0
+# 
+# 
+# a =   226, b =   282, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    77539. Expected value is testOut[       1843]    77539
+# 
+# 
+# a =  -387, b =   352, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    24703. Expected value is testOut[       1845]    24703
+# 
+# 
+# a =   156, b =  -435, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    88435. Expected value is testOut[       1847]    88435
+# 
+# 
+# a =   384, b =  -277, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -47789. Expected value is testOut[       1849]   -47789
+# 
+# 
+# a =  -433, b =    64, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -115649. Expected value is testOut[       1851]  -115649
+# 
+# 
+# a =  -439, b =   146, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -222017. Expected value is testOut[       1853]  -222017
+# 
+# 
+# a =    -5, b =    26, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -249729. Expected value is testOut[       1855]  -249729
+# 
+# 
+# a =  -231, b =   324, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -313823. Expected value is testOut[       1857]  -313823
+# 
+# 
+# a =    94, b =   370, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -313953. Expected value is testOut[       1859]  -313953
+# 
+# 
+# a =   210, b =   264, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -388797. Expected value is testOut[       1861]  -388797
+# 
+# 
+# a =  -187, b =   470, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -354017. Expected value is testOut[       1863]  -354017
+# 
+# 
+# a =  -235, b =  -461, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -298577. Expected value is testOut[       1865]  -298577
+# 
+# 
+# a =   -13, b =  -145, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -386467. Expected value is testOut[       1867]  -386467
+# 
+# 
+# a =  -291, b =   452, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -278132. Expected value is testOut[       1869]  -278132
+# 
+# 
+# a =  -479, b =  -439, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -276247. Expected value is testOut[       1871]  -276247
+# 
+# 
+# a =  -251, b =   368, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -407779. Expected value is testOut[       1873]  -407779
+# 
+# 
+# a =   226, b =   -23, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -197498. Expected value is testOut[       1875]  -197498
+# 
+# 
+# a =  -287, b =   194, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -289866. Expected value is testOut[       1877]  -289866
+# 
+# 
+# a =   152, b =  -185, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -295064. Expected value is testOut[       1879]  -295064
+# 
+# 
+# a =   134, b =  -407, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -350742. Expected value is testOut[       1881]  -350742
+# 
+# 
+# a =    40, b =    -1, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -378862. Expected value is testOut[       1883]  -378862
+# 
+# 
+# a =   454, b =   166, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -433400. Expected value is testOut[       1885]  -433400
+# 
+# 
+# a =   -93, b =  -165, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -433440. Expected value is testOut[       1887]  -433440
+# 
+# 
+# a =   -21, b =   250, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -358076. Expected value is testOut[       1889]  -358076
+# 
+# 
+# a =  -273, b =  -495, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -342731. Expected value is testOut[       1891]  -342731
+# 
+# 
+# a =  -177, b =  -461, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -347981. Expected value is testOut[       1893]  -347981
+# 
+# 
+# a =   134, b =   -31, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -212846. Expected value is testOut[       1895]  -212846
+# 
+# 
+# a =  -439, b =   236, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -131249. Expected value is testOut[       1897]  -131249
+# 
+# 
+# a =   238, b =   506, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -135403. Expected value is testOut[       1899]  -135403
+# 
+# 
+# a =   160, b =  -415, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -239007. Expected value is testOut[       1901]  -239007
+# 
+# 
+# a =    68, b =   196, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -118579. Expected value is testOut[       1903]  -118579
+# 
+# 
+# a =   446, b =   266, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -184979. Expected value is testOut[       1905]  -184979
+# 
+# 
+# a =  -249, b =  -507, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -171651. Expected value is testOut[       1907]  -171651
+# 
+# 
+# a =   456, b =  -265, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -53015. Expected value is testOut[       1909]   -53015
+# 
+# 
+# a =   296, b =  -447, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    73228. Expected value is testOut[       1911]    73228
+# 
+# 
+# a =   172, b =  -253, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -47612. Expected value is testOut[       1913]   -47612
+# 
+# 
+# a =  -247, b =   490, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -179924. Expected value is testOut[       1915]  -179924
+# 
+# 
+# a =  -393, b =  -167, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -223440. Expected value is testOut[       1917]  -223440
+# 
+# 
+# a =  -363, b =   236, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -344470. Expected value is testOut[       1919]  -344470
+# 
+# 
+# a =   502, b =   374, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -278839. Expected value is testOut[       1921]  -278839
+# 
+# 
+# a =  -369, b =  -247, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -364507. Expected value is testOut[       1923]  -364507
+# 
+# 
+# a =     0, b =   396, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =  -176759. Expected value is testOut[       1925]  -176759
+# 
+# 
+# a =   332, b =   228, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -85616. Expected value is testOut[       1927]   -85616
+# 
+# 
+# a =  -481, b =  -199, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   -85616. Expected value is testOut[       1929]   -85616
+# 
+# 
+# a =  -177, b =   480, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    -9920. Expected value is testOut[       1931]    -9920
+# 
+# 
+# a =  -135, b =  -261, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    85799. Expected value is testOut[       1933]    85799
+# 
+# 
+# a =   498, b =   -45, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =      839. Expected value is testOut[       1935]      839
+# 
+# 
+# a =  -419, b =  -275, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    36074. Expected value is testOut[       1937]    36074
+# 
+# 
+# a =    10, b =  -369, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =    13664. Expected value is testOut[       1939]    13664
+# 
+# 
+# a =   254, b =   470, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   128889. Expected value is testOut[       1941]   128889
+# 
+# 
+# a =   186, b =   314, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   125199. Expected value is testOut[       1943]   125199
+# 
+# 
+# a =    -1, b =   468, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   244579. Expected value is testOut[       1945]   244579
+# 
+# 
+# a =   436, b =   484, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   302983. Expected value is testOut[       1947]   302983
+# 
+# 
+# a =   234, b =  -243, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   302515. Expected value is testOut[       1949]   302515
+# 
+# 
+# a =   288, b =   328, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   513539. Expected value is testOut[       1951]   513539
+# 
+# 
+# a =   -91, b =   412, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   456677. Expected value is testOut[       1953]   456677
+# 
+# 
+# a =   270, b =   -37, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[       1955]   524287
+# 
+# 
+# a =  -507, b =  -417, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   486795. Expected value is testOut[       1957]   486795
+# 
+# 
+# a =   220, b =   152, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   476805. Expected value is testOut[       1959]   476805
+# 
+# 
+# a =   108, b =   198, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[       1961]   524287
+# 
+# 
+# a =   170, b =   124, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[       1963]   524287
+# 
+# 
+# a =   368, b =   136, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[       1965]   524287
+# 
+# 
+# a =   464, b =  -309, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[       1967]   524287
+# 
+# 
+# a =  -209, b =  -299, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[       1969]   524287
+# 
+# 
+# a =   336, b =  -255, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   380911. Expected value is testOut[       1971]   380911
+# 
+# 
+# a =   160, b =   -65, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   443402. Expected value is testOut[       1973]   443402
+# 
+# 
+# a =  -217, b =   338, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   357722. Expected value is testOut[       1975]   357722
+# 
+# 
+# a =    24, b =   490, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   347322. Expected value is testOut[       1977]   347322
+# 
+# 
+# a =   102, b =   448, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   273976. Expected value is testOut[       1979]   273976
+# 
+# 
+# a =    72, b =   200, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   285736. Expected value is testOut[       1981]   285736
+# 
+# 
+# a =  -509, b =  -443, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   331432. Expected value is testOut[       1983]   331432
+# 
+# 
+# a =   230, b =  -211, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   345832. Expected value is testOut[       1985]   345832
+# 
+# 
+# a =   466, b =  -153, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   524287. Expected value is testOut[       1987]   524287
+# 
+# 
+# a =  -219, b =  -387, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   475757. Expected value is testOut[       1989]   475757
+# 
+# 
+# a =   214, b =   -73, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   404459. Expected value is testOut[       1991]   404459
+# 
+# 
+# a =   -51, b =   -95, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   489212. Expected value is testOut[       1993]   489212
+# 
+# 
+# a =    32, b =    -9, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   473590. Expected value is testOut[       1995]   473590
+# 
+# 
+# a =  -209, b =  -215, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   478435. Expected value is testOut[       1997]   478435
+# 
+# 
+# a =   146, b =   196, valid_in = 1, reset = 0
+# valid_out = 1. Expected value is 1
+# 
+# f =   478147. Expected value is testOut[       1999]   478147
+# 
+# 
+# ** Note: $finish    : part2_tb_simple.sv(59)
+#    Time: 9996 ns  Iteration: 0  Instance: /tb_part2_mac
+# End time: 18:54:38 on Oct 02,2021, Elapsed time: 0:00:01
+# Errors: 29, Warnings: 1
