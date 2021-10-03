@@ -4,6 +4,7 @@ TB=tb_part3_mac
 C_FILE=test3_gen.c
 comp:
 	vlog $(TBFILE) $(SRCFILE)
+	vlog /usr/local/synopsys/syn//dw/sim_ver/DW02_mult*.v
 
 run: comp
 	vsim $(TB) -c -do "run -all" > run.log

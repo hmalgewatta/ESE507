@@ -9,14 +9,198 @@ z2
 !i10f 100
 cModel Technology
 Z0 d/home/home5/aalgewaththa/ese507work/proj1/part3
+vDW02_mult
+Z1 !s110 1633225007
+!i10b 1
+!s100 MUHOj^JG@bH:`JA4:b^BN0
+!s11b jhlRE=:AHmHzcO4mIYRQB3
+Izb>6CW`@I9@oa0a[jiho;3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1435442368
+8/usr/local/synopsys/syn//dw/sim_ver/DW02_mult.v
+F/usr/local/synopsys/syn//dw/sim_ver/DW02_mult.v
+!i122 -1
+Z4 L0 37
+Z5 OP;L;2019.3;69
+r1
+!s85 0
+31
+Z6 !s108 1633225007.000000
+!s107 /usr/local/synopsys/syn//dw/sim_ver/DW02_mult.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_multp.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_DG.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_6_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_5_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_4_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_3_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_2_stage.v|
+Z7 !s90 /usr/local/synopsys/syn//dw/sim_ver/DW02_mult_2_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_3_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_4_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_5_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_6_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_DG.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_multp.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult.v|
+!i113 1
+Z8 tCvgOpt 0
+n@d@w02_mult
+vDW02_mult_2_stage
+R1
+!i10b 1
+!s100 ]76_li;D>AQXmoLfWU2e[3
+!s11b Mm=69dZjJ:MB4Z[@ldMof0
+IXW`;781PzQK;M3eLc=glQ0
+R2
+R0
+R3
+8/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_2_stage.v
+F/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_2_stage.v
+!i122 -1
+Z9 L0 40
+R5
+r1
+!s85 0
+31
+R6
+Z10 !s107 /usr/local/synopsys/syn//dw/sim_ver/DW02_mult.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_multp.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_DG.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_6_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_5_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_4_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_3_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_2_stage.v|
+R7
+!i113 1
+R8
+n@d@w02_mult_2_stage
+vDW02_mult_3_stage
+R1
+!i10b 1
+!s100 Wf]BEcz54o=k6jF]3bYNY0
+!s11b YcVSA>;@`3U5OA9=MYbF80
+I8VA;>6nCOZVA]M1IHIKYQ1
+R2
+R0
+R3
+8/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_3_stage.v
+F/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_3_stage.v
+!i122 -1
+R9
+R5
+r1
+!s85 0
+31
+R6
+R10
+R7
+!i113 1
+R8
+n@d@w02_mult_3_stage
+vDW02_mult_4_stage
+R1
+!i10b 1
+!s100 XS:6AUb]_Kk9WX@]0ni4d2
+!s11b hLD8A27h4HE_oGAOoR2MS0
+IQaDa>6?LTgbf_`zjJ6Z_S2
+R2
+R0
+R3
+8/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_4_stage.v
+F/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_4_stage.v
+!i122 -1
+R4
+R5
+r1
+!s85 0
+31
+R6
+R10
+R7
+!i113 1
+R8
+n@d@w02_mult_4_stage
+vDW02_mult_5_stage
+R1
+!i10b 1
+!s100 TS38ZM[P]em3gTEINi>Om0
+!s11b ZBADk6>AD]UWN6I^;`_PU3
+IM`8n[bQOX]j5VC^[9Jo121
+R2
+R0
+R3
+8/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_5_stage.v
+F/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_5_stage.v
+!i122 -1
+L0 38
+R5
+r1
+!s85 0
+31
+R6
+R10
+R7
+!i113 1
+R8
+n@d@w02_mult_5_stage
+vDW02_mult_6_stage
+R1
+!i10b 1
+!s100 JY5FKK1C[ZzS]bdbfBATX2
+!s11b zjXdn1n_nGRS2k]R_^NDk2
+IUAzE[K;gXbFHU90P3m;?g0
+R2
+R0
+R3
+8/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_6_stage.v
+F/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_6_stage.v
+!i122 -1
+R4
+R5
+r1
+!s85 0
+31
+R6
+R10
+R7
+!i113 1
+R8
+n@d@w02_mult_6_stage
+vDW02_mult_DG
+R1
+!i10b 1
+!s100 Z2RL7cXSiFnI?K=LflX352
+!s11b Pi<3:klgiO?I;L?hdK3=40
+Ib6?@kL_gDfBaoRa@fllio0
+R2
+R0
+w1435442366
+8/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_DG.v
+F/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_DG.v
+!i122 -1
+L0 31
+R5
+r1
+!s85 0
+31
+R6
+R10
+R7
+!i113 1
+R8
+n@d@w02_mult_@d@g
+vDW02_multp
+R1
+!i10b 1
+!s100 <ZY9McRPH5C1[zU]:5<Ol1
+!s11b Ton@@[>=8SEH;h3GjUAY:3
+ID?=D0WBYS]iL^l_UJRoZz1
+R2
+R0
+R3
+8/usr/local/synopsys/syn//dw/sim_ver/DW02_multp.v
+F/usr/local/synopsys/syn//dw/sim_ver/DW02_multp.v
+!i122 -1
+L0 46
+R5
+r1
+!s85 0
+31
+R6
+R10
+R7
+!i113 1
+R8
+n@d@w02_multp
 vpart3_mac
-Z1 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z2 !s110 1633224286
+Z11 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R1
 !i10b 1
 !s100 <eo2ki`k5>7]6N[gcQHd@2
 !s11b bVRg3Q<eKeZ7eN=j8hD^_1
 I?]C135Bha[IGeU>Eae54J0
-Z3 VDg1SIo80bB@j0V0VzS_@n1
+R2
 S1
 R0
 w1633224582
@@ -24,23 +208,23 @@ w1633224582
 Fpart3_mac.sv
 !i122 -1
 L0 1
-Z4 OP;L;2019.3;69
+R5
 r1
 !s85 0
 31
-Z5 !s108 1633224286.000000
-!s107 part3_mac.sv|part3_tb_simple.sv|
-Z6 !s90 part3_tb_simple.sv|part3_mac.sv|
+Z12 !s108 1633225006.000000
+Z13 !s107 part3_mac.sv|part3_tb_simple.sv|
+Z14 !s90 part3_tb_simple.sv|part3_mac.sv|
 !i113 1
-Z7 tCvgOpt 0
+R8
 vtb_part3_mac
+R11
 R1
-R2
 !i10b 1
 !s100 ?BAI1`0[RL2mz>ERQ[EH40
 !s11b ;8]X=R5BGn0@nnb<l2=WH0
 IO0TGRYDL590^?klBTIXi?2
-R3
+R2
 S1
 R0
 w1633222597
@@ -48,12 +232,12 @@ w1633222597
 Fpart3_tb_simple.sv
 !i122 -1
 L0 9
-R4
+R5
 r1
 !s85 0
 31
-R5
-Z8 !s107 part3_mac.sv|part3_tb_simple.sv|
-R6
+R12
+R13
+R14
 !i113 1
-R7
+R8

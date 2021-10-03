@@ -7,9 +7,9 @@ output logic valid_out;
 
 logic enable_f, enable_ab;
 
-logic [19:0] acc;
+logic signed [19:0] acc;
 
-logic [9:0] a_in, b_in;
+logic signed [9:0] a_in, b_in;
 
 //assign enable_ab = valid_in;
 

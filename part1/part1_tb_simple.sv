@@ -9,14 +9,14 @@
 module tb_part1_mac();
 
    localparam IN_WIDTH = 10;
-   localparam IN_VEC_SIZE = 1000;
+   localparam IN_VEC_SIZE = 10000;
 
    logic clk, reset, valid_in, valid_out;
    logic signed [9:0] a, b;
    logic signed [19:0] f;
 
-   logic [9:0] testInput[4*IN_VEC_SIZE-1:0] ;
-   logic [19:0] testOut[2*IN_VEC_SIZE-1:0] ;
+   logic [31:0] testInput[4*IN_VEC_SIZE-1:0] ;
+   logic [31:0] testOut[2*IN_VEC_SIZE-1:0] ;
    
    integer i;
 
@@ -43,13 +43,16 @@ module tb_part1_mac();
            b = testInput[4*i+1];
            valid_in = testInput[4*i+2];
            reset = testInput[4*i+3];
-            $display("a = %d, b = %d, valid_in = %d, reset = %d", a, b, valid_in, reset);
-            $display("valid_out = %b. Expected value is %b\n", valid_out, testOut[2*i][0]);
-            $display("f = %d. Expected value is testOut[%.4d] %d\n\n", f, 2*i+1, $signed(testOut[2*i+1]));
+           $display("a = %d, b = %d, valid_in = %d, reset = %d", a, b, valid_in, reset);
+           $display("valid_out = %b. Expected value is %b\n", valid_out, testOut[2*i][0]);
+           $display("f = %d. Expected value is testOut[%.4d] %d\n\n", f, 2*i+1, $signed(testOut[2*i+1][19:0]));
+           assert(valid_out == testOut[2*i][0])
+           else
+           	$error("Valid out Mismatch");
            if (valid_out == 1)
-           assert(f == testOut[2*i+1])
+           assert(f == testOut[2*i+1][19:0])
            else begin
-           	$error("Mismatch got %d, expected %d", f, testOut[2*i+1]);
+           	$error("Mismatch got %d, expected %d", f, $signed(testOut[2*i+1][19:0]));
            end
            i = i+1;
        end
