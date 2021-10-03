@@ -2,10 +2,12 @@
 # Setup: fill out the following parameters: name of clock signal, clock period (ns),
 # reset signal name (if used), name of top-level module, name of source file
 set CLK_NAME "clk";
-set CLK_PERIOD 0.75; # 0.8
+set CLK_PERIOD 0.94; # 0.8
 set RST_NAME "reset";
-set TOP_MOD_NAME "part3b_mac";
-set SRC_FILE "part3b_mac.sv";
+#set TOP_MOD_NAME "part3b_mac";
+set TOP_MOD_NAME "part3_mac";
+#set SRC_FILE "part3b_mac.sv";
+set SRC_FILE "part3_mac.sv";
 # If you have multiple source files, change the line above to list them all like this:
 # set SRC_FILE [list "file1.sv" "file2.sv"];
 ###############################################

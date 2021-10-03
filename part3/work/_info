@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 d/home/home5/aalgewaththa/ese507work/proj1/part3
 vDW02_mult
-Z1 !s110 1633225007
+Z1 !s110 1633295985
 !i10b 1
 !s100 MUHOj^JG@bH:`JA4:b^BN0
 !s11b jhlRE=:AHmHzcO4mIYRQB3
@@ -26,7 +26,7 @@ Z5 OP;L;2019.3;69
 r1
 !s85 0
 31
-Z6 !s108 1633225007.000000
+Z6 !s108 1633295985.000000
 !s107 /usr/local/synopsys/syn//dw/sim_ver/DW02_mult.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_multp.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_DG.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_6_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_5_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_4_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_3_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_2_stage.v|
 Z7 !s90 /usr/local/synopsys/syn//dw/sim_ver/DW02_mult_2_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_3_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_4_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_5_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_6_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_DG.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_multp.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult.v|
 !i113 1
@@ -197,13 +197,13 @@ vpart3_mac
 Z11 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
 R1
 !i10b 1
-!s100 <eo2ki`k5>7]6N[gcQHd@2
-!s11b bVRg3Q<eKeZ7eN=j8hD^_1
-I?]C135Bha[IGeU>Eae54J0
+!s100 ii`9ZN=eY3UAk@KCSEEki1
+!s11b DB@RAiSSm^hhZ3FKmY=D63
+IVDRhdY4:i[b6SYTGmH8682
 R2
 S1
 R0
-w1633224582
+w1633296146
 8part3_mac.sv
 Fpart3_mac.sv
 !i122 -1
@@ -212,22 +212,22 @@ R5
 r1
 !s85 0
 31
-Z12 !s108 1633225006.000000
-Z13 !s107 part3_mac.sv|part3_tb_simple.sv|
-Z14 !s90 part3_tb_simple.sv|part3_mac.sv|
+R6
+Z12 !s107 part3_mac.sv|part3_tb_simple.sv|
+Z13 !s90 part3_tb_simple.sv|part3_mac.sv|
 !i113 1
 R8
 vtb_part3_mac
 R11
 R1
 !i10b 1
-!s100 ?BAI1`0[RL2mz>ERQ[EH40
-!s11b ;8]X=R5BGn0@nnb<l2=WH0
-IO0TGRYDL590^?klBTIXi?2
+!s100 6Yk^V7@[8<TD_cA@8=Uf@2
+!s11b XUJ9[WE0?a@[eYj[oYfbU2
+IVcU;?g5omjID9TX5zlI8O0
 R2
 S1
 R0
-w1633222597
+w1633291280
 8part3_tb_simple.sv
 Fpart3_tb_simple.sv
 !i122 -1
@@ -236,8 +236,8 @@ R5
 r1
 !s85 0
 31
+R6
 R12
 R13
-R14
 !i113 1
 R8

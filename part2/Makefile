@@ -1,7 +1,7 @@
 TBFILE=part2_tb_simple.sv
 SRCFILE=part2_mac.sv
 TB=tb_part2_mac
-C_FILE=test2_gen.c
+C_FILE=test_gen.c
 comp:
 	vlog $(TBFILE) $(SRCFILE)
 

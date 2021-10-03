@@ -9,7 +9,7 @@
 module tb_part2_mac();
 
    localparam IN_WIDTH = 10;
-   localparam IN_VEC_SIZE = 1000;
+   localparam IN_VEC_SIZE = 10000;
 
    logic clk, reset, valid_in, valid_out;
    logic signed [9:0] a, b;

@@ -1,0 +1,35 @@
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  b_in_reg[7]/CK (DFF_X1)                  0.00       0.00 r
+  b_in_reg[7]/QN (DFF_X1)                  0.07       0.07 r
+  U341/ZN (XNOR2_X1)                       0.07       0.14 r
+  U342/ZN (INV_X1)                         0.03       0.17 f
+  U371/Z (BUF_X1)                          0.04       0.21 f
+  U416/ZN (OAI22_X1)                       0.06       0.27 r
+  U448/CO (FA_X1)                          0.09       0.36 r
+  U449/ZN (XNOR2_X1)                       0.07       0.42 r
+  U182/ZN (XNOR2_X1)                       0.06       0.49 r
+  U181/ZN (XNOR2_X1)                       0.06       0.55 r
+  U201/ZN (XNOR2_X1)                       0.07       0.62 r
+  U464/ZN (NOR2_X1)                        0.03       0.66 f
+  U465/ZN (NOR2_X1)                        0.06       0.71 r
+  U466/ZN (NAND2_X1)                       0.04       0.75 f
+  U536/ZN (OAI21_X1)                       0.07       0.82 r
+  U548/ZN (AOI21_X1)                       0.04       0.86 f
+  U549/ZN (XNOR2_X1)                       0.06       0.92 f
+  U550/ZN (OAI21_X1)                       0.04       0.96 r
+  f_reg[17]/D (DFF_X2)                     0.01       0.96 r
+  data arrival time                                   0.96
+
+  clock clk (rise edge)                    0.95       0.95
+  clock network delay (ideal)              0.00       0.95
+  f_reg[17]/CK (DFF_X2)                    0.00       0.95 r
+  library setup time                      -0.03       0.92
+  data required time                                  0.92
+  -----------------------------------------------------------
+  data required time                                  0.92
+  data arrival time                                  -0.96
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.05

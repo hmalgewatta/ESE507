@@ -9,7 +9,7 @@
 module tb_part3_mac();
 
    localparam IN_WIDTH = 10;
-   localparam IN_VEC_SIZE = 1000;
+   localparam IN_VEC_SIZE = 10000;
 
    logic clk, reset, valid_in, valid_out;
    logic signed [9:0] a, b;
@@ -46,9 +46,9 @@ module tb_part3_mac();
             $display("a = %d, b = %d, valid_in = %d, reset = %d", a, b, valid_in, reset);
             $display("valid_out = %d. Expected value is %d\n", valid_out, testOut[2*i][0]);
             $display("f = %d. Expected value is testOut[%d] %d\n\n", f, 2*i+1, $signed(testOut[2*i+1][19:0]));
-           //assert(valid_out == testOut[2*i][0])
-           //else
-           //	$error("Valid out mismatch"); 
+           assert(valid_out == testOut[2*i][0])
+           else
+           	$error("Valid out mismatch"); 
            if (valid_out == 1)
            assert(f == testOut[2*i+1][19:0])
            else begin

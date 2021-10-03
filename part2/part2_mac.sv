@@ -18,7 +18,6 @@ always_comb
 begin
 	enable_ab = valid_in;
 	acc = a_in*b_in + f;
-	acc = a_in*b_in + f;
 	if (acc < 0 && (a_in >0 && b_in>0 || a_in<0 && b_in<0) && f > 0)
 		acc = OVERFLOW;
 	//else if (acc > 0 && mult <= 0 && f <= 0)
@@ -35,7 +34,7 @@ always_ff @(posedge clk) begin
         f <= 0;
         a_in <= 0;
         b_in <= 0;
-        enable_f <= 0;
+        //enable_f <= 0;
     end
     else
     begin

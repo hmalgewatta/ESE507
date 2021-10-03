@@ -13,6 +13,9 @@ rungui:
 dc:
 	dc_shell -f runsynth.tcl > output.txt
 
+dcnoout:
+	dc_shell -f runsynth.tcl
+
 test:
 	gcc test_gen.c -o test_gen -lm
 

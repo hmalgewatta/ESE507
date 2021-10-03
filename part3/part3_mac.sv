@@ -41,32 +41,28 @@ always_ff @(posedge clk) begin
         a_in <= 0;
         b_in <= 0;
         correct_mult <= 0;
+        enable_f <= 0;
 		mult_in <= 0;
     end
     else
     begin
-	mult_in <= mult;
-	enable_f <= correct_mult;
+		mult_in <= mult;
+		enable_f <= correct_mult;
+		correct_mult <= enable_ab;
+	    valid_out <= 0;
         // register inputs on enable
-    if (enable_ab == 1'b1)
-    begin
-        a_in <= a;
-        b_in <=b;
-        correct_mult <= 1;
-    end
-    else
-    begin
-        correct_mult <= 0;
-    end
+		if (enable_ab == 1'b1)
+		begin
+		    a_in <= a;
+		    b_in <=b;
+		end
 
-    // calculate result on enable
-    if (enable_f == 1'b1)
-    begin
-        f <= f_in;
-		valid_out <= correct_mult;
-    end
-	else
-	    valid_out <= correct_mult;
+		// calculate result on enable
+		if (enable_f == 1'b1)
+		begin
+		    f <= f_in;
+		    valid_out <= 1;
+		end
     end
 end
 
