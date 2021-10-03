@@ -5987,10 +5987,9 @@
 # f =   524287. Expected value is testOut[       1969]   524287
 # 
 # 
-# a =   336, b =  -255, valid_in = 1, reset = 0
-# valid_out = 1. Expected value is 1
-# 
-# f =   380911. Expected value is testOut[       1971]   380911
+# a =   336, b =  -255, valid_in = 1, reset# End time: 19:54:45 on Oct 02,2021, Elapsed time: 1:36:26
+# Errors: 46, Warnings: 2
+t[       1971]   380911
 # 
 # 
 # a =   160, b =   -65, valid_in = 1, reset = 0
