@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 d/home/home5/aalgewaththa/ese507work/proj1/part3
 vDW02_mult
-Z1 !s110 1633295985
+Z1 !s110 1633300528
 !i10b 1
 !s100 MUHOj^JG@bH:`JA4:b^BN0
 !s11b jhlRE=:AHmHzcO4mIYRQB3
@@ -26,7 +26,7 @@ Z5 OP;L;2019.3;69
 r1
 !s85 0
 31
-Z6 !s108 1633295985.000000
+Z6 !s108 1633300528.000000
 !s107 /usr/local/synopsys/syn//dw/sim_ver/DW02_mult.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_multp.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_DG.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_6_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_5_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_4_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_3_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_2_stage.v|
 Z7 !s90 /usr/local/synopsys/syn//dw/sim_ver/DW02_mult_2_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_3_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_4_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_5_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_6_stage.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult_DG.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_multp.v|/usr/local/synopsys/syn//dw/sim_ver/DW02_mult.v|
 !i113 1
@@ -197,15 +197,15 @@ vpart3_mac
 Z11 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
 R1
 !i10b 1
-!s100 ii`9ZN=eY3UAk@KCSEEki1
-!s11b DB@RAiSSm^hhZ3FKmY=D63
-IVDRhdY4:i[b6SYTGmH8682
+!s100 1MkgeJ>g:ak7?E<Bn`7g43
+!s11b jQKL?SM]UzE[<eSa:9]d81
+IgG]nFU_Q@jDf`:76DG6Qz2
 R2
 S1
 R0
-w1633296146
-8part3_mac.sv
-Fpart3_mac.sv
+w1633297931
+8part3b_mac.sv
+Fpart3b_mac.sv
 !i122 -1
 L0 1
 R5
@@ -213,8 +213,8 @@ r1
 !s85 0
 31
 R6
-Z12 !s107 part3_mac.sv|part3_tb_simple.sv|
-Z13 !s90 part3_tb_simple.sv|part3_mac.sv|
+Z12 !s107 part3b_mac.sv|part3_tb_simple.sv|
+Z13 !s90 part3_tb_simple.sv|part3b_mac.sv|
 !i113 1
 R8
 vtb_part3_mac

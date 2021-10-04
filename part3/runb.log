@@ -1,3 +1,7 @@
+Reading pref.tcl
+
+# 2019.3
+
 # vsim tb_part3_mac -c -do "run -all" 
 # Start time: 18:35:29 on Oct 03,2021
 # //  ModelSim DE 2019.3 Jul 24 2019 Linux 3.10.0-1160.36.2.el7.x86_64
