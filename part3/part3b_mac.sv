@@ -1,4 +1,4 @@
-module part3_mac(clk, reset, a, b, valid_in, f, valid_out); 
+module part3b_mac(clk, reset, a, b, valid_in, f, valid_out); 
 
 input clk, reset, valid_in;
 input signed [9:0] a, b;
@@ -15,7 +15,7 @@ logic signed [19:0] mult_in, f_in;
 localparam OVERFLOW = 20'h7ffff;
 localparam UNDERFLOW = 20'h80000;
 
-localparam STAGES = 2;
+localparam STAGES = 5;
 
 logic fwd [STAGES-1:0];
 integer i;
@@ -26,7 +26,7 @@ integer i;
 // handling reset
 
 //Pipelined Multiplier
-DW02_mult_2_stage #(10,10) multinstance(a_in,b_in,1'b1,clk,mult);
+DW02_mult_5_stage #(10,10) multinstance(a_in,b_in,1'b1,clk,mult);
 
 always_comb 
 begin

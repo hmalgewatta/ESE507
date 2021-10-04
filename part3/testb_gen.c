@@ -12,7 +12,7 @@ int main() {
     inputData = fopen("inputData", "w");
     expectedOutput = fopen("expectedOutput", "w");
 
-    int stages = 4;
+    int stages =7;
     int j;
 	for(j = 0; j < stages; ++j){
 		fprintf(expectedOutput, "0\n0\n");
@@ -24,7 +24,7 @@ int main() {
 	//Behaviour of MAC
 	// On reset clear all registers to 0
 
-    for (i=0; i<desiredInputs-3; i++) {
+    for (i=0; i<desiredInputs-stages; i++) {
     	// generate 10bit signed numbers
         a = rand() % 1024 - 512;
         b = rand() % 1024 - 512;
@@ -62,7 +62,7 @@ int main() {
 		expectedOutArr[2*i+1] = f;
     }
 
-	for (i = 0; i<desiredInputs-3; i++){
+	for (i = 0; i<desiredInputs-stages; i++){
 		fprintf(inputData, "%x\n%x\n%x\n%x\n", inputDataArr[4*i], inputDataArr[4*i+1], inputDataArr[4*i+2], inputDataArr[4*i+3]);
     	fprintf(expectedOutput, "%x\n%x\n", expectedOutArr[2*i], expectedOutArr[2*i+1]);
 	}

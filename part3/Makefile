@@ -2,6 +2,7 @@ TBFILE=part3_tb_simple.sv
 SRCFILE=part3_mac.sv
 TB=tb_part3_mac
 SRCFILEB=part3b_mac.sv
+TBFILEB=part3b_tb_simple.sv
 C_FILE=test_gen.c
 C_FILEB=testb_gen.c
 comp:
@@ -9,7 +10,7 @@ comp:
 	vlog /usr/local/synopsys/syn//dw/sim_ver/DW02_mult*.v
 
 compb:
-	vlog $(TBFILE) $(SRCFILEB)
+	vlog $(TBFILEB) $(SRCFILEB)
 	vlog /usr/local/synopsys/syn//dw/sim_ver/DW02_mult*.v
 
 runb: compb
