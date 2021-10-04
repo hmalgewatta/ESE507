@@ -15,6 +15,11 @@ logic signed [19:0] mult_in, f_in;
 localparam OVERFLOW = 20'h7ffff;
 localparam UNDERFLOW = 20'h80000;
 
+localparam STAGES = 2;
+
+logic fwd [STAGES-1:0];
+integer i;
+
 //what had to be changed
 // setting f (delayed by one cycle)
 // setting valid_out (same)
@@ -37,6 +42,10 @@ begin
 end
 
 always_ff @(posedge clk) begin
+	fwd[0] <= valid_in;
+	for(i=1; i < STAGES; i=i+1) begin
+		fwd[i] <= fwd[i-1];
+	end
     if (reset == 1'b1)
     begin
         valid_out <= 0;
@@ -46,12 +55,15 @@ always_ff @(posedge clk) begin
         correct_mult <= 0;
         enable_f <= 0;
 		mult_in <= 0;
+		for(i=0; i < STAGES; i=i+1) begin
+			fwd[i] <= 0;
+		end
     end
     else
     begin
 		mult_in <= mult;
 		enable_f <= correct_mult;
-		correct_mult <= enable_ab;
+		correct_mult <= fwd[STAGES-2];
 	    valid_out <= 0;
         // register inputs on enable
 		if (enable_ab == 1'b1)

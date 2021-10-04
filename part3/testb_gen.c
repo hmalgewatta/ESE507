@@ -32,7 +32,7 @@ int main() {
 		reset = rand()%32 == 30;
 		if(reset){
 			// f immediately reset to 0;
-			for (j = 0; j <= stages; ++j){
+			for (j = 0; j <= stages-1; ++j){
 				expectedOutArr[2*(i-j)] = 0;
 			}
 			//expectedOutArr[2*(i-2)] = 0;
