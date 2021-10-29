@@ -224,7 +224,6 @@ localparam DELAY = 5;
 logic conv_done;
 logic output_y;
 logic [LOGSIZE_Y+1:0] y_point [DELAY-1:0];
-logic [LOGSIZE_Y:0] y_next [DELAY-1:0];
 logic y_valid_shift [DELAY-1:0];
 logic clear_acc_shift [DELAY-1:0];
 
@@ -297,7 +296,6 @@ always_ff @( posedge clk ) begin
 			end
     		else begin
 	            y_point[0] <= y_point[0] + 1;
-	            y_next <= y_point;
 	        end
         end
      end
