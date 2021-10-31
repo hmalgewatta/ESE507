@@ -12,7 +12,7 @@
 
 module tbench2();
 
-    parameter  NUMITS     = 1000, N = 112, M = 49;
+    parameter  NUMITS     = 10000, N = 112, M = 49;
     localparam NUMXVALS   = N*NUMITS;
     localparam NUMFVALS   = M*NUMITS;
     localparam NUMOUTVALS = (N-M+1)*NUMITS;
