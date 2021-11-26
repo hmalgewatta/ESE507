@@ -1,0 +1,302 @@
+module memory(clk, data_in, data_out, addr, wr_en);
+   
+    parameter                   WIDTH=16, SIZE=64;
+    localparam                  LOGSIZE=$clog2(SIZE);
+    input [WIDTH-1:0]           data_in;
+    output logic [WIDTH-1:0]    data_out;
+    input [LOGSIZE-1:0]         addr;
+    input                       clk, wr_en;
+    
+    logic [SIZE-1:0][WIDTH-1:0] mem;
+    
+    always_ff @(posedge clk) begin
+        data_out <= mem[addr];
+        if (wr_en)
+            mem[addr] <= data_in;
+    end
+endmodule
+
+module control(clk, reset, x_valid, y_ready, addr_x, wr_en_x, addr_f, clear_acc, en_acc, x_ready, x_loaded, y_valid);
+
+parameter ADDR_WIDTH = 10, X_LEN_IN = 112, F_LEN_IN = 49;
+
+localparam F_LEN = $clog2(F_LEN_IN);
+localparam X_LEN = $clog2(X_LEN_IN);
+localparam Y_LEN = $clog2(X_LEN_IN-F_LEN_IN+1);
+
+input clk, reset, x_valid, y_ready;
+output logic wr_en_x, clear_acc, en_acc, x_ready;
+output logic [F_LEN:0] addr_f;
+output logic [X_LEN-1:0] addr_x;
+
+// current understanding
+// will store all inputs first to memory
+// then do convolution
+
+output logic x_loaded;
+output logic y_valid;
+
+//internal signals
+logic [F_LEN:0] f_counter;
+logic [X_LEN-1:0] x_counter;
+logic [Y_LEN:0] y_counter;
+logic point_calc_done, next_clear_acc;
+
+logic idle;
+
+
+
+always_ff @( posedge clk ) begin : ACCUMULATOR_SIGNALS
+    if (reset || idle) begin
+        clear_acc <= 1;
+        en_acc <= 0;
+        y_valid <= 0;
+		point_calc_done <= 0;
+		next_clear_acc <= 0;
+        y_counter <= 0;
+        idle <= 0;
+    end
+    else begin
+        next_clear_acc <= point_calc_done;
+    	if (y_counter == X_LEN_IN-F_LEN_IN+1) begin
+    	// once all of y has been calculated go to idle
+    		idle <= 1;
+    	end
+        else if(y_valid && y_ready) begin
+        // output will be consumed now so prepare for next calculation
+        	clear_acc <= 1;
+        	en_acc <= 0;
+			y_valid <= 0;
+            y_counter <= y_counter + 1;
+        end
+        else if(next_clear_acc) begin
+        // set y_valid and stall accumulator until this is read
+            y_valid <= next_clear_acc;
+            clear_acc <= 0;
+            en_acc <= 0;
+            point_calc_done <= 0;
+            next_clear_acc <= 0;
+        end 
+        else if (&{x_loaded, ~y_valid}) begin 
+            clear_acc <= 0;     
+            if (addr_f < F_LEN_IN) begin
+                en_acc <= 1;
+            end
+            else begin
+                en_acc <= 0;
+                clear_acc <= 0;
+                point_calc_done <= 1;
+            end
+        end
+    end
+end
+
+always_ff @( posedge clk ) begin : X
+    if (reset || idle) begin
+        wr_en_x <= 0;
+        x_counter <= 0; 
+        x_loaded <= 0;
+        addr_x <= 0;
+        x_ready <= 1;
+    end
+    else begin
+        wr_en_x <= x_valid;
+        if (x_valid && ~x_loaded) begin
+            if (x_counter == X_LEN_IN-1) begin
+                x_loaded <= 1;
+                addr_x <= 0;
+                x_ready <= 0;
+                x_counter <= 0;
+            end 
+            else begin
+            	x_ready <= 1;
+            	addr_x <= addr_x + 1;
+            	x_counter <= x_counter + 1;
+            end
+        end
+        else begin
+            wr_en_x <= 0;
+            if(y_valid && y_ready) begin
+                addr_x <= x_counter + 1;
+                x_counter <= x_counter + 1;
+            end
+            else if (&{x_loaded, ~y_valid}) begin    
+                if (addr_f < F_LEN_IN) begin
+                    addr_x <= addr_x + 1;
+                end
+            end
+        end
+    end
+end
+
+always_ff @( posedge clk ) begin : F
+    if (reset || idle) begin
+        f_counter <= 0; 
+        addr_f <= 0;
+        //f_ready <= 1;
+    end
+    else begin
+    	// no writing to memory for f
+        // reading from memory
+        if(point_calc_done) begin
+            addr_f <= 0;
+        end 
+        else if (&{x_loaded, ~y_valid}) begin   
+            if (addr_f < F_LEN_IN) begin
+                addr_f <= addr_f + 1;
+            end
+        end
+    end
+end
+
+endmodule
+
+module part3_mac(clk, reset, a, b, valid_in, f, valid_out); 
+
+parameter WIDTH = 10, OUT_WIDTH = 20;
+
+input clk, reset, valid_in;
+input signed [WIDTH-1:0] a, b;
+output logic signed [OUT_WIDTH-1:0] f;
+output logic valid_out;
+
+logic enable_f, enable_ab, correct_mult;
+
+logic signed [OUT_WIDTH-1:0] mult;
+
+logic signed [WIDTH-1:0] a_in, b_in;
+logic signed [OUT_WIDTH-1:0] mult_in, f_in;
+
+localparam OVERFLOW = (1 << OUT_WIDTH-1) - 1;
+localparam UNDERFLOW = $signed(1 << OUT_WIDTH-1);
+
+//what had to be changed
+// setting f (delayed by one cycle)
+// setting valid_out (same)
+// handling reset
+
+always_comb 
+begin
+	enable_ab = valid_in;
+	mult = a_in*b_in;	
+	f_in = mult_in + f;
+	
+    // multiplication saturation
+    if (((a_in > 0 && b_in > 0) || (a_in <0 && b_in <0)) && mult <= 0)
+		mult = $signed((1 << OUT_WIDTH-1) - 1);
+	else if ( ((a_in > 0 && b_in < 0) || (a_in < 0 && b_in >0)) && mult >= 0)
+		mult = $signed(1 << OUT_WIDTH-1);
+	else
+		mult = a_in*b_in;
+		
+    // addition saturation
+	if (f > 0 && mult_in > 0 && f_in <= 0)
+		f_in = $signed((1 << OUT_WIDTH-1) - 1);
+	else if (f < 0 && mult_in < 0 && f_in >= 0)
+		f_in = $signed(1 << OUT_WIDTH-1);
+	else
+		f_in = mult_in + f;
+end
+
+always_ff @(posedge clk) begin
+    if (reset == 1'b1)
+    begin
+        valid_out <= 0;
+        f <= 0;
+        a_in <= 0;
+        b_in <= 0;
+        correct_mult <= 0;
+        enable_f <= 0;
+		mult_in <= 0;
+    end
+    else
+    begin
+		mult_in <= mult;
+		enable_f <= correct_mult;
+		correct_mult <= enable_ab;
+	    valid_out <= 0;
+        // register inputs on enable
+		if (enable_ab == 1'b1)
+		begin
+		    a_in <= a;
+		    b_in <=b;
+		end
+
+		// calculate result on enable
+		if (enable_f == 1'b1)
+		begin
+		    f <= f_in;
+		    valid_out <= 1;
+		end
+    end
+end
+
+endmodule
+
+module <CONV_MOD_NAME>(clk, reset, x_data, x_valid, x_ready, y_data, y_valid, y_ready);
+
+parameter T = <T>,  SIZE_F = <SIZE_F>, SIZE_X = <SIZE_X>;
+
+localparam WIDTH = T;
+localparam LOGSIZE_F = $clog2(SIZE_F);
+localparam LOGSIZE_X = $clog2(SIZE_X);
+localparam OUT_WIDTH = T;
+
+input clk, reset, x_valid, y_ready;
+input signed [WIDTH-1:0] x_data;
+output logic x_ready, y_valid;
+output logic signed [OUT_WIDTH-1:0] y_data;
+
+//internal wires
+logic wr_en_x, clear_acc, en_acc, x_loaded, wr_x, mac_valid_out, y_valid_out;
+logic [WIDTH-1:0] data_out_f, data_out_x;
+logic [LOGSIZE_F:0] addr_f;
+logic [LOGSIZE_X-1:0] addr_x;
+logic signed [OUT_WIDTH-1:0] y_data_out;
+
+assign wr_x = &{x_valid,~x_loaded};
+
+assign y_data = (y_data_out > 0) ? y_data_out: 0;
+
+control #(WIDTH,SIZE_X,SIZE_F) ctrl(
+    clk, 
+    reset, 
+    x_valid, 
+    y_ready, 
+    addr_x, 
+    wr_en_x, 
+    addr_f,  
+    clear_acc, 
+    en_acc,
+    x_ready,
+    x_loaded,
+    y_valid
+    );
+
+// memory for f
+<F_ROM_MOD_NAME> mem_f(
+    clk,    
+    addr_f[LOGSIZE_F-1:0], 
+    data_out_f  
+    );
+
+// memory for x
+memory #(WIDTH, SIZE_X) mem_x(
+    clk, 
+    x_data, 
+    data_out_x, 
+    addr_x, 
+    wr_x
+    );
+
+part3_mac #(WIDTH, OUT_WIDTH) mac(
+    clk, 
+    clear_acc, 
+    data_out_x, 
+    data_out_f, 
+    en_acc, 
+    y_data_out, 
+    mac_valid_out
+    );
+
+endmodule
