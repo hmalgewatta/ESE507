@@ -245,7 +245,7 @@ localparam PARALLEL_INSTS = P;
 localparam CONV_POINTS = SIZE_X - SIZE_F + 1;
 //localparam OFFSET = ($ceil((SIZE_X - SIZE_F + 1)/PARALLEL_INSTS)) > 1 ? $ceil((SIZE_X - SIZE_F + 1)/PARALLEL_INSTS) : 2;
 localparam OFFSET = (SIZE_X - SIZE_F + PARALLEL_INSTS)/PARALLEL_INSTS;
-localparam LOG_OFFSET = $clog2(OFFSET) > 1 ? $clog2(OFFSET) : 1;
+localparam LOG_OFFSET = $clog2(OFFSET);
 localparam LOG_PARALLEL_INSTS = $clog2(PARALLEL_INSTS);
 
 localparam LOGSIZE_Y = $clog2(CONV_POINTS);
@@ -258,7 +258,7 @@ output logic signed [OUT_WIDTH-1:0] y_data;
 //internal wires
 logic wr_en_x, wr_en_f, clear_acc, en_acc, x_loaded, f_loaded, wr_x, wr_f, mac_valid_out, y_valid_out;
 logic [WIDTH-1:0] data_out_f, data_out_x;
-logic [LOGSIZE_F-1:0] addr_f;
+logic [LOGSIZE_F:0] addr_f;
 logic [LOGSIZE_X-1:0] addr_x;
 logic signed [OUT_WIDTH-1:0] y_data_out;
 
@@ -266,7 +266,7 @@ logic [LOGSIZE_X-1: 0] addr_x_gen [PARALLEL_INSTS-1:0];
 logic [WIDTH-1:0] data_out_x_gen [PARALLEL_INSTS-1:0];
 logic mac_valid_out_gen [PARALLEL_INSTS-1:0];
 logic y_wr_en [PARALLEL_INSTS-1:0];
-logic [LOGSIZE_Y-1: 0] y_addr_gen [PARALLEL_INSTS-1:0];
+logic [LOG_OFFSET-1: 0] y_addr_gen [PARALLEL_INSTS-1:0];
 logic signed [OUT_WIDTH-1:0] y_data_gen [PARALLEL_INSTS-1:0];
 logic signed [OUT_WIDTH-1:0] y_data_gen_relu [PARALLEL_INSTS-1:0];
 logic signed [OUT_WIDTH-1:0] y_data_out_gen [PARALLEL_INSTS-1:0];
@@ -276,6 +276,7 @@ logic [LOG_PARALLEL_INSTS:0] y_next;
 logic [LOGSIZE_Y:0] y_point;
 logic [LOG_OFFSET:0] y_mem_i;
 logic conv_done;
+logic ctrl_done;
 
 assign wr_x = &{x_valid,~x_loaded};
 
@@ -300,7 +301,7 @@ control #(WIDTH,SIZE_X,SIZE_F,OFFSET) ctrl(
 // memory for f
 <F_ROM_MOD_NAME> mem_f(
     clk,    
-    addr_f, 
+    addr_f[LOGSIZE_F-1:0], 
     data_out_f  
     );
 
