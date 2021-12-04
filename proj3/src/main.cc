@@ -188,7 +188,7 @@ void calPExhaustive(int N, int M1, int M2, int M3, int B, int &P1, int &P2, int 
     int timeForFirstOut = std::numeric_limits<int>::max();
     int temp = timeForFirstOut;
     int i, j, k;
-    cout << "L1 L2 L3" << L1 << "," << L2 << "," << L3 << endl;
+    cout << "L1 L2 L3 " << L1 << "," << L2 << "," << L3 << endl;
 
     if (B < 3)
     {
@@ -205,7 +205,7 @@ void calPExhaustive(int N, int M1, int M2, int M3, int B, int &P1, int &P2, int 
             {
                 if (k <= 0 || L2 % j != 0 || L3 % k != 0)
                     continue;
-                cout << "i j k" << i << "," << j << "," << k << endl;
+                //cout << "i j k" << i << "," << j << "," << k << endl;
                 temp = N + tMac1 * L1 / i + L1 + tMac2 * L2 / j + L2 + tMac3 * L3 / k + L3;
                 if (temp < timeForFirstOut)
                 {
@@ -213,7 +213,7 @@ void calPExhaustive(int N, int M1, int M2, int M3, int B, int &P1, int &P2, int 
                     P1 = i;
                     P2 = j;
                     P3 = k;
-                    cout << "i j k" << i << "," << j << "," << k << endl;
+                    //cout << "i j k" << i << "," << j << "," << k << endl;
                 }
             }
         }
