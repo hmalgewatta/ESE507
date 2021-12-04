@@ -1,0 +1,1949 @@
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+         Version J-2014.09-SP5-2 for RHEL64 -- Jul 11, 2015
+               Copyright (c) 1988-2015 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+##############################################
+# Setup: fill out the following parameters: name of clock signal, clock period (ns),
+# reset signal name (if used), name of top-level module, name of source file
+set CLK_NAME "clk";
+clk
+set CLK_PERIOD 1.51
+1.51
+set RST_NAME "reset";
+reset
+set TOP_MOD_NAME net_64_33_9_10_16_50
+net_64_33_9_10_16_50
+set SRC_FILE net_64_33_9_10_16_50.sv
+net_64_33_9_10_16_50.sv
+# If you have multiple source files, change the line above to list them all like this:
+# set SRC_FILE net_64_33_9_10_16_50.sv
+###############################################
+source setupdc.tcl
+NangateOpenCellLibrary_typical.db dw_foundation.sldb
+file mkdir work_synth
+# optimize FSMs
+set fsm_auto_inferring "true"; 
+true
+set fsm_enable_state_minimization "true";
+true
+define_design_lib WORK -path work_synth
+1
+analyze $SRC_FILE -format sverilog
+Running PRESTO HDLC
+Searching for ./net_64_33_9_10_16_50.sv
+Compiling source file ./net_64_33_9_10_16_50.sv
+Presto compilation completed successfully.
+Loading db file '/home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db'
+Loading db file '/usr/local/synopsys/syn/libraries/syn/dw_foundation.sldb'
+1
+elaborate -work WORK $TOP_MOD_NAME
+Loading db file '/usr/local/synopsys/syn/libraries/syn/gtech.db'
+Loading db file '/usr/local/synopsys/syn/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'net_64_33_9_10_16_50'.
+Information: Building the design 'layer1_64_33_16_32'. (HDL-193)
+Warning:  ./net_64_33_9_10_16_50.sv:374: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_50.sv:382: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine layer1_64_33_16_32 line 356 in file
+		'./net_64_33_9_10_16_50.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     y_next_reg      | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|    conv_done_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     y_point_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     y_valid_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     y_mem_i_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+=================================================================
+|    block name/line     | Inputs | Outputs | # sel inputs | MB |
+=================================================================
+| layer1_64_33_16_32/354 |   32   |   16    |      5       | N  |
+=================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer2_32_9_16_12'. (HDL-193)
+Warning:  ./net_64_33_9_10_16_50.sv:573: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_50.sv:581: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine layer2_32_9_16_12 line 555 in file
+		'./net_64_33_9_10_16_50.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     y_next_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|    conv_done_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     y_point_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     y_valid_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     y_mem_i_reg     | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer3_24_10_16_5'. (HDL-193)
+Warning:  ./net_64_33_9_10_16_50.sv:748: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_50.sv:756: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine layer3_24_10_16_5 line 730 in file
+		'./net_64_33_9_10_16_50.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     y_next_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|    conv_done_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     y_point_reg     | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|     y_valid_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     y_mem_i_reg     | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'control' instantiated from design 'layer1_64_33_16_32' with
+	the parameters "16,64,33,1". (HDL-193)
+Warning:  ./net_64_33_9_10_16_50.sv:105: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine control_ADDR_WIDTH16_X_LEN_IN64_F_LEN_IN33_OFFSET1 line 52 in file
+		'./net_64_33_9_10_16_50.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      idle_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    clear_acc_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     en_acc_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     y_valid_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| point_calc_done_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| next_clear_acc_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    y_counter_reg    | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine control_ADDR_WIDTH16_X_LEN_IN64_F_LEN_IN33_OFFSET1 line 94 in file
+		'./net_64_33_9_10_16_50.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     x_ready_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     wr_en_x_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    x_counter_reg    | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|    x_loaded_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     addr_x_reg      | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine control_ADDR_WIDTH16_X_LEN_IN64_F_LEN_IN33_OFFSET1 line 132 in file
+		'./net_64_33_9_10_16_50.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     addr_f_reg      | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer1_64_33_16_32_f_rom'. (HDL-193)
+Warning:  ./net_64_33_9_10_16_50.sv:403: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_50.sv:404: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_50.sv:405: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_50.sv:406: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_50.sv:407: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_50.sv:409: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_50.sv:412: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_50.sv:415: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_50.sv:416: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_50.sv:417: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_50.sv:421: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_50.sv:422: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_50.sv:423: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_50.sv:426: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_50.sv:427: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_50.sv:428: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_50.sv:430: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 397 in file
+	'./net_64_33_9_10_16_50.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           398            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine layer1_64_33_16_32_f_rom line 397 in file
+		'./net_64_33_9_10_16_50.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        z_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'memory' instantiated from design 'layer1_64_33_16_32' with
+	the parameters "16,64". (HDL-193)
+
+Inferred memory devices in process
+	in routine memory_WIDTH16_SIZE64 line 14 in file
+		'./net_64_33_9_10_16_50.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===================================================================
+|     block name/line      | Inputs | Outputs | # sel inputs | MB |
+===================================================================
+| memory_WIDTH16_SIZE64/15 |   64   |   16    |      6       | N  |
+===================================================================
+Presto compilation completed successfully.
+Information: Building the design 'memory' instantiated from design 'layer1_64_33_16_32' with
+	the parameters "16,1". (HDL-193)
+
+Inferred memory devices in process
+	in routine memory_WIDTH16_SIZE1 line 14 in file
+		'./net_64_33_9_10_16_50.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mac' instantiated from design 'layer1_64_33_16_32' with
+	the parameters "16,16". (HDL-193)
+
+Inferred memory devices in process
+	in routine mac_WIDTH16_OUT_WIDTH16 line 203 in file
+		'./net_64_33_9_10_16_50.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     mult_in_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|    valid_out_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|        f_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      a_in_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      b_in_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|  correct_mult_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    enable_f_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'control' instantiated from design 'layer2_32_9_16_12' with
+	the parameters "16,32,9,2". (HDL-193)
+Warning:  ./net_64_33_9_10_16_50.sv:105: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine control_ADDR_WIDTH16_X_LEN_IN32_F_LEN_IN9_OFFSET2 line 52 in file
+		'./net_64_33_9_10_16_50.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      idle_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    clear_acc_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     en_acc_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     y_valid_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| point_calc_done_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| next_clear_acc_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    y_counter_reg    | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine control_ADDR_WIDTH16_X_LEN_IN32_F_LEN_IN9_OFFSET2 line 94 in file
+		'./net_64_33_9_10_16_50.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     x_ready_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     wr_en_x_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    x_counter_reg    | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|    x_loaded_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     addr_x_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine control_ADDR_WIDTH16_X_LEN_IN32_F_LEN_IN9_OFFSET2 line 132 in file
+		'./net_64_33_9_10_16_50.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     addr_f_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer2_32_9_16_12_f_rom'. (HDL-193)
+Warning:  ./net_64_33_9_10_16_50.sv:598: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_50.sv:600: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_50.sv:603: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_50.sv:604: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 596 in file
+	'./net_64_33_9_10_16_50.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           597            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine layer2_32_9_16_12_f_rom line 596 in file
+		'./net_64_33_9_10_16_50.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        z_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'memory' instantiated from design 'layer2_32_9_16_12' with
+	the parameters "16,32". (HDL-193)
+
+Inferred memory devices in process
+	in routine memory_WIDTH16_SIZE32 line 14 in file
+		'./net_64_33_9_10_16_50.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===================================================================
+|     block name/line      | Inputs | Outputs | # sel inputs | MB |
+===================================================================
+| memory_WIDTH16_SIZE32/15 |   32   |   16    |      5       | N  |
+===================================================================
+Presto compilation completed successfully.
+Information: Building the design 'memory' instantiated from design 'layer2_32_9_16_12' with
+	the parameters "16,2". (HDL-193)
+
+Inferred memory devices in process
+	in routine memory_WIDTH16_SIZE2 line 14 in file
+		'./net_64_33_9_10_16_50.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'control' instantiated from design 'layer3_24_10_16_5' with
+	the parameters "16,24,10,3". (HDL-193)
+Warning:  ./net_64_33_9_10_16_50.sv:105: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine control_ADDR_WIDTH16_X_LEN_IN24_F_LEN_IN10_OFFSET3 line 52 in file
+		'./net_64_33_9_10_16_50.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      idle_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    clear_acc_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     en_acc_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     y_valid_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| point_calc_done_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| next_clear_acc_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    y_counter_reg    | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine control_ADDR_WIDTH16_X_LEN_IN24_F_LEN_IN10_OFFSET3 line 94 in file
+		'./net_64_33_9_10_16_50.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     x_ready_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     wr_en_x_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    x_counter_reg    | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|    x_loaded_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     addr_x_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine control_ADDR_WIDTH16_X_LEN_IN24_F_LEN_IN10_OFFSET3 line 132 in file
+		'./net_64_33_9_10_16_50.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     addr_f_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer3_24_10_16_5_f_rom'. (HDL-193)
+Warning:  ./net_64_33_9_10_16_50.sv:774: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_50.sv:776: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_50.sv:777: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_50.sv:778: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_50.sv:780: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_50.sv:781: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_50.sv:782: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 771 in file
+	'./net_64_33_9_10_16_50.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           772            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine layer3_24_10_16_5_f_rom line 771 in file
+		'./net_64_33_9_10_16_50.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        z_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'memory' instantiated from design 'layer3_24_10_16_5' with
+	the parameters "16,24". (HDL-193)
+
+Inferred memory devices in process
+	in routine memory_WIDTH16_SIZE24 line 14 in file
+		'./net_64_33_9_10_16_50.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'memory' instantiated from design 'layer3_24_10_16_5' with
+	the parameters "16,3". (HDL-193)
+
+Inferred memory devices in process
+	in routine memory_WIDTH16_SIZE3 line 14 in file
+		'./net_64_33_9_10_16_50.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+1
+###### CLOCKS AND PORTS #######
+set CLK_PORT [get_ports $CLK_NAME]
+{clk}
+set TMP1 [remove_from_collection [all_inputs] $CLK_PORT]
+{reset x_data[15] x_data[14] x_data[13] x_data[12] x_data[11] x_data[10] x_data[9] x_data[8] x_data[7] x_data[6] x_data[5] x_data[4] x_data[3] x_data[2] x_data[1] x_data[0] x_valid y_ready}
+set INPUTS [remove_from_collection $TMP1 $RST_NAME]
+{x_data[15] x_data[14] x_data[13] x_data[12] x_data[11] x_data[10] x_data[9] x_data[8] x_data[7] x_data[6] x_data[5] x_data[4] x_data[3] x_data[2] x_data[1] x_data[0] x_valid y_ready}
+create_clock -period $CLK_PERIOD [get_ports clk]
+1
+# set delay for inputs to be 0.2ns
+set_input_delay 0.2 -max -clock clk $INPUTS
+1
+set_output_delay 0.2 -max -clock clk [all_outputs]
+1
+###### OPTIMIZATION #######
+set_max_area 0 
+1
+###### RUN #####
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | J-2014.09-DWBB_201409.5.2 |   *     |
+| Licensed DW Building Blocks        | J-2014.09-DWBB_201409.5.2 |   *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 91 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Loaded alib file './alib-52/NangateOpenCellLibrary_typical.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping hierarchy genLayer1 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer3 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/ctrl before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/mem_f before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[0].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[0].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[1].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[1].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[2].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[2].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[3].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[3].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[4].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[4].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[5].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[5].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[6].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[6].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[7].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[7].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[8].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[8].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[9].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[9].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[10].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[10].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[11].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[11].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[12].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[12].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[13].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[13].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[14].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[14].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[15].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[15].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[16].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[16].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[17].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[17].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[18].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[18].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[19].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[19].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[20].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[20].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[21].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[21].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[22].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[22].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[23].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[23].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[24].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[24].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[25].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[25].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[26].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[26].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[27].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[27].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[28].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[28].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[29].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[29].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[30].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[30].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[31].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[31].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/ctrl before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/mem_f before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[0].mem_x before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[0].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[0].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[1].mem_x before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[1].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[1].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[2].mem_x before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[2].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[2].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[3].mem_x before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[3].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[3].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[4].mem_x before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[4].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[4].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[5].mem_x before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[5].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[5].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[6].mem_x before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[6].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[6].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[7].mem_x before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[7].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[7].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[8].mem_x before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[8].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[8].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[9].mem_x before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[9].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[9].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[10].mem_x before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[10].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[10].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[11].mem_x before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[11].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[11].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer3/ctrl before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer3/mem_f before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer3/genblk1[0].mem_x before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer3/genblk1[0].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer3/genblk1[0].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer3/genblk1[1].mem_x before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer3/genblk1[1].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer3/genblk1[1].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer3/genblk1[2].mem_x before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer3/genblk1[2].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer3/genblk1[2].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer3/genblk1[3].mem_x before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer3/genblk1[3].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer3/genblk1[3].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer3/genblk1[4].mem_x before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer3/genblk1[4].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer3/genblk1[4].mac before Pass 1 (OPT-776)
+Information: Ungrouping 124 of 157 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'net_64_33_9_10_16_50'
+Information: Added key list 'DesignWare' to design 'net_64_33_9_10_16_50'. (DDB-72)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/mem_f/z_reg[14]' is removed because it is merged to 'genLayer2/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/mem_f/z_reg[13]' is removed because it is merged to 'genLayer2/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/mem_f/z_reg[12]' is removed because it is merged to 'genLayer2/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/mem_f/z_reg[11]' is removed because it is merged to 'genLayer2/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/mem_f/z_reg[10]' is removed because it is merged to 'genLayer2/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/mem_f/z_reg[9]' is removed because it is merged to 'genLayer2/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/mem_f/z_reg[8]' is removed because it is merged to 'genLayer2/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/mem_f/z_reg[7]' is removed because it is merged to 'genLayer2/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/mem_f/z_reg[6]' is removed because it is merged to 'genLayer2/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/mem_f/z_reg[5]' is removed because it is merged to 'genLayer2/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/mem_f/z_reg[4]' is removed because it is merged to 'genLayer2/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/mem_f/z_reg[3]' is removed because it is merged to 'genLayer2/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer3/mem_f/z_reg[14]' is removed because it is merged to 'genLayer3/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer3/mem_f/z_reg[13]' is removed because it is merged to 'genLayer3/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer3/mem_f/z_reg[12]' is removed because it is merged to 'genLayer3/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer3/mem_f/z_reg[11]' is removed because it is merged to 'genLayer3/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer3/mem_f/z_reg[10]' is removed because it is merged to 'genLayer3/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer3/mem_f/z_reg[9]' is removed because it is merged to 'genLayer3/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer3/mem_f/z_reg[8]' is removed because it is merged to 'genLayer3/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer3/mem_f/z_reg[7]' is removed because it is merged to 'genLayer3/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer3/mem_f/z_reg[6]' is removed because it is merged to 'genLayer3/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer3/mem_f/z_reg[5]' is removed because it is merged to 'genLayer3/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer3/mem_f/z_reg[4]' is removed because it is merged to 'genLayer3/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer3/mem_f/z_reg[3]' is removed because it is merged to 'genLayer3/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/mem_f/z_reg[14]' is removed because it is merged to 'genLayer1/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/mem_f/z_reg[13]' is removed because it is merged to 'genLayer1/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/mem_f/z_reg[12]' is removed because it is merged to 'genLayer1/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/mem_f/z_reg[11]' is removed because it is merged to 'genLayer1/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/mem_f/z_reg[10]' is removed because it is merged to 'genLayer1/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/mem_f/z_reg[9]' is removed because it is merged to 'genLayer1/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/mem_f/z_reg[8]' is removed because it is merged to 'genLayer1/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/mem_f/z_reg[7]' is removed because it is merged to 'genLayer1/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/mem_f/z_reg[6]' is removed because it is merged to 'genLayer1/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/mem_f/z_reg[5]' is removed because it is merged to 'genLayer1/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/mem_f/z_reg[4]' is removed because it is merged to 'genLayer1/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/mem_f/z_reg[3]' is removed because it is merged to 'genLayer1/mem_f/z_reg[15]'. (OPT-1215)
+ Implement Synthetic for 'net_64_33_9_10_16_50'.
+  Processing 'memory_WIDTH16_SIZE64_0'
+ Implement Synthetic for 'memory_WIDTH16_SIZE64_0'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The register 'genLayer1/genblk1[0].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[0].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[1].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[1].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[2].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[2].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[3].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[3].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[4].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[4].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[5].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[5].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[6].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[6].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[7].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[7].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[8].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[8].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[9].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[9].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[10].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[10].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[11].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[11].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[12].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[12].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[13].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[13].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[14].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[14].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[15].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[15].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[16].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[16].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[17].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[17].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[18].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[18].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[19].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[19].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[20].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[20].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[21].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[21].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[22].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[22].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[23].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[23].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[24].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[24].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[25].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[25].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[26].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[26].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[27].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[27].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[28].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[28].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[29].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[29].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[30].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[30].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[31].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[31].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_y/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_y/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_y/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_y/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_y/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_y/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_y/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_y/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_y/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_y/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_y/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_y/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_y/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_y/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_y/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_y/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_y/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_y/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_y/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_y/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_y/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_y/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[1].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[2].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[3].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[4].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[5].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[6].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[7].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[8].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[9].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[10].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[11].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[12].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[13].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[14].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[15].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[16].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[17].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[18].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[19].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[20].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[21].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[22].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[23].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[24].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[25].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[26].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[27].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[28].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[29].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[30].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[31].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[1].mac/correct_mult_reg' is removed because it is merged to 'genLayer2/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[2].mac/correct_mult_reg' is removed because it is merged to 'genLayer2/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[3].mac/correct_mult_reg' is removed because it is merged to 'genLayer2/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[4].mac/correct_mult_reg' is removed because it is merged to 'genLayer2/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[5].mac/correct_mult_reg' is removed because it is merged to 'genLayer2/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[6].mac/correct_mult_reg' is removed because it is merged to 'genLayer2/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[7].mac/correct_mult_reg' is removed because it is merged to 'genLayer2/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[8].mac/correct_mult_reg' is removed because it is merged to 'genLayer2/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[9].mac/correct_mult_reg' is removed because it is merged to 'genLayer2/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[10].mac/correct_mult_reg' is removed because it is merged to 'genLayer2/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[11].mac/correct_mult_reg' is removed because it is merged to 'genLayer2/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer3/genblk1[3].mac/correct_mult_reg' is removed because it is merged to 'genLayer3/genblk1[4].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer3/genblk1[2].mac/correct_mult_reg' is removed because it is merged to 'genLayer3/genblk1[4].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer3/genblk1[1].mac/correct_mult_reg' is removed because it is merged to 'genLayer3/genblk1[4].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer3/genblk1[0].mac/correct_mult_reg' is removed because it is merged to 'genLayer3/genblk1[4].mac/correct_mult_reg'. (OPT-1215)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[9].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[10].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[8].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[10].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[7].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[10].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[6].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[10].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[5].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[10].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[4].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[10].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[3].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[10].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[2].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[10].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[1].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[10].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[0].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[10].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[20].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[21].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[19].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[21].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[18].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[21].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[17].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[21].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[16].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[21].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[15].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[21].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[14].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[21].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[13].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[21].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[12].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[21].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[11].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[21].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[30].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[31].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[29].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[31].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[28].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[31].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[27].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[31].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[26].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[31].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[25].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[31].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[24].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[31].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[23].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[31].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[22].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[31].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[10].mac/enable_f_reg' is removed because it is merged to 'genLayer2/genblk1[11].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[9].mac/enable_f_reg' is removed because it is merged to 'genLayer2/genblk1[11].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[8].mac/enable_f_reg' is removed because it is merged to 'genLayer2/genblk1[11].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[7].mac/enable_f_reg' is removed because it is merged to 'genLayer2/genblk1[11].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[6].mac/enable_f_reg' is removed because it is merged to 'genLayer2/genblk1[11].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[5].mac/enable_f_reg' is removed because it is merged to 'genLayer2/genblk1[11].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[4].mac/enable_f_reg' is removed because it is merged to 'genLayer2/genblk1[11].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[3].mac/enable_f_reg' is removed because it is merged to 'genLayer2/genblk1[11].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[2].mac/enable_f_reg' is removed because it is merged to 'genLayer2/genblk1[11].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[1].mac/enable_f_reg' is removed because it is merged to 'genLayer2/genblk1[11].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[0].mac/enable_f_reg' is removed because it is merged to 'genLayer2/genblk1[11].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer3/genblk1[3].mac/enable_f_reg' is removed because it is merged to 'genLayer3/genblk1[4].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer3/genblk1[2].mac/enable_f_reg' is removed because it is merged to 'genLayer3/genblk1[4].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer3/genblk1[1].mac/enable_f_reg' is removed because it is merged to 'genLayer3/genblk1[4].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer3/genblk1[0].mac/enable_f_reg' is removed because it is merged to 'genLayer3/genblk1[4].mac/enable_f_reg'. (OPT-1215)
+Information: The register 'genLayer1/y_point_reg[5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/y_next_reg[5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/ctrl/addr_f_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/ctrl/addr_f_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[8][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[9][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[10][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[11][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[12][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[13][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[14][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[15][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[16][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[17][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[18][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[19][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[20][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[21][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[22][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[23][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[24][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[25][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[26][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[27][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[28][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[29][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[30][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[31][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[8][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[8][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[9][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[9][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[10][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[10][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[11][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[11][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[12][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[12][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[13][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[13][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[14][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[14][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[15][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[15][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[8][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[8][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[9][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[9][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[10][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[10][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[11][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[11][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[12][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[12][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[13][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[13][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[14][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[14][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[15][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[15][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[8][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[9][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[10][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[11][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[12][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[13][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[14][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[15][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[8][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[8][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[9][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[9][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[10][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[10][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[11][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[11][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[12][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[12][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[13][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[13][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[14][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[14][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[15][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[15][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[15][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[15][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[15][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[8][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[9][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[10][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[11][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[12][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[13][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[14][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[8][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[9][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[10][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[11][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[12][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[13][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[14][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[8][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[9][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[10][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[11][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[12][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[13][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[14][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[8][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[9][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[10][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[11][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[12][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[13][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[14][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[15][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[16][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[16][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[17][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[17][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[18][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[18][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[19][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[19][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[20][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[20][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[21][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[21][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[22][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[22][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[23][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[23][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[16][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[16][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[17][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[17][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[18][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[18][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[19][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[19][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[20][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[20][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[21][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[21][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[22][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[22][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[23][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[23][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[16][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[17][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[18][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[19][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[20][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[21][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[22][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[23][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[16][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[16][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[17][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[17][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[18][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[18][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[19][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[19][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[20][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[20][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[21][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[21][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[22][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[22][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[23][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[23][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[23][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[23][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[23][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[16][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[17][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[18][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[19][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[20][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[21][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[22][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[16][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[17][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[18][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[19][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[20][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[21][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[22][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[16][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[17][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[18][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[19][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[20][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[21][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[22][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[16][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[17][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[18][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[19][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[20][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[21][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[22][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[23][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[24][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[24][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[25][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[25][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[26][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[26][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[27][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[27][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[28][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[28][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[29][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[29][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[30][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[30][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/mem_reg[31][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/mem_reg[31][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[24][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[24][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[25][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[25][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[26][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[26][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[27][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[27][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[28][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[28][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[29][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[29][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[30][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[30][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/mem_reg[31][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[31][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[24][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[25][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[26][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[27][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[28][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[29][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[30][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/mem_reg[31][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[24][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[24][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[25][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[25][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[26][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[26][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[27][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[27][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[28][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[28][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[29][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[29][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[30][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[30][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[31][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[31][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[31][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/mem_reg[31][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/mem_reg[31][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[24][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[25][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[26][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[27][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[28][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[29][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/mem_reg[30][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[24][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[25][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[26][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[27][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[28][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[29][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/mem_reg[30][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[24][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[25][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[26][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[27][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[28][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[29][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/mem_reg[30][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[24][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[25][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[26][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[27][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[28][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[29][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[30][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[31][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/ctrl/addr_f_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[8][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[9][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[10][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[11][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[12][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[13][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[14][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[15][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[16][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[18][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[20][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[22][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[17][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[19][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[21][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[23][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mac/a_in_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_x/mem_reg[8][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_x/mem_reg[10][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_x/mem_reg[12][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_x/mem_reg[14][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_x/mem_reg[9][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_x/mem_reg[11][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_x/mem_reg[13][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_x/mem_reg[15][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_x/mem_reg[16][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_x/mem_reg[18][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_x/mem_reg[20][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_x/mem_reg[22][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_x/mem_reg[17][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_x/mem_reg[19][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_x/mem_reg[21][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_x/mem_reg[23][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_x/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_x/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_x/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_x/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_x/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_x/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_x/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_x/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mem_x/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[1].mac/a_in_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_x/mem_reg[8][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_x/mem_reg[10][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_x/mem_reg[12][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_x/mem_reg[14][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_x/mem_reg[9][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_x/mem_reg[11][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_x/mem_reg[13][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_x/mem_reg[15][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_x/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_x/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_x/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_x/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_x/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_x/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_x/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_x/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_x/mem_reg[8][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_x/mem_reg[10][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_x/mem_reg[12][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_x/mem_reg[14][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_x/mem_reg[9][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_x/mem_reg[11][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_x/mem_reg[13][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_x/mem_reg[15][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_x/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_x/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_x/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_x/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_x/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_x/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_x/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_x/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_x/mem_reg[8][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_x/mem_reg[10][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_x/mem_reg[12][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_x/mem_reg[14][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_x/mem_reg[9][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_x/mem_reg[11][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_x/mem_reg[13][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_x/mem_reg[15][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_x/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_x/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_x/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_x/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_x/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_x/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_x/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_x/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_x/mem_reg[16][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_x/mem_reg[18][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_x/mem_reg[20][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_x/mem_reg[22][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_x/mem_reg[16][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_x/mem_reg[18][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_x/mem_reg[20][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_x/mem_reg[22][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_x/mem_reg[16][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_x/mem_reg[18][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_x/mem_reg[20][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_x/mem_reg[22][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_x/mem_reg[17][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_x/mem_reg[19][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_x/mem_reg[21][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_x/mem_reg[23][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mem_x/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[2].mac/a_in_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_x/mem_reg[17][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_x/mem_reg[19][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_x/mem_reg[21][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_x/mem_reg[23][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mem_x/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[3].mac/a_in_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_x/mem_reg[17][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_x/mem_reg[19][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_x/mem_reg[21][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_x/mem_reg[23][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mem_x/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[4].mac/a_in_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mem_x/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[11].mac/a_in_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mem_x/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[10].mac/a_in_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mem_x/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[9].mac/a_in_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mem_x/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[8].mac/a_in_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mem_x/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[7].mac/a_in_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mem_x/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[6].mac/a_in_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mem_x/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[5].mac/a_in_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mem_x/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[4].mac/a_in_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mem_x/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[3].mac/a_in_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mac/a_in_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mac/a_in_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mac/a_in_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[9].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[10].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[8].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[10].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[7].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[10].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[6].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[10].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[5].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[10].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[4].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[10].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[3].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[10].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[2].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[10].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[0].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[10].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[1].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[10].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[20].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[21].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[19].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[21].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[18].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[21].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[17].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[21].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[16].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[21].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[15].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[21].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[14].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[21].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[13].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[21].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[12].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[21].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[11].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[21].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[30].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[31].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[29].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[31].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[28].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[31].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[27].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[31].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[26].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[31].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[25].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[31].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[24].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[31].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[23].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[31].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[22].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[31].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[10].mac/valid_out_reg' is removed because it is merged to 'genLayer2/genblk1[11].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[9].mac/valid_out_reg' is removed because it is merged to 'genLayer2/genblk1[11].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[8].mac/valid_out_reg' is removed because it is merged to 'genLayer2/genblk1[11].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[7].mac/valid_out_reg' is removed because it is merged to 'genLayer2/genblk1[11].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[6].mac/valid_out_reg' is removed because it is merged to 'genLayer2/genblk1[11].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[5].mac/valid_out_reg' is removed because it is merged to 'genLayer2/genblk1[11].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[4].mac/valid_out_reg' is removed because it is merged to 'genLayer2/genblk1[11].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[3].mac/valid_out_reg' is removed because it is merged to 'genLayer2/genblk1[11].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[2].mac/valid_out_reg' is removed because it is merged to 'genLayer2/genblk1[11].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[0].mac/valid_out_reg' is removed because it is merged to 'genLayer2/genblk1[11].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer2/genblk1[1].mac/valid_out_reg' is removed because it is merged to 'genLayer2/genblk1[11].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer3/genblk1[3].mac/valid_out_reg' is removed because it is merged to 'genLayer3/genblk1[4].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer3/genblk1[1].mac/valid_out_reg' is removed because it is merged to 'genLayer3/genblk1[4].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer3/genblk1[0].mac/valid_out_reg' is removed because it is merged to 'genLayer3/genblk1[4].mac/valid_out_reg'. (OPT-1215)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:05:46  456932.1      1.01    1898.6   12957.7                           9836340.0000
+    0:05:46  456932.1      1.01    1898.6   12957.7                           9836340.0000
+    0:05:46  456932.1      1.01    1898.6   12957.7                           9836340.0000
+    0:05:47  456923.9      0.99    1897.1   12910.1                           9835895.0000
+  Re-synthesis Optimization (Phase 1)
+  Re-synthesis Optimization (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Selecting critical implementations
+  Mapping 'net_64_33_9_10_16_50_DW01_add_0'
+  Mapping 'net_64_33_9_10_16_50_DW01_add_1'
+    0:09:30  427979.6      0.21     328.4     592.2                           8873418.0000
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:09:30  427979.6      0.21     328.4     592.2                           8873418.0000
+    0:09:31  427979.6      0.21     328.4     592.2                           8873418.0000
+    0:09:45  427111.9      0.22     326.2     491.1                           8797367.0000
+    0:09:45  427111.9      0.22     326.2     491.1                           8797367.0000
+    0:09:55  427699.3      0.20     287.4     538.1                           8819023.0000
+    0:09:55  427699.3      0.20     287.4     538.1                           8819023.0000
+    0:09:55  427699.3      0.20     287.4     538.1                           8819023.0000
+    0:09:55  427699.3      0.20     287.4     538.1                           8819023.0000
+    0:09:56  427699.3      0.20     287.4     538.1                           8819023.0000
+    0:09:56  427699.3      0.20     287.4     538.1                           8819023.0000
+    0:10:21  428127.8      0.18     271.6     511.3                           8834397.0000
+    0:10:21  428127.8      0.18     271.6     511.3                           8834397.0000
+    0:10:26  428432.6      0.18     259.5     507.3                           8844902.0000
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:10:26  428432.6      0.18     259.5     507.3                           8844902.0000
+    0:10:30  429109.1      0.16     232.5     487.9                           8868007.0000
+    0:10:30  429109.1      0.16     232.5     487.9                           8868007.0000
+    0:10:56  430584.3      0.12     178.4     540.2                           8917730.0000
+    0:10:56  430581.4      0.12     178.4     532.9                           8917687.0000
+    0:11:01  431220.3      0.11     155.1     504.6                           8939382.0000
+    0:11:01  431220.3      0.11     155.1     504.6                           8939382.0000
+    0:11:14  431916.4      0.10     144.1     508.1                           8961452.0000
+    0:11:16  431884.0      0.10     142.6     502.8                           8960865.0000
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:11:16  431884.0      0.10     142.6     502.8                           8960865.0000
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[10].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[31].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_50', the register 'genLayer1/genblk1[21].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[31].mac/enable_f_reg'. (OPT-1215)
+    0:11:29  431865.1      0.09     129.7     617.8 genLayer1/genblk1[7].mac/mult_in_reg[13]/D 8960656.0000
+    0:11:29  431867.8      0.08     127.4     617.8                           8960813.0000
+    0:11:38  432372.6      0.08     118.3     617.8                           8977112.0000
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:11:39  432372.6      0.08     118.3     617.8                           8977112.0000
+    0:11:43  432248.1      0.08     116.8     708.8                           8973227.0000
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:12:33  431137.1      0.08     105.3     708.9                           8946802.0000
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+  Global Optimization (Phase 49)
+  Global Optimization (Phase 50)
+  Global Optimization (Phase 51)
+  Global Optimization (Phase 52)
+  Global Optimization (Phase 53)
+  Global Optimization (Phase 54)
+  Global Optimization (Phase 55)
+  Global Optimization (Phase 56)
+  Global Optimization (Phase 57)
+  Global Optimization (Phase 58)
+  Global Optimization (Phase 59)
+  Global Optimization (Phase 60)
+  Global Optimization (Phase 61)
+    0:16:20  425680.6      0.00       0.0       0.0                           8757303.0000
+    0:16:20  425680.6      0.00       0.0       0.0                           8757303.0000
+    0:16:20  425680.6      0.00       0.0       0.0                           8757303.0000
+    0:16:31  425420.2      0.00       0.0       0.0                           8735260.0000
+    0:16:31  425420.2      0.00       0.0       0.0                           8735260.0000
+    0:16:31  425420.2      0.00       0.0       0.0                           8735260.0000
+    0:16:31  425420.2      0.00       0.0       0.0                           8735260.0000
+    0:16:31  425420.2      0.00       0.0       0.0                           8735260.0000
+    0:16:31  425420.2      0.00       0.0       0.0                           8735260.0000
+    0:16:31  425420.2      0.00       0.0       0.0                           8735260.0000
+    0:16:31  425420.2      0.00       0.0       0.0                           8735260.0000
+    0:16:31  425420.2      0.00       0.0       0.0                           8735260.0000
+    0:16:31  425420.2      0.00       0.0       0.0                           8735260.0000
+    0:16:31  425420.2      0.00       0.0       0.0                           8735260.0000
+    0:16:31  425420.2      0.00       0.0       0.0                           8735260.0000
+    0:16:31  425420.2      0.00       0.0       0.0                           8735260.0000
+    0:16:31  425420.2      0.00       0.0       0.0                           8735260.0000
+    0:16:31  425420.2      0.00       0.0       0.0                           8735260.0000
+    0:16:31  425420.2      0.00       0.0       0.0                           8735260.0000
+    0:16:31  425420.2      0.00       0.0       0.0                           8735260.0000
+    0:16:31  425420.2      0.00       0.0       0.0                           8735260.0000
+    0:16:31  425420.2      0.00       0.0       0.0                           8735260.0000
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:16:45  425420.2      0.00       0.0       0.0                           8735260.0000
+    0:17:02  423988.6      0.03      17.3       0.0                           8675970.0000
+    0:17:04  424002.9      0.02      15.1       0.0                           8676634.0000
+    0:17:04  424002.9      0.02      15.1       0.0                           8676634.0000
+    0:17:17  424018.1      0.02      16.8       0.0                           8674557.0000
+    0:17:21  423987.0      0.02      16.9       0.0                           8674020.0000
+    0:17:22  423928.2      0.02      16.6       0.0                           8672439.0000
+    0:17:23  423889.3      0.02      16.4       0.0                           8671194.0000
+    0:17:24  423888.8      0.02      16.4       0.0                           8671180.0000
+    0:17:25  423883.0      0.02      16.4       0.0                           8671029.0000
+    0:17:25  423876.3      0.02      16.4       0.0                           8670901.0000
+    0:17:35  423801.3      0.02      13.1       0.0                           8668260.0000
+    0:17:42  424437.0      0.00       0.0       3.4                           8689373.0000
+    0:18:03  423936.4      0.00       0.0      16.0                           8668715.0000
+Loading db file '/home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'net_64_33_9_10_16_50' contains 17 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'genLayer1/genblk1[30].mem_x/clk': 46164 load(s), 1 driver(s)
+     Net 'genLayer1/genblk1[30].mem_x/data_in[15]': 2048 load(s), 1 driver(s)
+     Net 'genLayer1/genblk1[30].mem_x/data_in[14]': 2048 load(s), 1 driver(s)
+     Net 'genLayer1/genblk1[30].mem_x/data_in[13]': 2048 load(s), 1 driver(s)
+     Net 'genLayer1/genblk1[30].mem_x/data_in[12]': 2048 load(s), 1 driver(s)
+     Net 'genLayer1/genblk1[30].mem_x/data_in[11]': 2048 load(s), 1 driver(s)
+     Net 'genLayer1/genblk1[30].mem_x/data_in[10]': 2048 load(s), 1 driver(s)
+     Net 'genLayer1/genblk1[30].mem_x/data_in[9]': 2048 load(s), 1 driver(s)
+     Net 'genLayer1/genblk1[30].mem_x/data_in[8]': 2048 load(s), 1 driver(s)
+     Net 'genLayer1/genblk1[30].mem_x/data_in[7]': 2048 load(s), 1 driver(s)
+     Net 'genLayer1/genblk1[30].mem_x/data_in[6]': 2048 load(s), 1 driver(s)
+     Net 'genLayer1/genblk1[30].mem_x/data_in[5]': 2048 load(s), 1 driver(s)
+     Net 'genLayer1/genblk1[30].mem_x/data_in[4]': 2048 load(s), 1 driver(s)
+     Net 'genLayer1/genblk1[30].mem_x/data_in[3]': 2048 load(s), 1 driver(s)
+     Net 'genLayer1/genblk1[30].mem_x/data_in[2]': 2048 load(s), 1 driver(s)
+     Net 'genLayer1/genblk1[30].mem_x/data_in[1]': 2048 load(s), 1 driver(s)
+     Net 'genLayer1/genblk1[30].mem_x/data_in[0]': 2048 load(s), 1 driver(s)
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+report_area
+ 
+****************************************
+Report : area
+Design : net_64_33_9_10_16_50
+Version: J-2014.09-SP5-2
+Date   : Sat Dec  4 16:16:59 2021
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Design 'net_64_33_9_10_16_50' contains 17 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db)
+
+Number of ports:                           38
+Number of nets:                        111373
+Number of cells:                        90023
+Number of combinational cells:          77107
+Number of sequential cells:             12884
+Number of macros/black boxes:               0
+Number of buf/inv:                       5895
+Number of references:                      93
+
+Combinational area:             215051.693235
+Buf/Inv area:                    22851.262179
+Noncombinational area:          208884.738443
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                423936.431678
+Total area:                 undefined
+1
+report_power
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : net_64_33_9_10_16_50
+Version: J-2014.09-SP5-2
+Date   : Sat Dec  4 16:17:07 2021
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db)
+
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+net_64_33_9_10_16_50   5K_hvratio_1_1    NangateOpenCellLibrary
+
+
+Global Operating Voltage = 1.1  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  = 178.7892 mW   (98%)
+  Net Switching Power  =   2.7766 mW    (2%)
+                         ---------
+Total Dynamic Power    = 181.5658 mW  (100%)
+
+Cell Leakage Power     =   8.1754 mW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register       1.7760e+05          246.6700        3.5982e+06        1.8144e+05  (  95.62%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  1.2064e+03        2.5297e+03        4.5771e+06        8.3134e+03  (   4.38%)
+--------------------------------------------------------------------------------------------------
+Total          1.7881e+05 uW     2.7764e+03 uW     8.1754e+06 nW     1.8975e+05 uW
+1
+report_timing
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : net_64_33_9_10_16_50
+Version: J-2014.09-SP5-2
+Date   : Sat Dec  4 16:17:07 2021
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: genLayer1/genblk1[11].mac/a_in_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: genLayer1/genblk1[11].mac/mult_in_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  net_64_33_9_10_16_50
+                     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  genLayer1/genblk1[11].mac/a_in_reg[0]/CK (DFF_X1)       0.00 #     0.00 r
+  genLayer1/genblk1[11].mac/a_in_reg[0]/QN (DFF_X1)       0.15       0.15 r
+  U82392/ZN (NOR2_X1)                                     0.04       0.19 f
+  U82398/S (HA_X1)                                        0.09       0.28 f
+  U100768/CO (FA_X1)                                      0.09       0.37 f
+  U100766/CO (FA_X1)                                      0.10       0.47 f
+  U100764/CO (FA_X1)                                      0.09       0.56 f
+  U100762/CO (FA_X1)                                      0.09       0.65 f
+  U100760/CO (FA_X1)                                      0.09       0.74 f
+  U100758/CO (FA_X1)                                      0.09       0.83 f
+  U100756/CO (FA_X1)                                      0.09       0.93 f
+  U82404/ZN (AOI22_X1)                                    0.05       0.98 r
+  U82405/ZN (INV_X1)                                      0.03       1.00 f
+  U100753/CO (FA_X1)                                      0.09       1.09 f
+  U100751/CO (FA_X1)                                      0.09       1.18 f
+  U82406/ZN (INV_X1)                                      0.03       1.22 r
+  U82411/ZN (OAI21_X1)                                    0.03       1.24 f
+  U84390/CO (FA_X1)                                       0.10       1.34 f
+  U41729/ZN (OR2_X1)                                      0.06       1.40 f
+  U43906/ZN (AND2_X1)                                     0.04       1.43 f
+  U93793/ZN (AOI21_X1)                                    0.03       1.47 r
+  genLayer1/genblk1[11].mac/mult_in_reg[15]/D (DFF_X1)
+                                                          0.01       1.48 r
+  data arrival time                                                  1.48
+
+  clock clk (rise edge)                                   1.51       1.51
+  clock network delay (ideal)                             0.00       1.51
+  genLayer1/genblk1[11].mac/mult_in_reg[15]/CK (DFF_X1)
+                                                          0.00       1.51 r
+  library setup time                                     -0.03       1.48
+  data required time                                                 1.48
+  --------------------------------------------------------------------------
+  data required time                                                 1.48
+  data arrival time                                                 -1.48
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
+write -f verilog $TOP_MOD_NAME -output gates.v -hierarchy
+Writing verilog file '/home/home5/aalgewaththa/ese507work/proj3/part3/hdl/gates.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+quit
+
+Thank you...

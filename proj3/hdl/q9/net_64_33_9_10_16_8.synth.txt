@@ -1,0 +1,1284 @@
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+         Version J-2014.09-SP5-2 for RHEL64 -- Jul 11, 2015
+               Copyright (c) 1988-2015 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+##############################################
+# Setup: fill out the following parameters: name of clock signal, clock period (ns),
+# reset signal name (if used), name of top-level module, name of source file
+set CLK_NAME "clk";
+clk
+set CLK_PERIOD 1.28
+1.28
+set RST_NAME "reset";
+reset
+set TOP_MOD_NAME net_64_33_9_10_16_8
+net_64_33_9_10_16_8
+set SRC_FILE net_64_33_9_10_16_8.sv
+net_64_33_9_10_16_8.sv
+# If you have multiple source files, change the line above to list them all like this:
+# set SRC_FILE net_64_33_9_10_16_8.sv
+###############################################
+source setupdc.tcl
+NangateOpenCellLibrary_typical.db dw_foundation.sldb
+file mkdir work_synth
+# optimize FSMs
+set fsm_auto_inferring "true"; 
+true
+set fsm_enable_state_minimization "true";
+true
+define_design_lib WORK -path work_synth
+1
+analyze $SRC_FILE -format sverilog
+Running PRESTO HDLC
+Searching for ./net_64_33_9_10_16_8.sv
+Compiling source file ./net_64_33_9_10_16_8.sv
+Presto compilation completed successfully.
+Loading db file '/home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db'
+Loading db file '/usr/local/synopsys/syn/libraries/syn/dw_foundation.sldb'
+1
+elaborate -work WORK $TOP_MOD_NAME
+Loading db file '/usr/local/synopsys/syn/libraries/syn/gtech.db'
+Loading db file '/usr/local/synopsys/syn/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'net_64_33_9_10_16_8'.
+Information: Building the design 'layer1_64_33_16_4'. (HDL-193)
+Warning:  ./net_64_33_9_10_16_8.sv:374: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:382: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine layer1_64_33_16_4 line 356 in file
+		'./net_64_33_9_10_16_8.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     y_next_reg      | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|    conv_done_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     y_point_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     y_valid_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     y_mem_i_reg     | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+================================================================
+|   block name/line     | Inputs | Outputs | # sel inputs | MB |
+================================================================
+| layer1_64_33_16_4/354 |   4    |   16    |      2       | N  |
+================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer2_32_9_16_3'. (HDL-193)
+Warning:  ./net_64_33_9_10_16_8.sv:573: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:581: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine layer2_32_9_16_3 line 555 in file
+		'./net_64_33_9_10_16_8.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     y_next_reg      | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|    conv_done_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     y_point_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     y_valid_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     y_mem_i_reg     | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer3_24_10_16_1'. (HDL-193)
+Warning:  ./net_64_33_9_10_16_8.sv:748: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:756: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine layer3_24_10_16_1 line 730 in file
+		'./net_64_33_9_10_16_8.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     y_next_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    conv_done_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     y_point_reg     | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|     y_valid_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     y_mem_i_reg     | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'control' instantiated from design 'layer1_64_33_16_4' with
+	the parameters "16,64,33,8". (HDL-193)
+Warning:  ./net_64_33_9_10_16_8.sv:105: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine control_ADDR_WIDTH16_X_LEN_IN64_F_LEN_IN33_OFFSET8 line 52 in file
+		'./net_64_33_9_10_16_8.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      idle_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    clear_acc_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     en_acc_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     y_valid_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| point_calc_done_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| next_clear_acc_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    y_counter_reg    | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine control_ADDR_WIDTH16_X_LEN_IN64_F_LEN_IN33_OFFSET8 line 94 in file
+		'./net_64_33_9_10_16_8.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     x_ready_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     wr_en_x_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    x_counter_reg    | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|    x_loaded_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     addr_x_reg      | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine control_ADDR_WIDTH16_X_LEN_IN64_F_LEN_IN33_OFFSET8 line 132 in file
+		'./net_64_33_9_10_16_8.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     addr_f_reg      | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer1_64_33_16_4_f_rom'. (HDL-193)
+Warning:  ./net_64_33_9_10_16_8.sv:403: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:404: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:405: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:406: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:409: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:410: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:412: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:413: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:414: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:415: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:416: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:418: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:422: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:423: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:425: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:426: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:427: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:429: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:430: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:431: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 397 in file
+	'./net_64_33_9_10_16_8.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           398            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine layer1_64_33_16_4_f_rom line 397 in file
+		'./net_64_33_9_10_16_8.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        z_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'memory' instantiated from design 'layer1_64_33_16_4' with
+	the parameters "16,64". (HDL-193)
+
+Inferred memory devices in process
+	in routine memory_WIDTH16_SIZE64 line 14 in file
+		'./net_64_33_9_10_16_8.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===================================================================
+|     block name/line      | Inputs | Outputs | # sel inputs | MB |
+===================================================================
+| memory_WIDTH16_SIZE64/15 |   64   |   16    |      6       | N  |
+===================================================================
+Presto compilation completed successfully.
+Information: Building the design 'memory' instantiated from design 'layer1_64_33_16_4' with
+	the parameters "16,8". (HDL-193)
+
+Inferred memory devices in process
+	in routine memory_WIDTH16_SIZE8 line 14 in file
+		'./net_64_33_9_10_16_8.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+==================================================================
+|    block name/line      | Inputs | Outputs | # sel inputs | MB |
+==================================================================
+| memory_WIDTH16_SIZE8/15 |   8    |   16    |      3       | N  |
+==================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mac' instantiated from design 'layer1_64_33_16_4' with
+	the parameters "16,16". (HDL-193)
+
+Inferred memory devices in process
+	in routine mac_WIDTH16_OUT_WIDTH16 line 203 in file
+		'./net_64_33_9_10_16_8.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     mult_in_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|    valid_out_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|        f_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      a_in_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      b_in_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|  correct_mult_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    enable_f_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'control' instantiated from design 'layer2_32_9_16_3' with
+	the parameters "16,32,9,8". (HDL-193)
+Warning:  ./net_64_33_9_10_16_8.sv:105: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine control_ADDR_WIDTH16_X_LEN_IN32_F_LEN_IN9_OFFSET8 line 52 in file
+		'./net_64_33_9_10_16_8.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      idle_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    clear_acc_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     en_acc_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     y_valid_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| point_calc_done_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| next_clear_acc_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    y_counter_reg    | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine control_ADDR_WIDTH16_X_LEN_IN32_F_LEN_IN9_OFFSET8 line 94 in file
+		'./net_64_33_9_10_16_8.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     x_ready_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     wr_en_x_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    x_counter_reg    | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|    x_loaded_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     addr_x_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine control_ADDR_WIDTH16_X_LEN_IN32_F_LEN_IN9_OFFSET8 line 132 in file
+		'./net_64_33_9_10_16_8.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     addr_f_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer2_32_9_16_3_f_rom'. (HDL-193)
+Warning:  ./net_64_33_9_10_16_8.sv:599: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:601: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:602: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 596 in file
+	'./net_64_33_9_10_16_8.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           597            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine layer2_32_9_16_3_f_rom line 596 in file
+		'./net_64_33_9_10_16_8.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        z_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'memory' instantiated from design 'layer2_32_9_16_3' with
+	the parameters "16,32". (HDL-193)
+
+Inferred memory devices in process
+	in routine memory_WIDTH16_SIZE32 line 14 in file
+		'./net_64_33_9_10_16_8.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===================================================================
+|     block name/line      | Inputs | Outputs | # sel inputs | MB |
+===================================================================
+| memory_WIDTH16_SIZE32/15 |   32   |   16    |      5       | N  |
+===================================================================
+Presto compilation completed successfully.
+Information: Building the design 'control' instantiated from design 'layer3_24_10_16_1' with
+	the parameters "16,24,10,15". (HDL-193)
+Warning:  ./net_64_33_9_10_16_8.sv:105: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine control_ADDR_WIDTH16_X_LEN_IN24_F_LEN_IN10_OFFSET15 line 52 in file
+		'./net_64_33_9_10_16_8.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      idle_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    clear_acc_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     en_acc_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     y_valid_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| point_calc_done_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| next_clear_acc_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    y_counter_reg    | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine control_ADDR_WIDTH16_X_LEN_IN24_F_LEN_IN10_OFFSET15 line 94 in file
+		'./net_64_33_9_10_16_8.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     x_ready_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     wr_en_x_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    x_counter_reg    | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|    x_loaded_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     addr_x_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine control_ADDR_WIDTH16_X_LEN_IN24_F_LEN_IN10_OFFSET15 line 132 in file
+		'./net_64_33_9_10_16_8.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     addr_f_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer3_24_10_16_1_f_rom'. (HDL-193)
+Warning:  ./net_64_33_9_10_16_8.sv:773: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:774: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:775: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:776: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:779: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:780: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./net_64_33_9_10_16_8.sv:782: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 771 in file
+	'./net_64_33_9_10_16_8.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           772            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine layer3_24_10_16_1_f_rom line 771 in file
+		'./net_64_33_9_10_16_8.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        z_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'memory' instantiated from design 'layer3_24_10_16_1' with
+	the parameters "16,24". (HDL-193)
+
+Inferred memory devices in process
+	in routine memory_WIDTH16_SIZE24 line 14 in file
+		'./net_64_33_9_10_16_8.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'memory' instantiated from design 'layer3_24_10_16_1' with
+	the parameters "16,15". (HDL-193)
+
+Inferred memory devices in process
+	in routine memory_WIDTH16_SIZE15 line 14 in file
+		'./net_64_33_9_10_16_8.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===================================================================
+|     block name/line      | Inputs | Outputs | # sel inputs | MB |
+===================================================================
+| memory_WIDTH16_SIZE15/15 |   16   |   16    |      4       | N  |
+===================================================================
+Presto compilation completed successfully.
+1
+###### CLOCKS AND PORTS #######
+set CLK_PORT [get_ports $CLK_NAME]
+{clk}
+set TMP1 [remove_from_collection [all_inputs] $CLK_PORT]
+{reset x_data[15] x_data[14] x_data[13] x_data[12] x_data[11] x_data[10] x_data[9] x_data[8] x_data[7] x_data[6] x_data[5] x_data[4] x_data[3] x_data[2] x_data[1] x_data[0] x_valid y_ready}
+set INPUTS [remove_from_collection $TMP1 $RST_NAME]
+{x_data[15] x_data[14] x_data[13] x_data[12] x_data[11] x_data[10] x_data[9] x_data[8] x_data[7] x_data[6] x_data[5] x_data[4] x_data[3] x_data[2] x_data[1] x_data[0] x_valid y_ready}
+create_clock -period $CLK_PERIOD [get_ports clk]
+1
+# set delay for inputs to be 0.2ns
+set_input_delay 0.2 -max -clock clk $INPUTS
+1
+set_output_delay 0.2 -max -clock clk [all_outputs]
+1
+###### OPTIMIZATION #######
+set_max_area 0 
+1
+###### RUN #####
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | J-2014.09-DWBB_201409.5.2 |   *     |
+| Licensed DW Building Blocks        | J-2014.09-DWBB_201409.5.2 |   *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 48 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Loaded alib file './alib-52/NangateOpenCellLibrary_typical.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping hierarchy genLayer1 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer3 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/ctrl before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/mem_f before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[0].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[0].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[1].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[1].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[2].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[2].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[3].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer1/genblk1[3].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/ctrl before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/mem_f before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[0].mem_x before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[0].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[0].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[1].mem_x before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[1].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[1].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[2].mem_x before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[2].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer2/genblk1[2].mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer3/ctrl before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer3/mem_f before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer3/genblk1[0].mem_x before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer3/genblk1[0].mem_y before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genLayer3/genblk1[0].mac before Pass 1 (OPT-776)
+Information: Ungrouping 29 of 34 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'net_64_33_9_10_16_8'
+Information: Added key list 'DesignWare' to design 'net_64_33_9_10_16_8'. (DDB-72)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer2/mem_f/z_reg[14]' is removed because it is merged to 'genLayer2/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer2/mem_f/z_reg[13]' is removed because it is merged to 'genLayer2/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer2/mem_f/z_reg[12]' is removed because it is merged to 'genLayer2/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer2/mem_f/z_reg[11]' is removed because it is merged to 'genLayer2/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer2/mem_f/z_reg[10]' is removed because it is merged to 'genLayer2/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer2/mem_f/z_reg[9]' is removed because it is merged to 'genLayer2/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer2/mem_f/z_reg[8]' is removed because it is merged to 'genLayer2/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer2/mem_f/z_reg[7]' is removed because it is merged to 'genLayer2/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer2/mem_f/z_reg[6]' is removed because it is merged to 'genLayer2/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer2/mem_f/z_reg[5]' is removed because it is merged to 'genLayer2/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer2/mem_f/z_reg[4]' is removed because it is merged to 'genLayer2/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer2/mem_f/z_reg[3]' is removed because it is merged to 'genLayer2/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer3/mem_f/z_reg[14]' is removed because it is merged to 'genLayer3/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer3/mem_f/z_reg[13]' is removed because it is merged to 'genLayer3/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer3/mem_f/z_reg[12]' is removed because it is merged to 'genLayer3/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer3/mem_f/z_reg[11]' is removed because it is merged to 'genLayer3/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer3/mem_f/z_reg[10]' is removed because it is merged to 'genLayer3/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer3/mem_f/z_reg[9]' is removed because it is merged to 'genLayer3/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer3/mem_f/z_reg[8]' is removed because it is merged to 'genLayer3/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer3/mem_f/z_reg[7]' is removed because it is merged to 'genLayer3/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer3/mem_f/z_reg[6]' is removed because it is merged to 'genLayer3/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer3/mem_f/z_reg[5]' is removed because it is merged to 'genLayer3/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer3/mem_f/z_reg[4]' is removed because it is merged to 'genLayer3/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer3/mem_f/z_reg[3]' is removed because it is merged to 'genLayer3/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer1/mem_f/z_reg[14]' is removed because it is merged to 'genLayer1/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer1/mem_f/z_reg[13]' is removed because it is merged to 'genLayer1/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer1/mem_f/z_reg[12]' is removed because it is merged to 'genLayer1/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer1/mem_f/z_reg[11]' is removed because it is merged to 'genLayer1/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer1/mem_f/z_reg[10]' is removed because it is merged to 'genLayer1/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer1/mem_f/z_reg[9]' is removed because it is merged to 'genLayer1/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer1/mem_f/z_reg[8]' is removed because it is merged to 'genLayer1/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer1/mem_f/z_reg[7]' is removed because it is merged to 'genLayer1/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer1/mem_f/z_reg[6]' is removed because it is merged to 'genLayer1/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer1/mem_f/z_reg[5]' is removed because it is merged to 'genLayer1/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer1/mem_f/z_reg[4]' is removed because it is merged to 'genLayer1/mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer1/mem_f/z_reg[3]' is removed because it is merged to 'genLayer1/mem_f/z_reg[15]'. (OPT-1215)
+ Implement Synthetic for 'net_64_33_9_10_16_8'.
+  Processing 'memory_WIDTH16_SIZE64_0'
+ Implement Synthetic for 'memory_WIDTH16_SIZE64_0'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The register 'genLayer1/y_next_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[0].mem_y/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[0].mem_y/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[0].mem_y/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[0].mem_y/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[0].mem_y/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[0].mem_y/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[0].mem_y/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[0].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[1].mem_y/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[1].mem_y/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[1].mem_y/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[1].mem_y/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[1].mem_y/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[1].mem_y/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[1].mem_y/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[1].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[2].mem_y/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[2].mem_y/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[2].mem_y/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[2].mem_y/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[2].mem_y/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[2].mem_y/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[2].mem_y/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[2].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[3].mem_y/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[3].mem_y/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[3].mem_y/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[3].mem_y/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[3].mem_y/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[3].mem_y/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[3].mem_y/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[3].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_y/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_y/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_y/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_y/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_y/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_y/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_y/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_y/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_y/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_y/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_y/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_y/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_y/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_y/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_y/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_y/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_y/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_y/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_y/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_y/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_y/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/y_next_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_y/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_y/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_y/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_y/mem_reg[10][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_y/mem_reg[14][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_y/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_y/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_y/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_y/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_y/mem_reg[8][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_y/mem_reg[9][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_y/mem_reg[12][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_y/mem_reg[13][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_y/mem_reg[11][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[3].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[2].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[1].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/genblk1[0].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer1/genblk1[1].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer1/genblk1[2].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer1/genblk1[3].mac/correct_mult_reg' is removed because it is merged to 'genLayer1/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer2/genblk1[1].mac/correct_mult_reg' is removed because it is merged to 'genLayer2/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer2/genblk1[2].mac/correct_mult_reg' is removed because it is merged to 'genLayer2/genblk1[0].mac/correct_mult_reg'. (OPT-1215)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: The register 'genLayer3/y_mem_i_reg[4]' will be removed. (OPT-1207)
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer1/genblk1[2].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[3].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer1/genblk1[1].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[3].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer1/genblk1[0].mac/enable_f_reg' is removed because it is merged to 'genLayer1/genblk1[3].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer2/genblk1[1].mac/enable_f_reg' is removed because it is merged to 'genLayer2/genblk1[2].mac/enable_f_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer2/genblk1[0].mac/enable_f_reg' is removed because it is merged to 'genLayer2/genblk1[2].mac/enable_f_reg'. (OPT-1215)
+Information: The register 'genLayer1/ctrl/addr_f_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer1/y_point_reg[5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/ctrl/addr_f_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[8][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[9][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[10][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[11][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[12][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[13][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[14][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[15][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[16][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[17][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[18][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[19][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[20][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[21][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[22][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[23][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[24][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[25][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[26][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[27][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[28][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[29][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[30][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/mem_reg[31][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[8][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[9][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[10][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[11][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[12][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[13][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[14][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[15][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[8][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[9][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[10][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[11][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[12][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[13][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[14][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[15][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[16][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[17][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[18][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[19][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[20][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[21][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[22][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[23][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[16][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[17][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[18][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[19][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[20][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[21][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[22][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[23][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[24][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[25][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[26][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[27][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[28][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[29][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[30][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/mem_reg[31][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[24][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[25][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[26][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[27][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[28][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[29][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[30][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/mem_reg[31][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/ctrl/y_counter_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/ctrl/addr_f_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[8][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[10][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[12][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[14][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[9][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[11][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[13][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[15][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[16][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[18][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[20][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[22][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[17][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[19][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[21][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/mem_reg[23][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mem_x/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer3/genblk1[0].mac/a_in_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mem_x/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[2].mac/a_in_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mem_x/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[1].mac/a_in_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mem_x/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genLayer2/genblk1[0].mac/a_in_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer1/genblk1[2].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[3].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer1/genblk1[0].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[3].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer1/genblk1[1].mac/valid_out_reg' is removed because it is merged to 'genLayer1/genblk1[3].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer2/genblk1[0].mac/valid_out_reg' is removed because it is merged to 'genLayer2/genblk1[2].mac/valid_out_reg'. (OPT-1215)
+Information: In design 'net_64_33_9_10_16_8', the register 'genLayer2/genblk1[1].mac/valid_out_reg' is removed because it is merged to 'genLayer2/genblk1[2].mac/valid_out_reg'. (OPT-1215)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:01:05   79457.1      1.00     954.7    2710.9                           1748168.6250
+    0:01:05   79448.3      0.99     953.6    2660.7                           1747709.3750
+    0:01:05   79448.3      0.99     953.6    2660.7                           1747709.3750
+    0:01:05   79415.1      0.99     952.5    2536.9                           1746226.5000
+  Re-synthesis Optimization (Phase 1)
+  Re-synthesis Optimization (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Mapping 'net_64_33_9_10_16_8_DP_OP_1174J1_130_7517_1'
+    0:01:27   72183.9      0.34     795.5     108.6                           1493670.3750
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:01:27   72183.9      0.34     795.5     108.6                           1493670.3750
+    0:01:27   72183.9      0.34     795.5     108.6                           1493670.3750
+    0:01:29   72005.4      0.34     546.0      78.9                           1481543.3750
+    0:01:29   72005.4      0.34     546.0      78.9                           1481543.3750
+    0:01:50   73011.7      0.23     302.5      84.2                           1514345.5000
+    0:01:50   73011.7      0.23     302.5      84.2                           1514345.5000
+    0:01:50   73011.1      0.23     302.4      84.2                           1514357.0000
+    0:01:50   73011.1      0.23     302.4      84.2                           1514357.0000
+    0:01:54   73094.1      0.22     301.6      87.5                           1516745.3750
+    0:01:54   73094.1      0.22     301.6      87.5                           1516745.3750
+    0:02:00   73381.2      0.19     296.7      88.0                           1525645.0000
+    0:02:00   73381.2      0.19     296.7      88.0                           1525645.0000
+    0:02:02   73446.9      0.19     296.4      94.5                           1527728.3750
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:02:02   73446.9      0.19     296.4      94.5                           1527728.3750
+    0:02:02   73452.7      0.19     296.4      94.5                           1527914.3750
+    0:02:02   73452.7      0.19     296.4      94.5                           1527914.3750
+    0:02:03   73452.7      0.19     296.4      94.5                           1527914.3750
+    0:02:03   73452.7      0.19     296.4      94.5                           1527914.3750
+    0:02:03   73452.7      0.19     296.4      94.5                           1527914.3750
+    0:02:03   73452.7      0.19     296.4      94.5                           1527914.3750
+    0:02:03   73452.7      0.19     296.4      94.5                           1527914.3750
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:02:03   73452.7      0.19     296.4      94.5                           1527914.3750
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+    0:02:05   73325.6      0.17     146.5       1.6 genLayer1/genblk1[3].mac/mult_in_reg[0]/D 1523260.8750
+    0:02:06   73309.3      0.16     145.0       1.6                           1522626.0000
+    0:02:16   73595.5      0.14     134.8       3.4                           1532735.7500
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:02:16   73595.5      0.14     134.8       3.4                           1532735.7500
+    0:02:17   73580.9      0.14     198.4       3.4                           1532261.7500
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:02:27   73414.1      0.14     196.4       3.4                           1528183.7500
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+  Global Optimization (Phase 49)
+  Global Optimization (Phase 50)
+  Global Optimization (Phase 51)
+  Global Optimization (Phase 52)
+  Global Optimization (Phase 53)
+  Global Optimization (Phase 54)
+  Global Optimization (Phase 55)
+  Global Optimization (Phase 56)
+  Global Optimization (Phase 57)
+  Global Optimization (Phase 58)
+  Global Optimization (Phase 59)
+  Global Optimization (Phase 60)
+  Global Optimization (Phase 61)
+    0:02:43   72821.8      0.01       1.3       0.0 genLayer2/genblk1[0].mac/mult_in_reg[14]/D 1502245.5000
+    0:02:43   72843.3      0.00       0.6       0.0 genLayer1/genblk1[3].mac/mult_in_reg[2]/D 1502699.8750
+    0:02:44   72863.5      0.00       0.2       0.0                           1503381.8750
+    0:02:46   72902.1      0.00       0.0       0.0                           1504965.8750
+    0:02:46   72902.1      0.00       0.0       0.0                           1504965.8750
+    0:02:48   72834.5      0.00       0.0       0.0                           1499151.8750
+    0:02:48   72834.5      0.00       0.0       0.0                           1499151.8750
+    0:02:48   72834.5      0.00       0.0       0.0                           1499151.8750
+    0:02:48   72834.5      0.00       0.0       0.0                           1499151.8750
+    0:02:48   72834.5      0.00       0.0       0.0                           1499151.8750
+    0:02:48   72834.5      0.00       0.0       0.0                           1499151.8750
+    0:02:48   72834.5      0.00       0.0       0.0                           1499151.8750
+    0:02:48   72834.5      0.00       0.0       0.0                           1499151.8750
+    0:02:48   72834.5      0.00       0.0       0.0                           1499151.8750
+    0:02:48   72834.5      0.00       0.0       0.0                           1499151.8750
+    0:02:48   72834.5      0.00       0.0       0.0                           1499151.8750
+    0:02:48   72834.5      0.00       0.0       0.0                           1499151.8750
+    0:02:48   72834.5      0.00       0.0       0.0                           1499151.8750
+    0:02:48   72834.5      0.00       0.0       0.0                           1499151.8750
+    0:02:48   72834.5      0.00       0.0       0.0                           1499151.8750
+    0:02:48   72834.5      0.00       0.0       0.0                           1499151.8750
+    0:02:48   72834.5      0.00       0.0       0.0                           1499151.8750
+    0:02:48   72834.5      0.00       0.0       0.0                           1499151.8750
+    0:02:48   72834.5      0.00       0.0       0.0                           1499151.8750
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:02:50   72834.5      0.00       0.0       0.0                           1499151.8750
+    0:02:52   72597.3      0.01       0.3       0.0                           1490640.1250
+    0:02:53   72606.0      0.00       0.0       0.0                           1491012.3750
+    0:02:53   72606.0      0.00       0.0       0.0                           1491012.3750
+    0:02:54   72599.4      0.00       0.0       0.0                           1490431.7500
+    0:02:57   72516.1      0.00       0.0       0.0                           1488202.7500
+    0:02:57   72507.1      0.00       0.0       0.0                           1487771.6250
+    0:02:57   72507.1      0.00       0.0       0.0                           1487771.6250
+    0:02:58   72476.5      0.00       0.0       0.0                           1486274.2500
+Loading db file '/home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'net_64_33_9_10_16_8' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'genLayer1/genblk1[2].mem_x/clk': 7857 load(s), 1 driver(s)
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+report_area
+ 
+****************************************
+Report : area
+Design : net_64_33_9_10_16_8
+Version: J-2014.09-SP5-2
+Date   : Sat Dec  4 14:40:11 2021
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Design 'net_64_33_9_10_16_8' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db)
+
+Number of ports:                           38
+Number of nets:                         26506
+Number of cells:                        21644
+Number of combinational cells:          17943
+Number of sequential cells:              3697
+Number of macros/black boxes:               0
+Number of buf/inv:                       1598
+Number of references:                      57
+
+Combinational area:              36928.514500
+Buf/Inv area:                     3429.272023
+Noncombinational area:           35547.972713
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 72476.487213
+Total area:                 undefined
+1
+report_power
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : net_64_33_9_10_16_8
+Version: J-2014.09-SP5-2
+Date   : Sat Dec  4 14:40:12 2021
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db)
+
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+net_64_33_9_10_16_8    5K_hvratio_1_1    NangateOpenCellLibrary
+
+
+Global Operating Voltage = 1.1  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =  37.7080 mW   (99%)
+  Net Switching Power  = 431.2862 uW    (1%)
+                         ---------
+Total Dynamic Power    =  38.1393 mW  (100%)
+
+Cell Leakage Power     =   1.4648 mW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register       3.7515e+04           47.2881        6.1480e+05        3.8178e+04  (  96.40%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational    192.6367          384.0016        8.5004e+05        1.4267e+03  (   3.60%)
+--------------------------------------------------------------------------------------------------
+Total          3.7708e+04 uW       431.2898 uW     1.4648e+06 nW     3.9604e+04 uW
+1
+report_timing
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : net_64_33_9_10_16_8
+Version: J-2014.09-SP5-2
+Date   : Sat Dec  4 14:40:12 2021
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: genLayer1/genblk1[3].mac/b_in_reg[7]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: genLayer1/genblk1[3].mac/mult_in_reg[2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  net_64_33_9_10_16_8
+                     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  genLayer1/genblk1[3].mac/b_in_reg[7]/CK (DFF_X2)        0.00 #     0.00 r
+  genLayer1/genblk1[3].mac/b_in_reg[7]/Q (DFF_X2)         0.12       0.12 r
+  U11420/Z (BUF_X2)                                       0.09       0.21 r
+  U20715/ZN (XNOR2_X1)                                    0.09       0.30 r
+  U20766/ZN (OR2_X1)                                      0.04       0.34 r
+  U20767/ZN (OAI21_X1)                                    0.03       0.37 f
+  U20825/CO (FA_X1)                                       0.10       0.47 f
+  U11593/ZN (NAND2_X1)                                    0.03       0.50 r
+  U11595/ZN (NAND3_X1)                                    0.04       0.54 f
+  U20776/ZN (XNOR2_X1)                                    0.07       0.61 f
+  U20778/ZN (XNOR2_X1)                                    0.06       0.67 f
+  U20864/CO (FA_X1)                                       0.09       0.76 f
+  U21069/ZN (INV_X1)                                      0.03       0.79 r
+  U20800/ZN (NAND2_X1)                                    0.04       0.83 f
+  U12110/ZN (XNOR2_X1)                                    0.06       0.89 f
+  U12202/ZN (AOI21_X1)                                    0.04       0.93 r
+  U20982/ZN (NAND2_X1)                                    0.03       0.96 f
+  U20983/ZN (AOI22_X1)                                    0.05       1.01 r
+  U21036/ZN (OAI21_X1)                                    0.04       1.05 f
+  U13364/ZN (OAI21_X1)                                    0.06       1.11 r
+  U13190/ZN (AND2_X2)                                     0.07       1.18 r
+  U21425/ZN (NAND2_X1)                                    0.03       1.21 f
+  U21426/ZN (NAND2_X1)                                    0.03       1.24 r
+  genLayer1/genblk1[3].mac/mult_in_reg[2]/D (DFF_X1)      0.01       1.25 r
+  data arrival time                                                  1.25
+
+  clock clk (rise edge)                                   1.28       1.28
+  clock network delay (ideal)                             0.00       1.28
+  genLayer1/genblk1[3].mac/mult_in_reg[2]/CK (DFF_X1)     0.00       1.28 r
+  library setup time                                     -0.03       1.25
+  data required time                                                 1.25
+  --------------------------------------------------------------------------
+  data required time                                                 1.25
+  data arrival time                                                 -1.25
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
+write -f verilog $TOP_MOD_NAME -output gates.v -hierarchy
+Writing verilog file '/home/home5/aalgewaththa/ese507work/proj3/part3/hdl/gates.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+quit
+
+Thank you...

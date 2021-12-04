@@ -1,0 +1,8 @@
+main_with_eval has a fourth mode that allows the user to specify P1,P2,P3 via the command line. Use the script exhaustive_test.csh to generate profile.txt which will contain the simulation time for all the valid combinations of P1,P2,P3 and will rank them from lowest simulation time to largest with the corresponding P1,P2,P3 selected
+
+./exhaustive_test.csh N M1 M2 M3 T B
+
+build with
+	g++ main_with_eval.cc -o geneval -std=c++11 -O3
+
+This file has not been updated to the latest changes to other layers as this will only be used for evaluation and has no direct impact from the latest changes to the generator software.s

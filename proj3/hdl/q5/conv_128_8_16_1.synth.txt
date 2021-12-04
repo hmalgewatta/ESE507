@@ -1,0 +1,968 @@
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+         Version J-2014.09-SP5-2 for RHEL64 -- Jul 11, 2015
+               Copyright (c) 1988-2015 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+##############################################
+# Setup: fill out the following parameters: name of clock signal, clock period (ns),
+# reset signal name (if used), name of top-level module, name of source file
+set CLK_NAME "clk";
+clk
+set CLK_PERIOD 1.19
+1.19
+set RST_NAME "reset";
+reset
+set TOP_MOD_NAME conv_128_8_16_1
+conv_128_8_16_1
+set SRC_FILE conv_128_8_16_1.sv
+conv_128_8_16_1.sv
+# If you have multiple source files, change the line above to list them all like this:
+# set SRC_FILE conv_128_8_16_1.sv
+###############################################
+source setupdc.tcl
+NangateOpenCellLibrary_typical.db dw_foundation.sldb
+file mkdir work_synth
+# optimize FSMs
+set fsm_auto_inferring "true"; 
+true
+set fsm_enable_state_minimization "true";
+true
+define_design_lib WORK -path work_synth
+1
+analyze $SRC_FILE -format sverilog
+Running PRESTO HDLC
+Searching for ./conv_128_8_16_1.sv
+Compiling source file ./conv_128_8_16_1.sv
+Presto compilation completed successfully.
+Loading db file '/home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db'
+Loading db file '/usr/local/synopsys/syn/libraries/syn/dw_foundation.sldb'
+1
+elaborate -work WORK $TOP_MOD_NAME
+Loading db file '/usr/local/synopsys/syn/libraries/syn/gtech.db'
+Loading db file '/usr/local/synopsys/syn/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ./conv_128_8_16_1.sv:374: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./conv_128_8_16_1.sv:382: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine conv_128_8_16_1 line 356 in file
+		'./conv_128_8_16_1.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     y_next_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    conv_done_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     y_point_reg     | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|     y_valid_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     y_mem_i_reg     | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'conv_128_8_16_1'.
+Information: Building the design 'control' instantiated from design 'conv_128_8_16_1' with
+	the parameters "16,128,8,121". (HDL-193)
+Warning:  ./conv_128_8_16_1.sv:105: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine control_ADDR_WIDTH16_X_LEN_IN128_F_LEN_IN8_OFFSET121 line 52 in file
+		'./conv_128_8_16_1.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      idle_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    clear_acc_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     en_acc_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     y_valid_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| point_calc_done_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| next_clear_acc_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    y_counter_reg    | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine control_ADDR_WIDTH16_X_LEN_IN128_F_LEN_IN8_OFFSET121 line 94 in file
+		'./conv_128_8_16_1.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     x_ready_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     wr_en_x_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    x_counter_reg    | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
+|    x_loaded_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     addr_x_reg      | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine control_ADDR_WIDTH16_X_LEN_IN128_F_LEN_IN8_OFFSET121 line 132 in file
+		'./conv_128_8_16_1.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     addr_f_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'conv_128_8_16_1_f_rom'. (HDL-193)
+Warning:  ./conv_128_8_16_1.sv:399: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./conv_128_8_16_1.sv:405: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./conv_128_8_16_1.sv:406: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 397 in file
+	'./conv_128_8_16_1.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           398            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine conv_128_8_16_1_f_rom line 397 in file
+		'./conv_128_8_16_1.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        z_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'memory' instantiated from design 'conv_128_8_16_1' with
+	the parameters "16,128". (HDL-193)
+
+Inferred memory devices in process
+	in routine memory_WIDTH16_SIZE128 line 14 in file
+		'./conv_128_8_16_1.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+====================================================================
+|     block name/line       | Inputs | Outputs | # sel inputs | MB |
+====================================================================
+| memory_WIDTH16_SIZE128/15 |  128   |   16    |      7       | N  |
+====================================================================
+Presto compilation completed successfully.
+Information: Building the design 'memory' instantiated from design 'conv_128_8_16_1' with
+	the parameters "16,121". (HDL-193)
+
+Inferred memory devices in process
+	in routine memory_WIDTH16_SIZE121 line 14 in file
+		'./conv_128_8_16_1.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+====================================================================
+|     block name/line       | Inputs | Outputs | # sel inputs | MB |
+====================================================================
+| memory_WIDTH16_SIZE121/15 |  128   |   16    |      7       | N  |
+====================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mac' instantiated from design 'conv_128_8_16_1' with
+	the parameters "16,16". (HDL-193)
+
+Inferred memory devices in process
+	in routine mac_WIDTH16_OUT_WIDTH16 line 203 in file
+		'./conv_128_8_16_1.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     mult_in_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|    valid_out_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|        f_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      a_in_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      b_in_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|  correct_mult_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    enable_f_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+1
+###### CLOCKS AND PORTS #######
+set CLK_PORT [get_ports $CLK_NAME]
+{clk}
+set TMP1 [remove_from_collection [all_inputs] $CLK_PORT]
+{reset x_data[15] x_data[14] x_data[13] x_data[12] x_data[11] x_data[10] x_data[9] x_data[8] x_data[7] x_data[6] x_data[5] x_data[4] x_data[3] x_data[2] x_data[1] x_data[0] x_valid y_ready}
+set INPUTS [remove_from_collection $TMP1 $RST_NAME]
+{x_data[15] x_data[14] x_data[13] x_data[12] x_data[11] x_data[10] x_data[9] x_data[8] x_data[7] x_data[6] x_data[5] x_data[4] x_data[3] x_data[2] x_data[1] x_data[0] x_valid y_ready}
+create_clock -period $CLK_PERIOD [get_ports clk]
+1
+# set delay for inputs to be 0.2ns
+set_input_delay 0.2 -max -clock clk $INPUTS
+1
+set_output_delay 0.2 -max -clock clk [all_outputs]
+1
+###### OPTIMIZATION #######
+set_max_area 0 
+1
+###### RUN #####
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | J-2014.09-DWBB_201409.5.2 |   *     |
+| Licensed DW Building Blocks        | J-2014.09-DWBB_201409.5.2 |   *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 13 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Loaded alib file './alib-52/NangateOpenCellLibrary_typical.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping hierarchy ctrl before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy mem_f before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[0].mac before Pass 1 (OPT-776)
+Information: Ungrouping 3 of 6 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'memory_WIDTH16_SIZE121'
+ Implement Synthetic for 'memory_WIDTH16_SIZE121'.
+  Processing 'conv_128_8_16_1'
+Information: Added key list 'DesignWare' to design 'conv_128_8_16_1'. (DDB-72)
+Information: In design 'conv_128_8_16_1', the register 'mem_f/z_reg[14]' is removed because it is merged to 'mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'conv_128_8_16_1', the register 'mem_f/z_reg[13]' is removed because it is merged to 'mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'conv_128_8_16_1', the register 'mem_f/z_reg[12]' is removed because it is merged to 'mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'conv_128_8_16_1', the register 'mem_f/z_reg[11]' is removed because it is merged to 'mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'conv_128_8_16_1', the register 'mem_f/z_reg[10]' is removed because it is merged to 'mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'conv_128_8_16_1', the register 'mem_f/z_reg[9]' is removed because it is merged to 'mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'conv_128_8_16_1', the register 'mem_f/z_reg[8]' is removed because it is merged to 'mem_f/z_reg[15]'. (OPT-1215)
+Information: In design 'conv_128_8_16_1', the register 'mem_f/z_reg[0]' is removed because it is merged to 'mem_f/z_reg[3]'. (OPT-1215)
+ Implement Synthetic for 'conv_128_8_16_1'.
+  Processing 'memory_WIDTH16_SIZE128'
+ Implement Synthetic for 'memory_WIDTH16_SIZE128'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The register 'y_next_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[16][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[32][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[48][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[64][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[80][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[96][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[112][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[20][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[36][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[52][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[68][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[84][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[100][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[116][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[8][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[24][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[40][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[56][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[72][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[88][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[104][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[120][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[12][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[28][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[44][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[60][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[76][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[92][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[108][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[17][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[33][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[49][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[65][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[81][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[97][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[113][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[21][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[37][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[53][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[69][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[85][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[101][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[117][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[9][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[25][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[41][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[57][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[73][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[89][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[105][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[13][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[29][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[45][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[61][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[77][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[93][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[109][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[19][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[35][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[51][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[67][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[83][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[99][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[115][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[23][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[39][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[55][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[71][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[87][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[103][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[119][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[11][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[27][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[43][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[59][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[75][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[91][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[107][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[15][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[31][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[47][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[63][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[79][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[95][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[111][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[18][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[34][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[50][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[66][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[82][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[98][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[114][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[22][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[38][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[54][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[70][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[86][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[102][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[118][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[10][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[26][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[42][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[58][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[74][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[90][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[106][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[14][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[30][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[46][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[62][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[78][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[94][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/mem_reg[110][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'genblk1[0].mem_y/data_out_reg[15]' is a constant and will be removed. (OPT-1206)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:29   33688.1      0.40     300.3    1203.2                           724330.6875
+    0:00:29   33688.1      0.40     300.3    1203.2                           724330.6875
+    0:00:29   33688.1      0.40     300.3    1203.2                           724330.6875
+    0:00:29   33689.2      0.40     300.2    1185.7                           724367.3125
+  Re-synthesis Optimization (Phase 1)
+  Re-synthesis Optimization (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Mapping 'conv_128_8_16_1_DP_OP_128J1_122_7046_1'
+    0:00:39   32547.0      0.23     255.7       0.0                           675352.1875
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:39   32547.0      0.23     255.7       0.0                           675352.1875
+    0:00:39   32547.0      0.23     255.7       0.0                           675352.1875
+    0:00:39   32537.7      0.23     256.8       0.0                           672786.4375
+    0:00:40   32537.7      0.23     256.8       0.0                           672786.4375
+    0:00:41   32659.2      0.16     121.0       0.0                           676648.8125
+    0:00:41   32659.2      0.16     121.0       0.0                           676648.8125
+    0:00:41   32658.4      0.16     120.9       0.0                           676606.5625
+    0:00:41   32658.4      0.16     120.9       0.0                           676606.5625
+    0:00:42   32658.4      0.16     120.9       0.0                           676606.5625
+    0:00:42   32658.4      0.16     120.9       0.0                           676606.5625
+    0:00:44   32761.6      0.12      21.8       0.0                           680191.0625
+    0:00:44   32761.6      0.12      21.8       0.0                           680191.0625
+    0:00:44   32761.6      0.12      21.8       0.0                           680191.0625
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:44   32752.6      0.11      21.8       0.0                           679644.1250
+    0:00:47   32753.1      0.11      21.7       0.0                           679654.2500
+    0:00:47   32753.1      0.11      21.7       0.0                           679654.2500
+    0:00:48   32762.7      0.11      21.7       0.0                           679910.1250
+    0:00:48   32762.7      0.11      21.7       0.0                           679910.1250
+    0:00:49   32760.0      0.11      21.6       0.0                           679821.6250
+    0:00:49   32760.0      0.11      21.6       0.0                           679821.6250
+    0:00:50   32763.8      0.10      21.6       0.0                           679958.8125
+    0:00:51   32764.3      0.07      15.5       0.0                           679949.0000
+    0:00:52   32769.6      0.07      15.5       0.0                           680145.6875
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:52   32769.6      0.07      15.5       0.0                           680145.6875
+    0:00:53   32570.9      0.07       7.8       0.0                           674705.6250
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:56   32562.7      0.07       7.8       0.0                           674504.5625
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+  Global Optimization (Phase 49)
+  Global Optimization (Phase 50)
+    0:01:01   32216.9      0.00       0.1       0.0                           662453.8750
+    0:01:02   32237.3      0.00       0.0       0.0                           663218.8125
+    0:01:02   32237.3      0.00       0.0       0.0                           663218.8125
+    0:01:03   32220.8      0.00       0.0       0.0                           661711.6875
+    0:01:03   32220.8      0.00       0.0       0.0                           661711.6875
+    0:01:04   32220.0      0.00       0.0       0.0                           661688.3125
+    0:01:04   32220.0      0.00       0.0       0.0                           661688.3125
+    0:01:04   32220.0      0.00       0.0       0.0                           661688.3125
+    0:01:04   32220.0      0.00       0.0       0.0                           661688.3125
+    0:01:04   32220.0      0.00       0.0       0.0                           661688.3125
+    0:01:04   32220.0      0.00       0.0       0.0                           661688.3125
+    0:01:04   32220.3      0.00       0.0       0.0                           661707.0000
+    0:01:04   32220.3      0.00       0.0       0.0                           661707.0000
+    0:01:04   32220.3      0.00       0.0       0.0                           661707.0000
+    0:01:04   32220.3      0.00       0.0       0.0                           661707.0000
+    0:01:04   32220.3      0.00       0.0       0.0                           661707.0000
+    0:01:04   32220.3      0.00       0.0       0.0                           661707.0000
+    0:01:04   32220.3      0.00       0.0       0.0                           661707.0000
+    0:01:04   32220.3      0.00       0.0       0.0                           661707.0000
+    0:01:04   32220.3      0.00       0.0       0.0                           661707.0000
+    0:01:04   32220.3      0.00       0.0       0.0                           661707.0000
+    0:01:04   32220.3      0.00       0.0       0.0                           661707.0000
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:01:05   32220.3      0.00       0.0       0.0                           661707.0000
+    0:01:06   32088.1      0.01       0.6       0.0                           657601.8125
+    0:01:06   32087.3      0.00       0.3       0.0                           657750.9375
+    0:01:06   32087.3      0.00       0.3       0.0                           657750.9375
+    0:01:07   32085.7      0.00       0.1       0.0                           657222.4375
+    0:01:09   32042.1      0.00       0.1       0.0                           656133.6250
+    0:01:09   32069.2      0.00       0.0       0.0                           657101.8750
+    0:01:10   32045.3      0.00       0.0       0.0                           655971.0625
+Loading db file '/home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'conv_128_8_16_1' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'genblk1[0].mem_y/clk': 4020 load(s), 1 driver(s)
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+report_area
+ 
+****************************************
+Report : area
+Design : conv_128_8_16_1
+Version: J-2014.09-SP5-2
+Date   : Sat Dec  4 11:47:17 2021
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Design 'conv_128_8_16_1' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db)
+
+Number of ports:                           38
+Number of nets:                          2314
+Number of cells:                         2036
+Number of combinational cells:           1908
+Number of sequential cells:               126
+Number of macros/black boxes:               0
+Number of buf/inv:                        251
+Number of references:                      43
+
+Combinational area:              13858.334275
+Buf/Inv area:                     2392.936015
+Noncombinational area:           18186.951342
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 32045.285617
+Total area:                 undefined
+1
+report_power
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : conv_128_8_16_1
+Version: J-2014.09-SP5-2
+Date   : Sat Dec  4 11:47:18 2021
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db)
+
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+conv_128_8_16_1        5K_hvratio_1_1    NangateOpenCellLibrary
+
+
+Global Operating Voltage = 1.1  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =  22.3195 mW   (99%)
+  Net Switching Power  = 137.0773 uW    (1%)
+                         ---------
+Total Dynamic Power    =  22.4566 mW  (100%)
+
+Cell Leakage Power     = 561.7527 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register       2.2261e+04           12.7641        3.0895e+05        2.2583e+04  (  98.11%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational     58.6368          124.3130        2.5281e+05          435.7559  (   1.89%)
+--------------------------------------------------------------------------------------------------
+Total          2.2320e+04 uW       137.0771 uW     5.6175e+05 nW     2.3019e+04 uW
+1
+report_timing
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : conv_128_8_16_1
+Version: J-2014.09-SP5-2
+Date   : Sat Dec  4 11:47:18 2021
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: genblk1[0].mac/b_in_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: genblk1[0].mac/mult_in_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  conv_128_8_16_1    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  genblk1[0].mac/b_in_reg[1]/CK (DFF_X1)                  0.00 #     0.00 r
+  genblk1[0].mac/b_in_reg[1]/Q (DFF_X1)                   0.10       0.10 r
+  U450/ZN (XNOR2_X1)                                      0.08       0.17 r
+  U449/ZN (NAND2_X1)                                      0.04       0.21 f
+  U591/Z (BUF_X1)                                         0.05       0.26 f
+  U1163/ZN (OAI22_X1)                                     0.06       0.32 r
+  U1164/ZN (AND2_X1)                                      0.05       0.37 r
+  U1262/S (FA_X1)                                         0.12       0.49 f
+  U1307/ZN (XNOR2_X1)                                     0.06       0.55 f
+  U519/ZN (XNOR2_X1)                                      0.06       0.61 f
+  U516/ZN (NAND2_X1)                                      0.03       0.65 r
+  U499/ZN (NAND2_X1)                                      0.04       0.69 f
+  U498/ZN (OR2_X1)                                        0.07       0.75 f
+  U563/ZN (XNOR2_X1)                                      0.06       0.82 f
+  U560/ZN (OAI211_X1)                                     0.05       0.87 r
+  U496/ZN (NOR2_X1)                                       0.03       0.90 f
+  U495/ZN (OAI211_X1)                                     0.04       0.94 r
+  U1797/ZN (NAND2_X1)                                     0.03       0.97 f
+  U1834/ZN (AOI21_X1)                                     0.05       1.02 r
+  U2148/ZN (NAND2_X1)                                     0.04       1.06 f
+  U2149/Z (BUF_X1)                                        0.05       1.11 f
+  U2155/ZN (OAI21_X1)                                     0.04       1.15 r
+  genblk1[0].mac/mult_in_reg[0]/D (DFF_X2)                0.01       1.16 r
+  data arrival time                                                  1.16
+
+  clock clk (rise edge)                                   1.19       1.19
+  clock network delay (ideal)                             0.00       1.19
+  genblk1[0].mac/mult_in_reg[0]/CK (DFF_X2)               0.00       1.19 r
+  library setup time                                     -0.03       1.16
+  data required time                                                 1.16
+  --------------------------------------------------------------------------
+  data required time                                                 1.16
+  data arrival time                                                 -1.16
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
+write -f verilog $TOP_MOD_NAME -output gates.v -hierarchy
+Writing verilog file '/home/home5/aalgewaththa/ese507work/proj3/part3/hdl/gates.v'.
+Warning: Verilog writer has added 1 nets to module conv_128_8_16_1 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+quit
+
+Thank you...

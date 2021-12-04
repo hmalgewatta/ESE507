@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+
+# ./testmode3 N M1 M2 M3 T B P1 P2 P3
+mkdir -p hdl
+cp testgen gen 3layer_template.sv *txt conv_template*  hdl/
+cd hdl
+rm -rf work
+vlib work
+./testgen 3 $1 $2 $3 $4 $5 $6 
+./gen 4 $1 $2 $3 $4 $5 $6 $7 $8 $9 const_$1_$2_$3_$4_$5_$6.txt 
+vlog net_$1_$2_$3_$4_$5_$6.sv tb_net_$1_$2_$3_$4_$5_$6.sv 
+vsim -c tb_net_$1_$2_$3_$4_$5_$6 -do "run -all; quit"
+#sed -i -e 's/set TOP_MOD_NAME .*/set TOP_MOD_NAME '"conv_$1_$2_$3_$4"'/' runsynth.tcl
+#sed -i -e 's/set SRC_FILE .*/set SRC_FILE '"conv_$1_$2_$3_$4.sv"'/' runsynth.tcl
+#dc_shell -f runsynth.tcl
+cd ../
